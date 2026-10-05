@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "analytical_tables_unchanged": 12,
+  "embedded_figures_unchanged": true,
+  "student_name": "Liu Bojian",
+  "student_id": "3036764602",
+  "new_reproducibility_claims_grounded_in_saved_evidence": true,
+  "docx_markdown_metadata_consistent": true,
+  "render_validation": "passed",
+  "pages": 13,
+  "render_engine": "Microsoft Word native PDF export followed by Poppler PNG rendering",
+  "default_renderer_issue": "LibreOffice unavailable; installed Microsoft Word used.",
+  "visual_review": "All 13 pages inspected individually.",
+  "report_docx_sha256": "cf3b474146578d0c41464fd91af43456b1e8fe7e2ae2bf9608d5d17e415c6908",
+  "report_md_sha256": "45fc45d08d11dc40c4e8e53af31ada00111fa50683a5196d087ee2b804e43d56"
+}

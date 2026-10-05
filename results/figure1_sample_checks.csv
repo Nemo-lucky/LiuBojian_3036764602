@@ -1,0 +1,5 @@
+wave,state,surveyed,valid_wages,missing_wages,minimum,maximum,high_tail_n,percent_total
+1,NJ,331,314,17,4.25,5.75,9,100.0
+1,PA,79,76,3,4.25,5.5,2,100.0
+2,NJ,331,318,13,5.0,5.75,11,100.0
+2,PA,79,71,8,4.25,6.25,1,100.0

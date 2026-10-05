@@ -1,0 +1,23 @@
+{
+  "unauthorized_mutation_blocked": true,
+  "missing_file_rejected": true,
+  "private_data_blocked": true,
+  "full_ui_run_verified": true,
+  "outputs_checked": 39,
+  "selected_data_matches_state": true,
+  "source_input_unchanged": true,
+  "csv_selected_in_browser": true,
+  "uploaded_copy_matches_original": true,
+  "existing_results_verify_succeeded": true,
+  "malformed_csv_fails_before_analysis": true,
+  "failed_task_no_verified_results": true,
+  "interface_dependencies": "Python standard library only",
+  "browser_test": "Codex in-app browser on Windows",
+  "scope": "Local UI test; separate GitHub download simulation still pending",
+  "browser_console_errors": [],
+  "chart_tab_visually_checked": true,
+  "ui_source_sha256": {
+    "local_app.py": "523a8fd8aaa742291d6fab3a936681c9c6951cd1c1347e8ffe96291d37e81b45",
+    "ui/index.html": "dc52522d96643517a0727b1882917e67025e70f7e759849323a2be41f37a805d"
+  }
+}

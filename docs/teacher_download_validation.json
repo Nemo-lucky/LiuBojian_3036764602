@@ -1,0 +1,202 @@
+{
+  "status": "passed",
+  "test": "Fresh package extraction, independent virtual environment and local browser execution",
+  "scope": "Same Windows computer, new directory and environment; not an actual GitHub clone or a second computer/operating system",
+  "original_archive_sha256": "9918421a30a4fca46e8b199d52881a87e9eb30a1a5aa382e4060b9b4e3b55308",
+  "project": "C:\\Users\\ber寨\\Documents\\Codex\\2026-10-04\\z\\work\\teacher_download_20261005_204908\\Table2_Python",
+  "bundled_outputs_set_aside": [
+    "results"
+  ],
+  "dependencies_loaded_only_from_project_venv": true,
+  "pip_check": "No broken requirements found",
+  "data_placed_in_documented_folder": true,
+  "default_input_detected_without_editing_code": true,
+  "all_five_stages_passed": true,
+  "generated_outputs": 39,
+  "input_unchanged": true,
+  "integrity_verification": {
+    "status": "verified",
+    "mode": "read_only_existing_full_run",
+    "files_hash_checked": 39,
+    "analytical_sources_hash_checked": true,
+    "recorded_input_unchanged": true,
+    "current_input_hash_checked": true,
+    "run_finished_utc": "2026-10-05T12:53:01.311874+00:00",
+    "environment": {
+      "python": "3.12.3",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "packages": {
+        "pandas": "3.0.6",
+        "numpy": "2.5.3",
+        "matplotlib": "3.11.2",
+        "scipy": "1.18.1"
+      }
+    },
+    "paired_did": {
+      "estimate": 2.75,
+      "se": 1.342340976908276
+    },
+    "table4_n": 357,
+    "table4_nj_no_controls": {
+      "estimate": 2.325831188883181,
+      "se": 1.1915962776999331
+    },
+    "table4_nj_controls": {
+      "estimate": 2.3038595094333267,
+      "se": 1.1955324787616048
+    },
+    "primary_ownership_difference": {
+      "estimate": -0.942366769636494,
+      "se_hc3": 2.6407215698346542,
+      "ci95_low": -6.136045535494455,
+      "ci95_high": 4.251311996221467,
+      "p": 0.7214119875433538
+    },
+    "publication_audits_from_current_csvs": {
+      "Table 2": {
+        "matched": 82,
+        "checked": 88
+      },
+      "Table 3": {
+        "matched": 66,
+        "checked": 80
+      },
+      "Table 4": {
+        "matched": 16,
+        "checked": 18
+      }
+    },
+    "interpretation": "Insufficient evidence of ownership difference",
+    "limitations": [
+      "Only two states; HC3 does not handle arbitrary state-level dependence.",
+      "Publication discrepancies remain; exact original Figure 1 bars unverified.",
+      "Integrity checks do not establish causal assumptions."
+    ]
+  },
+  "numeric_csv_comparisons": [
+    {
+      "file": "results/table2_numeric.csv",
+      "rows": 20,
+      "matched": true
+    },
+    {
+      "file": "results/table2_wage_denominators.csv",
+      "rows": 6,
+      "matched": true
+    },
+    {
+      "file": "results/table2_audit_cells.csv",
+      "rows": 88,
+      "matched": true
+    },
+    {
+      "file": "results/table2_t_method_checks.csv",
+      "rows": 4,
+      "matched": true
+    },
+    {
+      "file": "data/processed/course_analysis.csv",
+      "rows": 410,
+      "matched": true
+    },
+    {
+      "file": "results/figure1_bin_counts.csv",
+      "rows": 56,
+      "matched": true
+    },
+    {
+      "file": "results/figure1_sample_checks.csv",
+      "rows": 4,
+      "matched": true
+    },
+    {
+      "file": "results/table3_numeric.csv",
+      "rows": 40,
+      "matched": true
+    },
+    {
+      "file": "results/table3_audit_cells.csv",
+      "rows": 80,
+      "matched": true
+    },
+    {
+      "file": "results/table3_samples.csv",
+      "rows": 5,
+      "matched": true
+    },
+    {
+      "file": "data/processed/table3_analysis.csv",
+      "rows": 410,
+      "matched": true
+    },
+    {
+      "file": "results/table4_numeric.csv",
+      "rows": 5,
+      "matched": true
+    },
+    {
+      "file": "results/table4_all_coefficients.csv",
+      "rows": 26,
+      "matched": true
+    },
+    {
+      "file": "results/table4_audit_cells.csv",
+      "rows": 18,
+      "matched": true
+    },
+    {
+      "file": "results/table4_author_sas_comparison.csv",
+      "rows": 1,
+      "matched": true
+    },
+    {
+      "file": "results/table4_sample_flow.csv",
+      "rows": 6,
+      "matched": true
+    },
+    {
+      "file": "data/processed/table4_analysis.csv",
+      "rows": 410,
+      "matched": true
+    },
+    {
+      "file": "results/extension_ownership_effects.csv",
+      "rows": 15,
+      "matched": true
+    },
+    {
+      "file": "results/extension_ownership_groups.csv",
+      "rows": 4,
+      "matched": true
+    },
+    {
+      "file": "results/extension_ownership_coefficients.csv",
+      "rows": 36,
+      "matched": true
+    },
+    {
+      "file": "results/extension_ownership_brand_counts.csv",
+      "rows": 4,
+      "matched": true
+    },
+    {
+      "file": "data/processed/extension_ownership_analysis.csv",
+      "rows": 410,
+      "matched": true
+    }
+  ],
+  "tolerance": {
+    "rtol": 1e-09,
+    "atol": 1e-10
+  },
+  "english_stage_notes_accessible": true,
+  "aggregate_download_routes_accessible": true,
+  "readme_interpreter_guidance_corrected": true,
+  "figures_visually_checked": [
+    "figure1.png",
+    "extension_ownership_changes.png",
+    "extension_ownership_effects.png"
+  ],
+  "browser_verified_status_and_result_cards": true,
+  "browser_console_errors": []
+}

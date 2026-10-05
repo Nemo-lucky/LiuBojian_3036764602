@@ -1,0 +1,67 @@
+{
+  "status": "verified",
+  "mode": "read_only_existing_full_run",
+  "files_hash_checked": 39,
+  "analytical_sources_hash_checked": true,
+  "recorded_input_unchanged": true,
+  "current_input_hash_checked": true,
+  "run_finished_utc": "2026-10-05T11:33:51.371272+00:00",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "pandas": "2.3.3",
+      "numpy": "2.4.1",
+      "matplotlib": "3.10.8",
+      "scipy": "1.17.0"
+    }
+  },
+  "paired_did": {
+    "estimate": 2.75,
+    "se": 1.342340976908276
+  },
+  "table4_n": 357,
+  "table4_nj_no_controls": {
+    "estimate": 2.325831188883181,
+    "se": 1.191596277699933
+  },
+  "table4_nj_controls": {
+    "estimate": 2.303859509433324,
+    "se": 1.1955324787616048
+  },
+  "primary_ownership_difference": {
+    "estimate": -0.9423667696364815,
+    "se_hc3": 2.640721569834654,
+    "ci95_low": -6.136045535494442,
+    "ci95_high": 4.251311996221479,
+    "p": 0.7214119875433573
+  },
+  "publication_audits_from_current_csvs": {
+    "Table 2": {
+      "matched": 82,
+      "checked": 88
+    },
+    "Table 3": {
+      "matched": 66,
+      "checked": 80
+    },
+    "Table 4": {
+      "matched": 16,
+      "checked": 18
+    }
+  },
+  "interpretation": "Insufficient evidence of ownership difference",
+  "limitations": [
+    "Only two states; HC3 does not handle arbitrary state-level dependence.",
+    "Publication discrepancies remain; exact original Figure 1 bars unverified.",
+    "Integrity checks do not establish causal assumptions."
+  ],
+  "skill": "minimum-wage-replication",
+  "invocation": "Explicit natural-language user request; installed SKILL.md read and followed",
+  "all_stages_executed_this_invocation": true,
+  "figures_visually_checked": [
+    "figure1.png",
+    "extension_ownership_changes.png",
+    "extension_ownership_effects.png"
+  ]
+}

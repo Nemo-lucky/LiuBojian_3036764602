@@ -1,0 +1,197 @@
+{
+  "status": "passed",
+  "tested_at_utc": "2026-10-05T09:09:17.800036+00:00",
+  "same_host_clean_environment": true,
+  "fresh_directory_with_spaces": true,
+  "preexisting_results": false,
+  "preexisting_processed_data": false,
+  "author_archive_present": false,
+  "fresh_venv": true,
+  "system_site_packages": false,
+  "analysis_modules_loaded_from_venv": true,
+  "pip_check": "No broken requirements found.",
+  "installation": "requirements.txt resolved in fresh environment; installed versions frozen into requirements-lock.txt",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "pandas": "3.0.6",
+      "numpy": "2.5.3",
+      "matplotlib": "3.11.2",
+      "scipy": "1.18.1"
+    }
+  },
+  "input_sha256": "45e6f4ac4928f7c9fcc2585a45e0467ecaa039f0b241f4c5a26cd290fd8e772b",
+  "raw_input_unchanged": true,
+  "all_five_stages_passed": true,
+  "analysis_files_regenerated": 39,
+  "csv_comparison": {
+    "passed": true,
+    "tolerance": {
+      "rtol": 1e-09,
+      "atol": 1e-10
+    },
+    "csv_count": 22,
+    "files": [
+      {
+        "file": "results/table2_numeric.csv",
+        "rows": 20,
+        "columns": 13,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table2_wage_denominators.csv",
+        "rows": 6,
+        "columns": 8,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table2_audit_cells.csv",
+        "rows": 88,
+        "columns": 7,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table2_t_method_checks.csv",
+        "rows": 4,
+        "columns": 5,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "data/processed/course_analysis.csv",
+        "rows": 410,
+        "columns": 54,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/figure1_bin_counts.csv",
+        "rows": 56,
+        "columns": 10,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/figure1_sample_checks.csv",
+        "rows": 4,
+        "columns": 9,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table3_numeric.csv",
+        "rows": 40,
+        "columns": 6,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table3_audit_cells.csv",
+        "rows": 80,
+        "columns": 7,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table3_samples.csv",
+        "rows": 5,
+        "columns": 6,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "data/processed/table3_analysis.csv",
+        "rows": 410,
+        "columns": 63,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table4_numeric.csv",
+        "rows": 5,
+        "columns": 12,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table4_all_coefficients.csv",
+        "rows": 26,
+        "columns": 4,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table4_audit_cells.csv",
+        "rows": 18,
+        "columns": 5,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table4_author_sas_comparison.csv",
+        "rows": 1,
+        "columns": 11,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/table4_sample_flow.csv",
+        "rows": 6,
+        "columns": 3,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "data/processed/table4_analysis.csv",
+        "rows": 410,
+        "columns": 61,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/extension_ownership_effects.csv",
+        "rows": 15,
+        "columns": 10,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/extension_ownership_groups.csv",
+        "rows": 4,
+        "columns": 8,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/extension_ownership_coefficients.csv",
+        "rows": 36,
+        "columns": 4,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "results/extension_ownership_brand_counts.csv",
+        "rows": 4,
+        "columns": 6,
+        "numeric_and_text_comparison": "passed"
+      },
+      {
+        "file": "data/processed/extension_ownership_analysis.csv",
+        "rows": 410,
+        "columns": 61,
+        "numeric_and_text_comparison": "passed"
+      }
+    ]
+  },
+  "missing_input_failure_check": {
+    "case": "missing_input",
+    "passed": true,
+    "exit_code": 1,
+    "manifest_status": "failed"
+  },
+  "figures_visual_review": [
+    "figure1.png",
+    "extension_ownership_changes.png",
+    "extension_ownership_effects.png"
+  ],
+  "source_sha256": {
+    "src/02_table2.py": "dad1d73c82ebea16d72dc673e7f0fccb999b25c9689eedca4633ff686bf65142",
+    "src/03_figure1.py": "c6eff9fdf672ebd1e22bc28aae298db8d83f576731269db5ea0f6923e02a3f6f",
+    "src/04_table3.py": "4b9f8f10e7eaf109a59e4de4a72d9b10bfef7e9682981f47ed3d721b52a1df20",
+    "src/05_table4.py": "a13d65f29478a29aebf767024902e73a162ea2c8af344973ff38d6d7efd564f8",
+    "src/06_extension_ownership.py": "7235218e90ee4bb5c3025975d998a4932d695d372f5e20f5135bed3497805165",
+    "src/course_data.py": "464d479d61027f27a06f895b2aee394b275391239c44b2f466b7af66fbf9ecec",
+    "src/audit_table2.py": "15c4aceb88e02c37816131b11483f49d0a57e3110dd5e0dfe077ad6540e66526",
+    "run_all.py": "abeb824504d55394fb6b84535d6f7a867f66fe47b3c85c8f38491ff6b6de1cdb"
+  },
+  "limitations": [
+    "Tested on one Windows host with a fresh virtual environment, not a separate computer.",
+    "CSV values checked at rtol1e-9/atol1e-10; figures visually checked, not required to be byte identical.",
+    "Original publication mismatches remain; validation does not establish causal identification.",
+    "Word narrative report is not regenerated by run_all.py."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "interface_language": "en",
+  "interface_static_text_english": true,
+  "five_stage_notes_english": true,
+  "error_messages_english": true,
+  "existing_results_verification": "passed",
+  "outputs_hash_checked": 39,
+  "analysis_rerun_for_language_edit": false,
+  "source_sha256": {
+    "local_app.py": "8d955b71de48003b1dd7c7ac89fc8d7f5cff9daf9eeec9475ba44d3399016e52",
+    "ui/index.html": "160f09a31a6c87dfe13c226d9ec946bdd5536ca27c1bfaaa16f9f78f8b4eb617"
+  }
+}

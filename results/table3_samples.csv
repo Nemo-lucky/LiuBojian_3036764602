@@ -1,0 +1,6 @@
+group,all_stores,before_n,after_n,paired_n,temp_zero_paired_n
+PA,79,77,77,75,75
+NJ,331,321,319,309,313
+NJ_low,101,97,98,94,95
+NJ_mid,140,137,135,132,134
+NJ_high,73,71,69,67,68

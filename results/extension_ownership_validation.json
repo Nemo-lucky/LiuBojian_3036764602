@@ -1,0 +1,24 @@
+{
+  "input_csv": "C:\\Users\\ber寨\\Desktop\\01_DID\\data\\public.csv",
+  "input_sha256": "45e6f4ac4928f7c9fcc2585a45e0467ecaa039f0b241f4c5a26cd290fd8e772b",
+  "primary_n": 357,
+  "sensitivity_n": 384,
+  "models": [
+    "NJ_unadjusted",
+    "NJ_brands_primary",
+    "GAP_brands_support",
+    "GAP_brands_regions",
+    "NJ_brands_384_sensitivity"
+  ],
+  "inference": "Store-level HC3 with t(N-k) approximate intervals; not state-cluster inference.",
+  "checks_passed": [
+    "common_samples",
+    "QR_coefficients_HC3",
+    "OLS_orthogonality",
+    "group_DID_saturated_regression",
+    "long_panel_triple_interaction"
+  ],
+  "primary_model": "NJ_brands_primary",
+  "hypothesis": "NJ x company ownership interaction = 0; two-sided test.",
+  "originality_scope": "Ownership interaction extension of this paper; no claim of novelty in all literature."
+}

@@ -1,0 +1,23 @@
+{
+  "input_csv": "C:\\Users\\ber寨\\Desktop\\01_DID\\data\\public.csv",
+  "input_sha256": "45e6f4ac4928f7c9fcc2585a45e0467ecaa039f0b241f4c5a26cd290fd8e772b",
+  "sample_n": 357,
+  "nj_n": 290,
+  "pa_n": 67,
+  "paired_employment_n": 384,
+  "excluded_wage_n": 27,
+  "closed_retained_n": 6,
+  "outcome_mean": -0.23753501400560229,
+  "outcome_sd": 8.825484522270923,
+  "published_matches": 16,
+  "published_numeric_cells": 18,
+  "checks_passed": [
+    "common_sample",
+    "region_classification",
+    "QR_OLS_and_SE",
+    "residual_orthogonality",
+    "joint_F_Wald",
+    "NJ_mean_contrast"
+  ],
+  "fifth_model_rule": "Paper table note: include ownership. Author SAS comparison exported separately."
+}

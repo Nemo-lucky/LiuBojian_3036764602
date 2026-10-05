@@ -1,0 +1,38 @@
+{
+  "status": "report_content_updated_pending_student_review",
+  "language": "English",
+  "main_sample": 357,
+  "extension_interaction": -0.942366769636494,
+  "source_csv_sha256": "45e6f4ac4928f7c9fcc2585a45e0467ecaa039f0b241f4c5a26cd290fd8e772b",
+  "tables_from_numeric_outputs": true,
+  "remaining_delivery": [
+    "student review",
+    "Git and GitHub access",
+    "authorized teaching-team data access"
+  ],
+  "pages": 13,
+  "render_engine": "Microsoft Word native export; Poppler PNG",
+  "visual_review": "All 13 pages individually inspected after final edits; no clipping, broken tables, missing figures or formula glyph issues.",
+  "default_renderer_issue": "LibreOffice absent; installed Word used as fallback.",
+  "student_name": "Liu Bojian",
+  "student_id": "3036764602",
+  "completed_delivery_work": [
+    "unified runner",
+    "clean reproduction",
+    "AI skill explicit invocation",
+    "English local page",
+    "fresh download-package simulation"
+  ],
+  "analytical_tables_preserved": true,
+  "report_docx_sha256": "cf3b474146578d0c41464fd91af43456b1e8fe7e2ae2bf9608d5d17e415c6908",
+  "report_md_sha256": "45fc45d08d11dc40c4e8e53af31ada00111fa50683a5196d087ee2b804e43d56",
+  "verification_sources": [
+    "docs/teacher_download_validation.json",
+    "docs/ai_skill_invocation_validation.json",
+    "docs/local_page_english_validation.json"
+  ],
+  "layout_validation": "passed",
+  "primary_report_format": "Markdown",
+  "primary_report": "report/ECO6067_Empirical_Report.md",
+  "word_status": "local historical version, excluded from public package"
+}

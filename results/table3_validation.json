@@ -1,0 +1,53 @@
+{
+  "input_filename": "public.csv",
+  "sha256": "45e6f4ac4928f7c9fcc2585a45e0467ecaa039f0b241f4c5a26cd290fd8e772b",
+  "group_counts_match_paper": true,
+  "row3_stacked_ols_validation": true,
+  "rows4_5_ols_hc2_validation": true,
+  "original_row3_se_method_confirmed": false,
+  "numeric_cells_checked": 80,
+  "numeric_cells_matched": 66,
+  "numeric_cells_different": 14,
+  "samples": [
+    {
+      "group": "PA",
+      "all_stores": 79,
+      "before_n": 77,
+      "after_n": 77,
+      "paired_n": 75,
+      "temp_zero_paired_n": 75
+    },
+    {
+      "group": "NJ",
+      "all_stores": 331,
+      "before_n": 321,
+      "after_n": 319,
+      "paired_n": 309,
+      "temp_zero_paired_n": 313
+    },
+    {
+      "group": "NJ_low",
+      "all_stores": 101,
+      "before_n": 97,
+      "after_n": 98,
+      "paired_n": 94,
+      "temp_zero_paired_n": 95
+    },
+    {
+      "group": "NJ_mid",
+      "all_stores": 140,
+      "before_n": 137,
+      "after_n": 135,
+      "paired_n": 132,
+      "temp_zero_paired_n": 134
+    },
+    {
+      "group": "NJ_high",
+      "all_stores": 73,
+      "before_n": 71,
+      "after_n": 69,
+      "paired_n": 67,
+      "temp_zero_paired_n": 68
+    }
+  ]
+}

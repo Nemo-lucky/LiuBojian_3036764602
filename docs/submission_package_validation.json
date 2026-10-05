@@ -1,0 +1,431 @@
+{
+  "status": "passed",
+  "primary_report": "report/ECO6067_Empirical_Report.md",
+  "markdown_figures_checked": [
+    "../results/figure1.png",
+    "../results/extension_ownership_effects.png"
+  ],
+  "public_files_count_before_inventory": 102,
+  "restricted_data_detected": [],
+  "git_tracked_restricted_data": false,
+  "analyses_rerun": false,
+  "github_published": false,
+  "processed_data_transfer": "pending authorized teaching-team arrangement",
+  "checks": [
+    "required deliverables present",
+    "report figure links resolve",
+    "public archive allowlist",
+    "CSV headers checked for store identifiers",
+    "Git tracked paths inspected"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "b0b7e24c707cdebaf9129758d0edfe35617b49030fadc6f19871c51ee155ad63"
+    },
+    {
+      "path": "AI_USE_DISCLOSURE.md",
+      "sha256": "f56a71d714385c5c799e291e6d84e486efaed5936e7b0068ad30accad1789eb3"
+    },
+    {
+      "path": "AI技能_中文使用说明.md",
+      "sha256": "33ef68677d46497ee57bfad2e5f0d7696b39b71954435e364f485b00c0ce0b30"
+    },
+    {
+      "path": "DATA_ACCESS.md",
+      "sha256": "b8a85eb1a79612d98528f35144fd65f011e02392bb301e0d78cf64e9b7d82d67"
+    },
+    {
+      "path": "docs/ai_skill_invocation_validation.json",
+      "sha256": "c29f91d9e94bffd7364deb822f2cffcfc32ad2faf0b05cd1f4ff1c8bb512e786"
+    },
+    {
+      "path": "docs/ai_skill_validation.json",
+      "sha256": "fa1f65046ed00370a0cdeacaf6cbf9cca4a9f21d554a8d8898c40f76f0e16549"
+    },
+    {
+      "path": "docs/AI_USE_LOG.md",
+      "sha256": "bb846e6c3b33e3c9a297217fba728e3bb3744a691a67267c893fa650d298aae9"
+    },
+    {
+      "path": "docs/clean_reproduction_validation.json",
+      "sha256": "dac57626d4d0d7139eb32994a81afe3bb4de005575cc06fa84c5070ba6f047f1"
+    },
+    {
+      "path": "docs/course_data_validation.json",
+      "sha256": "fa8a6f6cb829e025310a2078bff7e7f8347ff436f30ccd68df2556a10599a882"
+    },
+    {
+      "path": "docs/data_provenance.json",
+      "sha256": "d9d7614e5662cec180404ca0918b6c59f2ad1b3703a0e42499131b10448f626d"
+    },
+    {
+      "path": "docs/local_page_english_validation.json",
+      "sha256": "3a5089a49f0d15b01aa71cf7278f2420e671ba0a2ea42b8cae0e0eb8c8cc3ef5"
+    },
+    {
+      "path": "docs/local_page_validation.json",
+      "sha256": "df2eb98ae06a7bb374085ef3dace7230715ef0008f7b8ab93acb03c305720459"
+    },
+    {
+      "path": "docs/report_content_validation.json",
+      "sha256": "0076a76e46e07aad86d35254ff663800e9ab3abc15f5579c038b9865202c97f5"
+    },
+    {
+      "path": "docs/REUSABLE_WORKFLOW.md",
+      "sha256": "e129da5e4621cc556c777a8102967682ccb7356c3e55b910e36671da58fa8a76"
+    },
+    {
+      "path": "docs/teacher_download_validation.json",
+      "sha256": "512d8f1224591bc76bb9ecc5093947692b1404b8660c82937bfc0e4a3957fdb5"
+    },
+    {
+      "path": "docs/下载后使用模拟检查.md",
+      "sha256": "d47d7f760ea3d8cfa2ef1749ae9396a22b8d26ef0f156649156413967217d825"
+    },
+    {
+      "path": "docs/干净目录复现检查.md",
+      "sha256": "c6471630a09e895dbf1a05a062ffb15714313578286dc6cee9aac6030865a651"
+    },
+    {
+      "path": "docs/第一步_理解研究设计.md",
+      "sha256": "bd3fc9e78b10fb60e36aa76390289fbea74ac94bc3df439158c2f7d26e4377d6"
+    },
+    {
+      "path": "local_app.py",
+      "sha256": "8d955b71de48003b1dd7c7ac89fc8d7f5cff9daf9eeec9475ba44d3399016e52"
+    },
+    {
+      "path": "LOCAL_PAGE.md",
+      "sha256": "bfd1569efaec4cad983c036c693dc043303b65fa4d02476d5b23df7633da639a"
+    },
+    {
+      "path": "README.md",
+      "sha256": "3dcbda382ce9c3b9b17f549cb6819c4e848e55dd78c4dcfc88953cf04d26bb16"
+    },
+    {
+      "path": "report/ECO6067_Empirical_Report.md",
+      "sha256": "45fc45d08d11dc40c4e8e53af31ada00111fa50683a5196d087ee2b804e43d56"
+    },
+    {
+      "path": "report/report_source_manifest.json",
+      "sha256": "2a6c10bd16b2e3e99d3712e6641233df9526638e3c65948546da0dc06772ae4b"
+    },
+    {
+      "path": "report/报告结构与中文阅读说明.md",
+      "sha256": "650d2a8f8abd39174779d9532c5c8c61ef46fed5787aec59b2efc88438eb11ce"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "sha256": "776261b849a17e0f25ee91c78363fcfe3ad841cf9d226f0b2e484ecb49230ad5"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "c2e920b62cc7540174a5b7a0c0b9d5c2addc15b01aca7a8487063463fd202cb0"
+    },
+    {
+      "path": "results/clean_workflow_run.json",
+      "sha256": "0c8d7b285c9deb1a9f027900a076ce25011b1e07b3d52776690a5ff019a64335"
+    },
+    {
+      "path": "results/clean_workflow_summary.md",
+      "sha256": "e30b44225c4edeb576f3e8670d62b20a5738b1a0dcf2315c7359e8ad254196ce"
+    },
+    {
+      "path": "results/extension_ownership_brand_counts.csv",
+      "sha256": "0107ae4b81c832f2df14cd204f4753b3e6b261242d14d14ff9b802c6d25eea2f"
+    },
+    {
+      "path": "results/extension_ownership_changes.png",
+      "sha256": "bd791efa6609eb63cb832e2641b6ea419d444349b89adf465383ffe5fbdca9bd"
+    },
+    {
+      "path": "results/extension_ownership_changes.svg",
+      "sha256": "f5eb0c49cd081f4ae11c04a68010fefc00b1da470a267bca97184d15ca72ce8d"
+    },
+    {
+      "path": "results/extension_ownership_coefficients.csv",
+      "sha256": "251298d26048aad1e1122f0f75c60be0fd09902d57dd5b68213807c9d6bb9d0b"
+    },
+    {
+      "path": "results/extension_ownership_effects.csv",
+      "sha256": "3233351956e2ff0dc5fe32ab4b38b01b9d58bd501a15545ab44845ccd541271b"
+    },
+    {
+      "path": "results/extension_ownership_effects.png",
+      "sha256": "df6fd9444b3067f3c86ee08fede03db38695e0b9e77f8278c85dd08c41ede16d"
+    },
+    {
+      "path": "results/extension_ownership_effects.svg",
+      "sha256": "e021d5f054840a9149f177d637efc78eb12602c24673d40941632e1fda6d2c28"
+    },
+    {
+      "path": "results/extension_ownership_groups.csv",
+      "sha256": "d54865b04c58b3df97496dcec3f72f74234c619891b2cd151179ba423f8ef281"
+    },
+    {
+      "path": "results/extension_ownership_report.md",
+      "sha256": "92cdec33a15f01c360e8c33b2f06d2b2117b4f26535d9a6491c88d9391bcf061"
+    },
+    {
+      "path": "results/extension_ownership_validation.json",
+      "sha256": "685fc878a2049dc28d5e71cc9032f37d6d52d419054c1a7c6d982f36aa311d5e"
+    },
+    {
+      "path": "results/figure1.png",
+      "sha256": "daf0ccebcebf5551d462fc6decca0bc4ee0d46d37013e7410371a10c1fb3234d"
+    },
+    {
+      "path": "results/figure1.svg",
+      "sha256": "10b5d5858dd43d1fda0b02d5d0b94b0e7425fc6c14cc1fca41b9bc04c2efe627"
+    },
+    {
+      "path": "results/figure1_bin_counts.csv",
+      "sha256": "04d75c6f43403dda88f143a898c4ba6bf179b06c0a899399a42a0541d3c8bce7"
+    },
+    {
+      "path": "results/figure1_sample_checks.csv",
+      "sha256": "0421ff2053d624ff6769e768bc335c146b5557811f130a3587839358e7cca3a3"
+    },
+    {
+      "path": "results/figure1_validation.json",
+      "sha256": "9b343e1d4afa7a1b32c5307a99f5316cc1a3d427f9e57cd0bb9c9efa9ae2196b"
+    },
+    {
+      "path": "results/figure1_中文说明.md",
+      "sha256": "28b0acd7125dcd0a566e5f872b98ca4eff65a8eac893ca7d9af3a249702b8687"
+    },
+    {
+      "path": "results/initial_audit.json",
+      "sha256": "2e8ff1a5e74d8dccf918eecc44d6e79b472fdbe859022bf8d9ad874f990406d8"
+    },
+    {
+      "path": "results/initial_state_summary.csv",
+      "sha256": "472a74c73a3f28d62569fd7397d88964d002622369eb73cd373246eb30f87483"
+    },
+    {
+      "path": "results/missing_counts.csv",
+      "sha256": "fd1acdd97aa7cb8b9b2b9926f2d1e2b7c8bc58fca60de1ca855aabcf8ad016f8"
+    },
+    {
+      "path": "results/table2_audit_cells.csv",
+      "sha256": "f5887d55cca2e497231b94393a91b5d36ba2329602e2c183d600e5926218a1c0"
+    },
+    {
+      "path": "results/table2_audit_中文.md",
+      "sha256": "2323835a35dd0cb112d90334a8815bd5a7751c12926362e3953c5e5c0bab85f0"
+    },
+    {
+      "path": "results/table2_numeric.csv",
+      "sha256": "bda7b97e8ad1d840ffc2c3cdaf91579224939a433b7adb98212001dc4995f814"
+    },
+    {
+      "path": "results/table2_replication.md",
+      "sha256": "97e32018e24a73c6e8096fb7d8976231c75903df831480598ff4e873523bc759"
+    },
+    {
+      "path": "results/table2_t_method_checks.csv",
+      "sha256": "37302cd2594101f79005269d46b7ec2d063ca0d7c04884aa27a4da6185a16c7f"
+    },
+    {
+      "path": "results/table2_wage_denominators.csv",
+      "sha256": "126df7ee63e73a640361d1c35a591190621253d7385492eb333a3ee8e375fb30"
+    },
+    {
+      "path": "results/table3_audit_cells.csv",
+      "sha256": "0f368a788622470d68916db04412bd4759a5613b5fc0bcf6b2d8a6d37975047f"
+    },
+    {
+      "path": "results/table3_numeric.csv",
+      "sha256": "3c6978629e18fc30eda771f843e4e33e8974e13c06acddcba0a0b2db868d7050"
+    },
+    {
+      "path": "results/table3_replication.md",
+      "sha256": "769ff65e1cb7664d216b2c6a3d177ce8f15b3fb2022272d82db5aa29ec0783fe"
+    },
+    {
+      "path": "results/table3_samples.csv",
+      "sha256": "8e6de0688d71b4fec862968e2599ebf6f289347c5dfb624537530c9dfdcc0229"
+    },
+    {
+      "path": "results/table3_validation.json",
+      "sha256": "3dbc3bca4b3beceb3bae9da524fe8795f89266243086af0cc21ca3bb3ca51cec"
+    },
+    {
+      "path": "results/table4_all_coefficients.csv",
+      "sha256": "63e0885a64a55f5380e423c9987e29bc627c926827bb870088c413b95b2b42a3"
+    },
+    {
+      "path": "results/table4_audit_cells.csv",
+      "sha256": "51e0654cb5ca699cbbf725d5f9d95622a2b265a64f327d3e33003041dfae6199"
+    },
+    {
+      "path": "results/table4_author_sas_comparison.csv",
+      "sha256": "c32009e681a03611378e01f228f201f9473a0420b9e3d27b6997b912de3094d3"
+    },
+    {
+      "path": "results/table4_numeric.csv",
+      "sha256": "eb452d0203c9887155b4d7092704908d8e4f0f829fddf50bdaa910c4763a407f"
+    },
+    {
+      "path": "results/table4_replication.md",
+      "sha256": "fa723aed07f876c1d83fda26b482166aece9b2c744c6d18c1bf4beb8929abdfe"
+    },
+    {
+      "path": "results/table4_sample_flow.csv",
+      "sha256": "a34aa9710e282d03979c895548047c1487cb7ddecdb74b95e98d0dae79821b31"
+    },
+    {
+      "path": "results/table4_validation.json",
+      "sha256": "0c148b7bc3558d2ae8b4be846c6b9248b5f0ac1885d7fb9f2de46e767cadb499"
+    },
+    {
+      "path": "results/variable_dictionary.csv",
+      "sha256": "92c28d070146df00199ee0fc29b81ba2f097f2319c47cabdc8b77e01f7eafe57"
+    },
+    {
+      "path": "results/workflow_run.json",
+      "sha256": "1ba532f2f9b04a76fe9b14f3a3f36670e01d7a51a9c2c20a0abf20ab2239fe9a"
+    },
+    {
+      "path": "results/workflow_summary.md",
+      "sha256": "e30b44225c4edeb576f3e8670d62b20a5738b1a0dcf2315c7359e8ad254196ce"
+    },
+    {
+      "path": "run_all.py",
+      "sha256": "abeb824504d55394fb6b84535d6f7a867f66fe47b3c85c8f38491ff6b6de1cdb"
+    },
+    {
+      "path": "run_extension.py",
+      "sha256": "0cbcb4a56e9e5c309b199fe4947b66372aed38bbb4e77aefdc4f863937cb75d4"
+    },
+    {
+      "path": "run_figure1.py",
+      "sha256": "456957fdc739714e42fcdc28d43ad4bfb201ceab3eacc065f32da1574ee04473"
+    },
+    {
+      "path": "run_table2.py",
+      "sha256": "eae7dc350ff8934394dbe58c5729436b9be46de2e879dece7122414c283b07ca"
+    },
+    {
+      "path": "run_table3.py",
+      "sha256": "68033e0f521539a6ad8ead764891daec720643bf6e9795d17b0d6c5951af98ba"
+    },
+    {
+      "path": "run_table4.py",
+      "sha256": "ac1f79355005978dc71d01d03796da8040dc619cd7ae1c5017b6b583529f2b9f"
+    },
+    {
+      "path": "skills/minimum-wage-replication/agents/openai.yaml",
+      "sha256": "e34468d5f4bee70b51a6195afef680cc374201d7aa7743d38efda4616a5f5170"
+    },
+    {
+      "path": "skills/minimum-wage-replication/references/interpretation.md",
+      "sha256": "aa23c1ebf1f2c591fc3f9488ddf3fb269924ec5551a823cf4cdecbd1a6f1900e"
+    },
+    {
+      "path": "skills/minimum-wage-replication/scripts/summarize_run.py",
+      "sha256": "36ec3faf61b7cc0e4447b798c4bb9cea3279ccadd29a149468012f3ac246f635"
+    },
+    {
+      "path": "skills/minimum-wage-replication/SKILL.md",
+      "sha256": "170f19672163ff621b7c685b5b4fdf0ec42966d00b9e253e67dcd712fb66d75a"
+    },
+    {
+      "path": "src/01_inspect_data.py",
+      "sha256": "7660a3368f3be1e307aad8c3e09e22628cd309028b73386a0120c7928382dc1c"
+    },
+    {
+      "path": "src/02_table2.py",
+      "sha256": "dad1d73c82ebea16d72dc673e7f0fccb999b25c9689eedca4633ff686bf65142"
+    },
+    {
+      "path": "src/03_figure1.py",
+      "sha256": "c6eff9fdf672ebd1e22bc28aae298db8d83f576731269db5ea0f6923e02a3f6f"
+    },
+    {
+      "path": "src/04_table3.py",
+      "sha256": "4b9f8f10e7eaf109a59e4de4a72d9b10bfef7e9682981f47ed3d721b52a1df20"
+    },
+    {
+      "path": "src/05_table4.py",
+      "sha256": "a13d65f29478a29aebf767024902e73a162ea2c8af344973ff38d6d7efd564f8"
+    },
+    {
+      "path": "src/06_extension_ownership.py",
+      "sha256": "7235218e90ee4bb5c3025975d998a4932d695d372f5e20f5135bed3497805165"
+    },
+    {
+      "path": "src/audit_table2.py",
+      "sha256": "15c4aceb88e02c37816131b11483f49d0a57e3110dd5e0dfe077ad6540e66526"
+    },
+    {
+      "path": "src/course_data.py",
+      "sha256": "464d479d61027f27a06f895b2aee394b275391239c44b2f466b7af66fbf9ecec"
+    },
+    {
+      "path": "src/download_data.py",
+      "sha256": "7911b91e73d628bacf827683364d36f19e27a91d1085e5ed7edd00944f5e3f1a"
+    },
+    {
+      "path": "SUBMISSION_CHECKLIST.md",
+      "sha256": "41d1a7b8892757472585f46ed205a4b1006d3084e08860ef8fe7a7c879a2062b"
+    },
+    {
+      "path": "ui/index.html",
+      "sha256": "160f09a31a6c87dfe13c226d9ec946bdd5536ca27c1bfaaa16f9f78f8b4eb617"
+    },
+    {
+      "path": "ui/reports/figure1_notes.md",
+      "sha256": "626e3e188b750655a00210601a50477a161c8b87d6a599d9c6d896a1fbf20945"
+    },
+    {
+      "path": "ui/reports/ownership_notes.md",
+      "sha256": "14745a50175f4730cb07cb48db393710d8ada05b7cfce409351c8a1d6eb20be4"
+    },
+    {
+      "path": "ui/reports/table2_notes.md",
+      "sha256": "b8c23dc5d5724b77a3cc2f66d3c05fcda2e0591f154bfb49c63454d0bfe23c1f"
+    },
+    {
+      "path": "ui/reports/table3_notes.md",
+      "sha256": "b45cb50cf2726d93c0d552fd218c7c204baaa5d4a1f8fa1f12c2e136e7f3d470"
+    },
+    {
+      "path": "ui/reports/table4_notes.md",
+      "sha256": "5b4ecaac681af204ca8baf1bd68d1859cefa55ca4ff2b375b6ec51c3c46264d9"
+    },
+    {
+      "path": "启动本地页面.bat",
+      "sha256": "da1b2b4510d294295ceda92e6b00468ffef791aa7f38b6fca9886ad96c6be649"
+    },
+    {
+      "path": "本地页面_中文使用说明.md",
+      "sha256": "3c445d2d83943eaf823e93699ec371841a8cef3c6d42885e8e2528d7867b82e4"
+    },
+    {
+      "path": "统一运行_中文说明.md",
+      "sha256": "6c8bd5382eaf1ebf0f946d57370db1079f5e002232bd8036cf4a87bb9fb3f53f"
+    },
+    {
+      "path": "运行Figure1_中文说明.md",
+      "sha256": "bdf47fe3011f7e1dece9ce21408884f81daab83b199ae047af8d56a9be63db38"
+    },
+    {
+      "path": "运行Table2_中文说明.md",
+      "sha256": "946632d941da2aba4cd4ab48cea831c28e00692f2fdf5014e6978b5f92b9f07b"
+    },
+    {
+      "path": "运行Table3_中文说明.md",
+      "sha256": "3f321e43276f47c778b0c0343646d292909982fe0963912c1022687944b5efe5"
+    },
+    {
+      "path": "运行Table4_中文说明.md",
+      "sha256": "9ce794e334b7de004de1d5b92eac9a44a405746b6576fa89a0bd4cc5b8660cf9"
+    },
+    {
+      "path": "运行拓展A_中文说明.md",
+      "sha256": "5e2b710911e38f2da957b10f7d008b0099ff4909cfe0717e3d79b7d42036ab2a"
+    }
+  ]
+}

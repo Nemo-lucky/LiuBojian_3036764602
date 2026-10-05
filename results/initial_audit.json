@@ -1,0 +1,34 @@
+{
+  "stores": 410,
+  "raw_variables": 46,
+  "sheet_globally_unique": false,
+  "state_sheet_key_unique": true,
+  "duplicate_sheet_records": [
+    {
+      "source_row_id": 42,
+      "sheet": 407,
+      "state": 0,
+      "chain": 2
+    },
+    {
+      "source_row_id": 168,
+      "sheet": 407,
+      "state": 1,
+      "chain": 4
+    }
+  ],
+  "warning": "SHEET 407 occurs in two states; both records retained; source_row_id added.",
+  "state_counts": {
+    "PA": 79,
+    "NJ": 331
+  },
+  "status_counts": {
+    "0": 1,
+    "1": 399,
+    "2": 2,
+    "3": 6,
+    "4": 1,
+    "5": 1
+  },
+  "status": "Initial audit passed; core replication and extension remain unfinished."
+}

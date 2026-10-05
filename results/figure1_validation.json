@@ -1,0 +1,55 @@
+{
+  "input_filename": "public.csv",
+  "sha256": "45e6f4ac4928f7c9fcc2585a45e0467ecaa039f0b241f4c5a26cd290fd8e772b",
+  "binning": "10 cents, left-inclusive, from 4.20; final tail >=5.50",
+  "denominator": "nonmissing wage, within state and wave",
+  "independent_interval_counts_match": true,
+  "all_distribution_totals_100_percent": true,
+  "exact_original_figure_match_verified": false,
+  "samples": [
+    {
+      "wave": 1,
+      "state": "NJ",
+      "surveyed": 331,
+      "valid_wages": 314,
+      "missing_wages": 17,
+      "minimum": 4.25,
+      "maximum": 5.75,
+      "high_tail_n": 9,
+      "percent_total": 100.0
+    },
+    {
+      "wave": 1,
+      "state": "PA",
+      "surveyed": 79,
+      "valid_wages": 76,
+      "missing_wages": 3,
+      "minimum": 4.25,
+      "maximum": 5.5,
+      "high_tail_n": 2,
+      "percent_total": 100.0
+    },
+    {
+      "wave": 2,
+      "state": "NJ",
+      "surveyed": 331,
+      "valid_wages": 318,
+      "missing_wages": 13,
+      "minimum": 5.0,
+      "maximum": 5.75,
+      "high_tail_n": 11,
+      "percent_total": 100.0
+    },
+    {
+      "wave": 2,
+      "state": "PA",
+      "surveyed": 79,
+      "valid_wages": 71,
+      "missing_wages": 8,
+      "minimum": 4.25,
+      "maximum": 6.25,
+      "high_tail_n": 1,
+      "percent_total": 100.0
+    }
+  ]
+}

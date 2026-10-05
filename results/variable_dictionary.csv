@@ -1,0 +1,47 @@
+variable,start_zero_based,end_exclusive,definition
+sheet,0,3,sheet number (unique store id)
+chain,4,5,chain 1=bk; 2=kfc; 3=roys; 4=wendys
+co_owned,6,7,1 if company owned
+state,8,9,1 if NJ; 0 if Pa                      
+southj,10,11,1 if in southern NJ
+centralj,12,13,1 if in central NJ
+northj,14,15,1 if in northern NJ
+pa1,16,17,"1 if in PA, northeast suburbs of Phila"
+pa2,18,19,"1 if in PA, Easton etc"
+shore,20,21,1 if on NJ shore
+ncalls,22,24,number of call-backs*
+empft,25,30,# full-time employees
+emppt,31,36,# part-time employees
+nmgrs,37,42,# managers/ass't managers
+wage_st,43,48,starting wage ($/hr)
+inctime,49,54,months to usual first raise
+firstinc,55,60,usual amount of first raise ($/hr)
+bonus,61,62,1 if cash bounty for new workers
+pctaff,63,68,% employees affected by new minimum
+meals,69,70,free/reduced price code (See below)
+open,71,76,hour of opening
+hrsopen,77,82,number hrs open per day
+psoda,83,88,"price of medium soda, including tax"
+pfry,89,94,"price of small fries, including tax"
+pentree,95,100,"price of entree, including tax"
+nregs,101,103,number of cash registers in store
+nregs11,104,106,number of registers open at 11:00 am
+type2,107,108,type 2nd interview 1=phone; 2=personal
+status2,109,110,status of second interview: see below
+date2,111,117,date of second interview MMDDYY format
+ncalls2,118,120,number of call-backs*
+empft2,121,126,# full-time employees
+emppt2,127,132,# part-time employees
+nmgrs2,133,138,# managers/ass't managers
+wage_st2,139,144,starting wage ($/hr)
+inctime2,145,150,months to usual first raise
+firstin2,151,156,usual amount of first raise ($/hr)
+special2,157,158,1 if special program for new workers
+meals2,159,160,free/reduced price code (See below)
+open2r,161,166,hour of opening
+hrsopen2,167,172,number hrs open per day
+psoda2,173,178,"price of medium soda, including tax"
+pfry2,179,184,"price of small fries, including tax"
+pentree2,185,190,"price of entree, including tax"
+nregs2,191,193,number of cash registers in store
+nregs112,194,196,number of registers open at 11:00 am

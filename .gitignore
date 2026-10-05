@@ -1,0 +1,19 @@
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+docs/references/
+__pycache__/
+.venv/
+.DS_Store
+logs/
+01_DID/
+
+# Local report history; Markdown is the primary deliverable
+report/*.docx
+report/*Draft*
+# Additional local environments and compiled Python files
+venv/
+env/
+*.pyc
+*.pyo
