@@ -12,5 +12,8 @@
   "default_renderer_issue": "LibreOffice unavailable; installed Microsoft Word used.",
   "visual_review": "All 13 pages inspected individually.",
   "report_docx_sha256": "cf3b474146578d0c41464fd91af43456b1e8fe7e2ae2bf9608d5d17e415c6908",
-  "report_md_sha256": "45fc45d08d11dc40c4e8e53af31ada00111fa50683a5196d087ee2b804e43d56"
+  "report_md_sha256": "45fc45d08d11dc40c4e8e53af31ada00111fa50683a5196d087ee2b804e43d56",
+  "current_primary_format": "Markdown",
+  "current_markdown_sha256": "aa631366041ad152530e02471112486525ad6605f2ad621fc72813d1630ba70e",
+  "render_validation_note": "13-page rendering refers to the historical Word version; current Markdown retains reviewed analyses and adds the verified GitHub delivery status."
 }

@@ -9,7 +9,7 @@
   "restricted_data_detected": [],
   "git_tracked_restricted_data": false,
   "analyses_rerun": false,
-  "github_published": false,
+  "github_published": true,
   "processed_data_transfer": "pending authorized teaching-team arrangement",
   "checks": [
     "required deliverables present",
@@ -20,12 +20,16 @@
   ],
   "files": [
     {
+      "path": ".gitattributes",
+      "sha256": "8b1e4f0b6317e81f564634da9b7993e20e56d2202e23d69e960d4dbd14e163e0"
+    },
+    {
       "path": ".gitignore",
       "sha256": "b0b7e24c707cdebaf9129758d0edfe35617b49030fadc6f19871c51ee155ad63"
     },
     {
       "path": "AI_USE_DISCLOSURE.md",
-      "sha256": "f56a71d714385c5c799e291e6d84e486efaed5936e7b0068ad30accad1789eb3"
+      "sha256": "de9b1e0dee067f57b5c07209d6879f8de363142b85abcf16dc75839ce4e0a30e"
     },
     {
       "path": "AI技能_中文使用说明.md",
@@ -36,16 +40,36 @@
       "sha256": "b8a85eb1a79612d98528f35144fd65f011e02392bb301e0d78cf64e9b7d82d67"
     },
     {
+      "path": "LOCAL_PAGE.md",
+      "sha256": "bfd1569efaec4cad983c036c693dc043303b65fa4d02476d5b23df7633da639a"
+    },
+    {
+      "path": "README.md",
+      "sha256": "9447658b14854703d73dd1272903732c871502c14052b389443db065aa56cc68"
+    },
+    {
+      "path": "SUBMISSION_CHECKLIST.md",
+      "sha256": "03db91fa1038f8d121e22a19bae25b8342506fb099fbccea912e3bc79b4374f7"
+    },
+    {
+      "path": "docs/AI_USE_LOG.md",
+      "sha256": "c8f91ced61440f78f40d4d6c056bb17afcd8adfab87c6d737f4c49bff842c754"
+    },
+    {
+      "path": "docs/GITHUB_REVIEW.md",
+      "sha256": "47866365bb45349df4f859a9d1e6676b7d738c5d75bc6b581b6a690312c2e963"
+    },
+    {
+      "path": "docs/REUSABLE_WORKFLOW.md",
+      "sha256": "e129da5e4621cc556c777a8102967682ccb7356c3e55b910e36671da58fa8a76"
+    },
+    {
       "path": "docs/ai_skill_invocation_validation.json",
       "sha256": "c29f91d9e94bffd7364deb822f2cffcfc32ad2faf0b05cd1f4ff1c8bb512e786"
     },
     {
       "path": "docs/ai_skill_validation.json",
       "sha256": "fa1f65046ed00370a0cdeacaf6cbf9cca4a9f21d554a8d8898c40f76f0e16549"
-    },
-    {
-      "path": "docs/AI_USE_LOG.md",
-      "sha256": "bb846e6c3b33e3c9a297217fba728e3bb3744a691a67267c893fa650d298aae9"
     },
     {
       "path": "docs/clean_reproduction_validation.json",
@@ -69,11 +93,7 @@
     },
     {
       "path": "docs/report_content_validation.json",
-      "sha256": "0076a76e46e07aad86d35254ff663800e9ab3abc15f5579c038b9865202c97f5"
-    },
-    {
-      "path": "docs/REUSABLE_WORKFLOW.md",
-      "sha256": "e129da5e4621cc556c777a8102967682ccb7356c3e55b910e36671da58fa8a76"
+      "sha256": "331bee9344d188319a9267c7d5a5c49157ad65f58e087453ff591f6b047e018a"
     },
     {
       "path": "docs/teacher_download_validation.json",
@@ -96,20 +116,12 @@
       "sha256": "8d955b71de48003b1dd7c7ac89fc8d7f5cff9daf9eeec9475ba44d3399016e52"
     },
     {
-      "path": "LOCAL_PAGE.md",
-      "sha256": "bfd1569efaec4cad983c036c693dc043303b65fa4d02476d5b23df7633da639a"
-    },
-    {
-      "path": "README.md",
-      "sha256": "3dcbda382ce9c3b9b17f549cb6819c4e848e55dd78c4dcfc88953cf04d26bb16"
-    },
-    {
       "path": "report/ECO6067_Empirical_Report.md",
-      "sha256": "45fc45d08d11dc40c4e8e53af31ada00111fa50683a5196d087ee2b804e43d56"
+      "sha256": "aa631366041ad152530e02471112486525ad6605f2ad621fc72813d1630ba70e"
     },
     {
       "path": "report/report_source_manifest.json",
-      "sha256": "2a6c10bd16b2e3e99d3712e6641233df9526638e3c65948546da0dc06772ae4b"
+      "sha256": "c2a78e5c96170046f8d652e9b966957c7ed327df30dfb89f2bf0604de0755e56"
     },
     {
       "path": "report/报告结构与中文阅读说明.md",
@@ -316,6 +328,10 @@
       "sha256": "ac1f79355005978dc71d01d03796da8040dc619cd7ae1c5017b6b583529f2b9f"
     },
     {
+      "path": "skills/minimum-wage-replication/SKILL.md",
+      "sha256": "170f19672163ff621b7c685b5b4fdf0ec42966d00b9e253e67dcd712fb66d75a"
+    },
+    {
       "path": "skills/minimum-wage-replication/agents/openai.yaml",
       "sha256": "e34468d5f4bee70b51a6195afef680cc374201d7aa7743d38efda4616a5f5170"
     },
@@ -326,10 +342,6 @@
     {
       "path": "skills/minimum-wage-replication/scripts/summarize_run.py",
       "sha256": "36ec3faf61b7cc0e4447b798c4bb9cea3279ccadd29a149468012f3ac246f635"
-    },
-    {
-      "path": "skills/minimum-wage-replication/SKILL.md",
-      "sha256": "170f19672163ff621b7c685b5b4fdf0ec42966d00b9e253e67dcd712fb66d75a"
     },
     {
       "path": "src/01_inspect_data.py",
@@ -366,10 +378,6 @@
     {
       "path": "src/download_data.py",
       "sha256": "7911b91e73d628bacf827683364d36f19e27a91d1085e5ed7edd00944f5e3f1a"
-    },
-    {
-      "path": "SUBMISSION_CHECKLIST.md",
-      "sha256": "41d1a7b8892757472585f46ed205a4b1006d3084e08860ef8fe7a7c879a2062b"
     },
     {
       "path": "ui/index.html",
@@ -426,6 +434,12 @@
     {
       "path": "运行拓展A_中文说明.md",
       "sha256": "5e2b710911e38f2da957b10f7d008b0099ff4909cfe0717e3d79b7d42036ab2a"
+    },
+    {
+      "path": "docs/github_delivery_validation.json",
+      "sha256": "3cdb7e2aa9f290893de0b0ac71ee667dede2094e130a90d8495d355073bfee04"
     }
-  ]
+  ],
+  "repository_url": "https://github.com/Nemo-lucky/eco6067-minimum-wage-replication",
+  "github_clone_validation": "passed"
 }

@@ -35,4 +35,4 @@ The fresh-environment tests used the same Windows host, not a second computer or
 
 ## Current status and supporting records
 
-The narrative report is [Markdown](report/ECO6067_Empirical_Report.md). The detailed chronological record is [AI_USE_LOG.md](docs/AI_USE_LOG.md); earlier pending statements in that historical log refer to those stages, not current completion status. Review [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for current delivery tasks. No fabricated Git history, completed GitHub upload or verified teaching-team access is claimed.
+The narrative report is [Markdown](report/ECO6067_Empirical_Report.md). The detailed chronological record is [AI_USE_LOG.md](docs/AI_USE_LOG.md); earlier pending statements in that historical log refer to those stages, not current completion status. Review [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for current delivery tasks. GitHub publication and anonymous remote-clone reproduction have now been verified; see docs/github_delivery_validation.json. Git tracking began after implementation, without fabricated historical stages. Teaching-team restricted-data access and formal submission remain pending.

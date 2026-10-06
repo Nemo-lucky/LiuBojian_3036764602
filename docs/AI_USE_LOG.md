@@ -83,3 +83,8 @@ AI updated the English report to reflect the completed unified runner, explicit 
 ## Submission preparation and Markdown format — 2026-10-05
 
 At the student request, AI made the existing reviewed Markdown report the primary deliverable, prepared an independent AI-use disclosure and documented restricted input access plus the four final processed datasets. Public packaging excludes local Word history, raw/store-level data, environments, logs and Git internals. Existing results were verified read-only before packaging; analyses and data were not modified. Markdown figure links and package inventory were checked. Git commits, GitHub publication and teaching-team access/transfer were not performed in this preparation step.
+
+
+## GitHub publication and actual clone check — 2026-10-06
+
+The student personally authorized Git Credential Manager. AI uploaded the verified public package to the student-owned repository using a GitHub noreply commit email. Git tracking starts with an explicit import of work completed before tracking; no prior history was invented. A subsequent real change preserves checksum bytes during checkout and documents reviewer use. Anonymous cloning succeeded with credentials and prompts disabled. A sandbox attempt could not launch the existing Microsoft Store-backed environment; running under the student account resolved it without code or data changes. The remote clone regenerated all39 outputs using the previously tested locked environment on the same Windows host; all22 CSVs matched reviewed outputs at rtol1e-9/atol1e-10 and the integrity helper passed. README, Markdown report, disclosure and checklist now reflect publication. No coursework submission message was sent and teaching-team restricted-data access is unverified.

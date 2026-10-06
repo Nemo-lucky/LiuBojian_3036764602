@@ -16,10 +16,13 @@ Deadline: **18 October 2026, 23:59 Hong Kong time**
 ## Still to complete
 
 - [ ] Student reviews and understands the final report and disclosure.
-- [ ] Establish meaningful Git commits from actual work; do not fabricate historical stages or dates.
-- [ ] Publish a complete accessible GitHub repository and check its URL as a reviewer.
-- [ ] Test download/clone from the published repository. The completed ZIP simulation is distinct from this test.
+- [x] Actual Git commits established from the verified snapshot and subsequent real revisions. Git was not used throughout earlier implementation; no earlier history was fabricated.
+- [x] Public repository published; anonymous clone and reviewer access verified.
+- [x] Actual remote clone tested: five stages, 39 regenerated outputs, 22 CSV comparisons and integrity checks passed. Same host and previously validated locked environment.
 - [ ] Confirm authorized teaching-team input access and whether the four processed files need separate private delivery.
 - [ ] Submit the repository URL through the teaching team's designated channel.
 
 Markdown is the primary report format. Previous Word versions are local historical material and are excluded from the public delivery archive. A PDF can be generated from the approved Markdown later if requested. GitHub can render the Markdown report and its relative figure links directly.
+
+
+Repository URL: https://github.com/Nemo-lucky/eco6067-minimum-wage-replication

@@ -7,8 +7,8 @@
   "tables_from_numeric_outputs": true,
   "remaining_delivery": [
     "student review",
-    "Git and GitHub access",
-    "authorized teaching-team data access"
+    "authorized teaching-team data access",
+    "formal repository URL submission"
   ],
   "pages": 13,
   "render_engine": "Microsoft Word native export; Poppler PNG",
@@ -25,7 +25,7 @@
   ],
   "analytical_tables_preserved": true,
   "report_docx_sha256": "cf3b474146578d0c41464fd91af43456b1e8fe7e2ae2bf9608d5d17e415c6908",
-  "report_md_sha256": "45fc45d08d11dc40c4e8e53af31ada00111fa50683a5196d087ee2b804e43d56",
+  "report_md_sha256": "aa631366041ad152530e02471112486525ad6605f2ad621fc72813d1630ba70e",
   "verification_sources": [
     "docs/teacher_download_validation.json",
     "docs/ai_skill_invocation_validation.json",
@@ -34,5 +34,8 @@
   "layout_validation": "passed",
   "primary_report_format": "Markdown",
   "primary_report": "report/ECO6067_Empirical_Report.md",
-  "word_status": "local historical version, excluded from public package"
+  "word_status": "local historical version, excluded from public package",
+  "repository_url": "https://github.com/Nemo-lucky/eco6067-minimum-wage-replication",
+  "github_publication": "verified",
+  "github_remote_clone": "passed"
 }

@@ -1,6 +1,8 @@
 # ECO6067 Minimum Wage Replication and Ownership Extension
 
-This project reconstructs Tables 2–4 and Figure 1 of Card and Krueger (1994), then tests whether company-owned and non-company-owned restaurants respond differently. All five stages have been computed, validated and run by the student. The unified workflow also passed a fresh-directory, fresh-virtual-environment validation. The English report has been updated with completed workflow, skill, local-page and download-simulation evidence, and the supplied student details. Student review, real Git history, GitHub access and final submission checks are still pending.
+This project reconstructs Tables 2–4 and Figure 1 of Card and Krueger (1994), then tests whether company-owned and non-company-owned restaurants respond differently. All five stages have been computed, validated and run by the student. The unified workflow also passed a fresh-directory, fresh-virtual-environment validation. The English report has been updated with completed workflow, skill, local-page and download-simulation evidence, and the supplied student details. The public GitHub repository has been published and anonymously cloned; its full workflow passed a remote-clone reproduction check. Student review, authorized teaching-team data access and formal submission remain pending.
+
+Repository URL: [https://github.com/Nemo-lucky/eco6067-minimum-wage-replication](https://github.com/Nemo-lucky/eco6067-minimum-wage-replication)
 
 ## Review the submission
 
@@ -93,7 +95,7 @@ Do not publish restricted course inputs, processed store-level data or course do
 
 ## Remaining delivery work
 
-Review [the Markdown report](report/ECO6067_Empirical_Report.md) and [AI-use disclosure](AI_USE_DISCLOSURE.md), establish real Git commits and an accessible GitHub repository, and verify the teaching team's input access. Do not fabricate earlier commit history. The unified runner generates analytical reports and figures; it does not automatically update the narrative report. The report now documents completed workflow checks; update it again only if methods or delivery status change.
+Review [the Markdown report](report/ECO6067_Empirical_Report.md) and [AI-use disclosure](AI_USE_DISCLOSURE.md), verify the teaching team's input access, and submit the repository URL through the designated channel. Git tracking began after implementation; the initial snapshot and actual subsequent revisions are documented honestly in docs/GITHUB_REVIEW.md. Do not fabricate earlier commit history. The unified runner generates analytical reports and figures; it does not automatically update the narrative report. The report now documents completed workflow checks; update it again only if methods or delivery status change.
 
 Deadline:18 October 2026,23:59 Hong Kong time. Table 1 is not assigned.
 
@@ -107,4 +109,9 @@ After the virtual-environment setup above, run `.\.venv\Scripts\python.exe local
 
 ## Reviewer download simulation
 
-The code archive passed extraction into a fresh directory with bundled results set aside, a new project virtual environment and only the authorized CSV in the documented location. The local browser regenerated all39 outputs; all22 CSVs matched the reviewed run within rtol1e-9/atol1e-10, and three figures were inspected. See docs/teacher_download_validation.json. This tested the same Windows host with a new directory/environment, not a second computer or an actual GitHub clone. Repository access and teaching-team data access remain final delivery checks.
+The code archive passed extraction into a fresh directory with bundled results set aside, a new project virtual environment and only the authorized CSV in the documented location. The local browser regenerated all39 outputs; all22 CSVs matched the reviewed run within rtol1e-9/atol1e-10, and three figures were inspected. See docs/teacher_download_validation.json. This tested the same Windows host with a new directory/environment, not a second computer or an actual GitHub clone. Public repository access is now verified; teaching-team data access remains a final delivery check.
+
+
+## Actual GitHub clone verification
+
+On 6 October 2026 the public repository was cloned with Git credentials and interactive prompts disabled. Using the already validated locked Python environment on the same Windows host, the downloaded code regenerated all 39 outputs; all 22 CSVs matched the reviewed results within rtol=1e-9 and atol=1e-10. Input, source and output integrity checks passed. This remote-clone check is separate from the earlier fresh-environment ZIP simulation. See [saved evidence](docs/github_delivery_validation.json).

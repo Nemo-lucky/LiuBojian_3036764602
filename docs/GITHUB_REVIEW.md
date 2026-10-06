@@ -24,4 +24,4 @@ Git tracking began after the empirical implementation had already been completed
 
 ## Access and submission
 
-The intended teaching-team submission is the repository URL. Raw and store-level data are not included publicly. Confirm authorized input access and any separate private processed-data delivery with the teaching team. Repository publication, anonymous access and actual remote download checks must be verified before claiming these steps complete.
+The intended teaching-team submission is the repository URL. Raw and store-level data are not included publicly. Confirm authorized input access and any separate private processed-data delivery with the teaching team. Repository publication and an anonymous clone followed by complete workflow execution were verified on 6 October 2026. See github_delivery_validation.json. Teaching-team input access and formal submission are still pending.
