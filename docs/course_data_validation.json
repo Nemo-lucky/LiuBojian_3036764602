@@ -1,14 +1,10 @@
 {
   "input": "public.csv",
   "source": "Course Package 01 supplied by student",
-  "checked_at_utc": "2026-10-05T03:04:56.303249+00:00",
+  "checked_at_utc": "2026-10-13T12:23:30.426164+00:00",
   "sha256": "45e6f4ac4928f7c9fcc2585a45e0467ecaa039f0b241f4c5a26cd290fd8e772b",
   "author_archive_comparison": {
-    "same_column_order": true,
-    "same_missing_pattern": true,
-    "same_numeric_values_exactly": true,
-    "raw_rows": 410,
-    "raw_columns": 46
+    "status": "Author archive not present; comparison skipped, course analysis unaffected."
   },
   "state_counts": {
     "NJ": 331,

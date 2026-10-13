@@ -29,7 +29,7 @@
     },
     {
       "path": "AI_USE_DISCLOSURE.md",
-      "sha256": "de9b1e0dee067f57b5c07209d6879f8de363142b85abcf16dc75839ce4e0a30e"
+      "sha256": "2c1fcdce0ed5c3cb829e00f5bb3dad33bf4c40c4e3b12d78f76218ca7821e016"
     },
     {
       "path": "AI技能_中文使用说明.md",
@@ -37,7 +37,7 @@
     },
     {
       "path": "DATA_ACCESS.md",
-      "sha256": "b8a85eb1a79612d98528f35144fd65f011e02392bb301e0d78cf64e9b7d82d67"
+      "sha256": "f2095c68b6490ed1e8c6ad38779e152ed5a6d0a432f1a45521a95e132fe98e31"
     },
     {
       "path": "LOCAL_PAGE.md",
@@ -45,15 +45,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "9447658b14854703d73dd1272903732c871502c14052b389443db065aa56cc68"
+      "sha256": "2409138821c92205562187bc89f628fab4e124f72a86237a42af384485ecfa5e"
     },
     {
       "path": "SUBMISSION_CHECKLIST.md",
-      "sha256": "03db91fa1038f8d121e22a19bae25b8342506fb099fbccea912e3bc79b4374f7"
+      "sha256": "f6f7d36c9cb0cb327c5002412520777c5be1095cad2bcf6fade0bb80661d2e40"
     },
     {
       "path": "docs/AI_USE_LOG.md",
-      "sha256": "c8f91ced61440f78f40d4d6c056bb17afcd8adfab87c6d737f4c49bff842c754"
+      "sha256": "81948e7ea90af423eb74c79928ac2e6085dd20c90a91baafcdd103d01f339305"
     },
     {
       "path": "docs/GITHUB_REVIEW.md",
@@ -72,16 +72,28 @@
       "sha256": "fa1f65046ed00370a0cdeacaf6cbf9cca4a9f21d554a8d8898c40f76f0e16549"
     },
     {
+      "path": "docs/author_data_crosscheck_historical.json",
+      "sha256": "fa8a6f6cb829e025310a2078bff7e7f8347ff436f30ccd68df2556a10599a882"
+    },
+    {
       "path": "docs/clean_reproduction_validation.json",
       "sha256": "dac57626d4d0d7139eb32994a81afe3bb4de005575cc06fa84c5070ba6f047f1"
     },
     {
       "path": "docs/course_data_validation.json",
-      "sha256": "fa8a6f6cb829e025310a2078bff7e7f8347ff436f30ccd68df2556a10599a882"
+      "sha256": "b3bce32aec3851869cb7727724f0c88b14a6d44d3354fdbca8a996b5604eefde"
     },
     {
       "path": "docs/data_provenance.json",
       "sha256": "d9d7614e5662cec180404ca0918b6c59f2ad1b3703a0e42499131b10448f626d"
+    },
+    {
+      "path": "docs/final_content_validation.json",
+      "sha256": "962b56382aa30fb7fdd2c1cb749681da5af8682df7c16be39f5aba7aea0f9945"
+    },
+    {
+      "path": "docs/github_delivery_validation.json",
+      "sha256": "3cdb7e2aa9f290893de0b0ac71ee667dede2094e130a90d8495d355073bfee04"
     },
     {
       "path": "docs/local_page_english_validation.json",
@@ -149,27 +161,27 @@
     },
     {
       "path": "results/extension_ownership_changes.png",
-      "sha256": "bd791efa6609eb63cb832e2641b6ea419d444349b89adf465383ffe5fbdca9bd"
+      "sha256": "68f1521e936f7c3ae49a441ea48986c0db4ca4eeb4fee6dedad4e337a16eeb2d"
     },
     {
       "path": "results/extension_ownership_changes.svg",
-      "sha256": "f5eb0c49cd081f4ae11c04a68010fefc00b1da470a267bca97184d15ca72ce8d"
+      "sha256": "16a9fc021cb55888cb222ae23ae67dd08fc6d939a2e2691f837a4c094a4be3f4"
     },
     {
       "path": "results/extension_ownership_coefficients.csv",
-      "sha256": "251298d26048aad1e1122f0f75c60be0fd09902d57dd5b68213807c9d6bb9d0b"
+      "sha256": "beed19890396884666500c1afc047916ab8c1c10c927c94dc9aaa55d7beadcf0"
     },
     {
       "path": "results/extension_ownership_effects.csv",
-      "sha256": "3233351956e2ff0dc5fe32ab4b38b01b9d58bd501a15545ab44845ccd541271b"
+      "sha256": "3c877fa5a3a9029c0dce54834980a46730389b70189dd14e335dce517b05d241"
     },
     {
       "path": "results/extension_ownership_effects.png",
-      "sha256": "df6fd9444b3067f3c86ee08fede03db38695e0b9e77f8278c85dd08c41ede16d"
+      "sha256": "1b71bb8b45368416311c112f7b6ef7207ca5129fec4ca21fa92657efbcdbeada"
     },
     {
       "path": "results/extension_ownership_effects.svg",
-      "sha256": "e021d5f054840a9149f177d637efc78eb12602c24673d40941632e1fda6d2c28"
+      "sha256": "a79305e89e61966a5b585fc1358dee3d2b741cb323398b66d53bbe4a233449d1"
     },
     {
       "path": "results/extension_ownership_groups.csv",
@@ -185,11 +197,11 @@
     },
     {
       "path": "results/figure1.png",
-      "sha256": "daf0ccebcebf5551d462fc6decca0bc4ee0d46d37013e7410371a10c1fb3234d"
+      "sha256": "ff8397134888d611670e93c0b54e7f900ab0d4462df5adc586e088ebff74967f"
     },
     {
       "path": "results/figure1.svg",
-      "sha256": "10b5d5858dd43d1fda0b02d5d0b94b0e7425fc6c14cc1fca41b9bc04c2efe627"
+      "sha256": "02edc718a65b54c7b6b0bfdfc91538ff2d16b58a373e21eeae5447b11bdfc92e"
     },
     {
       "path": "results/figure1_bin_counts.csv",
@@ -265,19 +277,19 @@
     },
     {
       "path": "results/table4_all_coefficients.csv",
-      "sha256": "63e0885a64a55f5380e423c9987e29bc627c926827bb870088c413b95b2b42a3"
+      "sha256": "3d63a2f483669589ff942629ce31df75c033f254b2341d2ed91ab6675e05eb03"
     },
     {
       "path": "results/table4_audit_cells.csv",
-      "sha256": "51e0654cb5ca699cbbf725d5f9d95622a2b265a64f327d3e33003041dfae6199"
+      "sha256": "d2c796b0152b6ea3f5a97f921679c4d4745dfac2a866b79dfcfab086c941e47e"
     },
     {
       "path": "results/table4_author_sas_comparison.csv",
-      "sha256": "c32009e681a03611378e01f228f201f9473a0420b9e3d27b6997b912de3094d3"
+      "sha256": "36d33ea5fa82871efd3b0443857447b6e3e012003a733f4d81f30614c9ff0aef"
     },
     {
       "path": "results/table4_numeric.csv",
-      "sha256": "eb452d0203c9887155b4d7092704908d8e4f0f829fddf50bdaa910c4763a407f"
+      "sha256": "c552db2bd14e77fc29c0842a735dbdbe11a4023cfbf62a3bbed7c1f5bac35e8a"
     },
     {
       "path": "results/table4_replication.md",
@@ -297,7 +309,7 @@
     },
     {
       "path": "results/workflow_run.json",
-      "sha256": "1ba532f2f9b04a76fe9b14f3a3f36670e01d7a51a9c2c20a0abf20ab2239fe9a"
+      "sha256": "da7cb9a8aa91acdaa24b8e3b71cc3350519ea914c422dd1c723824421cf73bd1"
     },
     {
       "path": "results/workflow_summary.md",
@@ -434,12 +446,11 @@
     {
       "path": "运行拓展A_中文说明.md",
       "sha256": "5e2b710911e38f2da957b10f7d008b0099ff4909cfe0717e3d79b7d42036ab2a"
-    },
-    {
-      "path": "docs/github_delivery_validation.json",
-      "sha256": "3cdb7e2aa9f290893de0b0ac71ee667dede2094e130a90d8495d355073bfee04"
     }
   ],
   "repository_url": "https://github.com/Nemo-lucky/eco6067-minimum-wage-replication",
-  "github_clone_validation": "passed"
+  "github_clone_validation": "passed",
+  "final_content_check": "passed on 2026-10-13",
+  "private_processed_archive": "prepared locally; excluded from public repository",
+  "public_files_count": 108
 }

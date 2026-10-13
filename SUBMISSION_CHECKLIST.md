@@ -26,3 +26,12 @@ Markdown is the primary report format. Previous Word versions are local historic
 
 
 Repository URL: https://github.com/Nemo-lucky/eco6067-minimum-wage-replication
+
+
+## Final content closure — 13 October 2026
+
+- [x] Full workflow rerun, 39 output hashes and input/source checks passed.
+- [x] All22 CSVs match the previously reviewed remote-clone run within documented tolerances.
+- [x] Four final processed datasets packaged locally for private teaching-team delivery; not uploaded publicly.
+
+Content preparation is complete under the previously supplied assignment brief. Student final review and formal submission remain pending. The latest protected course page could not be read without course login.

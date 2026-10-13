@@ -1,11 +1,11 @@
 {
   "status": "success",
-  "started_utc": "2026-10-05T12:17:19.183246+00:00",
+  "started_utc": "2026-10-13T12:23:25.136442+00:00",
   "stages": [
     {
       "name": "Table 2",
       "status": "passed",
-      "seconds": 0.561,
+      "seconds": 0.619,
       "outputs": [
         {
           "path": "results/table2_numeric.csv",
@@ -44,7 +44,7 @@
         },
         {
           "path": "docs/course_data_validation.json",
-          "sha256": "570257f24121b1f800b6b34946baee6d60b08d7a31a488b8ede096cfb58c09f2",
+          "sha256": "b3bce32aec3851869cb7727724f0c88b14a6d44d3354fdbca8a996b5604eefde",
           "bytes": 701
         }
       ]
@@ -52,17 +52,17 @@
     {
       "name": "Figure 1",
       "status": "passed",
-      "seconds": 1.391,
+      "seconds": 2.558,
       "outputs": [
         {
           "path": "results/figure1.png",
-          "sha256": "daf0ccebcebf5551d462fc6decca0bc4ee0d46d37013e7410371a10c1fb3234d",
-          "bytes": 220258
+          "sha256": "ff8397134888d611670e93c0b54e7f900ab0d4462df5adc586e088ebff74967f",
+          "bytes": 212257
         },
         {
           "path": "results/figure1.svg",
-          "sha256": "10b5d5858dd43d1fda0b02d5d0b94b0e7425fc6c14cc1fca41b9bc04c2efe627",
-          "bytes": 42737
+          "sha256": "02edc718a65b54c7b6b0bfdfc91538ff2d16b58a373e21eeae5447b11bdfc92e",
+          "bytes": 42733
         },
         {
           "path": "results/figure1_bin_counts.csv",
@@ -89,7 +89,7 @@
     {
       "name": "Table 3",
       "status": "passed",
-      "seconds": 0.575,
+      "seconds": 0.602,
       "outputs": [
         {
           "path": "results/table3_numeric.csv",
@@ -126,27 +126,27 @@
     {
       "name": "Table 4",
       "status": "passed",
-      "seconds": 1.99,
+      "seconds": 7.414,
       "outputs": [
         {
           "path": "results/table4_numeric.csv",
-          "sha256": "eb452d0203c9887155b4d7092704908d8e4f0f829fddf50bdaa910c4763a407f",
-          "bytes": 897
+          "sha256": "c552db2bd14e77fc29c0842a735dbdbe11a4023cfbf62a3bbed7c1f5bac35e8a",
+          "bytes": 894
         },
         {
           "path": "results/table4_all_coefficients.csv",
-          "sha256": "63e0885a64a55f5380e423c9987e29bc627c926827bb870088c413b95b2b42a3",
-          "bytes": 1262
+          "sha256": "3d63a2f483669589ff942629ce31df75c033f254b2341d2ed91ab6675e05eb03",
+          "bytes": 1263
         },
         {
           "path": "results/table4_audit_cells.csv",
-          "sha256": "51e0654cb5ca699cbbf725d5f9d95622a2b265a64f327d3e33003041dfae6199",
+          "sha256": "d2c796b0152b6ea3f5a97f921679c4d4745dfac2a866b79dfcfab086c941e47e",
           "bytes": 796
         },
         {
           "path": "results/table4_author_sas_comparison.csv",
-          "sha256": "c32009e681a03611378e01f228f201f9473a0420b9e3d27b6997b912de3094d3",
-          "bytes": 285
+          "sha256": "36d33ea5fa82871efd3b0443857447b6e3e012003a733f4d81f30614c9ff0aef",
+          "bytes": 284
         },
         {
           "path": "results/table4_sample_flow.csv",
@@ -173,12 +173,12 @@
     {
       "name": "Ownership extension",
       "status": "passed",
-      "seconds": 2.382,
+      "seconds": 2.144,
       "outputs": [
         {
           "path": "results/extension_ownership_effects.csv",
-          "sha256": "3233351956e2ff0dc5fe32ab4b38b01b9d58bd501a15545ab44845ccd541271b",
-          "bytes": 2498
+          "sha256": "3c877fa5a3a9029c0dce54834980a46730389b70189dd14e335dce517b05d241",
+          "bytes": 2501
         },
         {
           "path": "results/extension_ownership_groups.csv",
@@ -187,8 +187,8 @@
         },
         {
           "path": "results/extension_ownership_coefficients.csv",
-          "sha256": "251298d26048aad1e1122f0f75c60be0fd09902d57dd5b68213807c9d6bb9d0b",
-          "bytes": 2380
+          "sha256": "beed19890396884666500c1afc047916ab8c1c10c927c94dc9aaa55d7beadcf0",
+          "bytes": 2381
         },
         {
           "path": "results/extension_ownership_brand_counts.csv",
@@ -197,23 +197,23 @@
         },
         {
           "path": "results/extension_ownership_changes.png",
-          "sha256": "bd791efa6609eb63cb832e2641b6ea419d444349b89adf465383ffe5fbdca9bd",
-          "bytes": 47905
+          "sha256": "68f1521e936f7c3ae49a441ea48986c0db4ca4eeb4fee6dedad4e337a16eeb2d",
+          "bytes": 43752
         },
         {
           "path": "results/extension_ownership_changes.svg",
-          "sha256": "f5eb0c49cd081f4ae11c04a68010fefc00b1da470a267bca97184d15ca72ce8d",
-          "bytes": 34753
+          "sha256": "16a9fc021cb55888cb222ae23ae67dd08fc6d939a2e2691f837a4c094a4be3f4",
+          "bytes": 34713
         },
         {
           "path": "results/extension_ownership_effects.png",
-          "sha256": "df6fd9444b3067f3c86ee08fede03db38695e0b9e77f8278c85dd08c41ede16d",
-          "bytes": 47338
+          "sha256": "1b71bb8b45368416311c112f7b6ef7207ca5129fec4ca21fa92657efbcdbeada",
+          "bytes": 47211
         },
         {
           "path": "results/extension_ownership_effects.svg",
-          "sha256": "e021d5f054840a9149f177d637efc78eb12602c24673d40941632e1fda6d2c28",
-          "bytes": 39467
+          "sha256": "a79305e89e61966a5b585fc1358dee3d2b741cb323398b66d53bbe4a233449d1",
+          "bytes": 39800
         },
         {
           "path": "results/extension_ownership_validation.json",
@@ -244,10 +244,10 @@
     "python": "3.12.3",
     "platform": "Windows-10-10.0.19045-SP0",
     "packages": {
-      "pandas": "2.3.3",
-      "numpy": "2.4.1",
-      "matplotlib": "3.10.8",
-      "scipy": "1.17.0"
+      "pandas": "3.0.6",
+      "numpy": "2.5.3",
+      "matplotlib": "3.11.2",
+      "scipy": "1.18.1"
     }
   },
   "source_sha256": {
@@ -260,7 +260,7 @@
     "src/audit_table2.py": "15c4aceb88e02c37816131b11483f49d0a57e3110dd5e0dfe077ad6540e66526",
     "run_all.py": "abeb824504d55394fb6b84535d6f7a867f66fe47b3c85c8f38491ff6b6de1cdb"
   },
-  "finished_utc": "2026-10-05T12:17:26.606477+00:00",
+  "finished_utc": "2026-10-13T12:23:43.269267+00:00",
   "raw_input_unchanged": true,
   "generated_output_count": 39,
   "original_publication_exact_match": false,

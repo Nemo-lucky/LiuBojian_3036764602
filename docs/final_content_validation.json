@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "date_hong_kong": "2026-10-13",
+  "basis": "previously supplied assignment Draft v3; latest password-protected course page not revalidated",
+  "existing_run_issue": "final sync replaced a declared validation output and made the previous manifest stale; resolved by full rerun",
+  "full_workflow": {
+    "status": "verified",
+    "mode": "read_only_existing_full_run",
+    "files_hash_checked": 39,
+    "analytical_sources_hash_checked": true,
+    "recorded_input_unchanged": true,
+    "current_input_hash_checked": true,
+    "run_finished_utc": "2026-10-13T12:23:43.269267+00:00",
+    "environment": {
+      "python": "3.12.3",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "packages": {
+        "pandas": "3.0.6",
+        "numpy": "2.5.3",
+        "matplotlib": "3.11.2",
+        "scipy": "1.18.1"
+      }
+    },
+    "paired_did": {
+      "estimate": 2.75,
+      "se": 1.342340976908276
+    },
+    "table4_n": 357,
+    "table4_nj_no_controls": {
+      "estimate": 2.325831188883181,
+      "se": 1.1915962776999331
+    },
+    "table4_nj_controls": {
+      "estimate": 2.3038595094333267,
+      "se": 1.1955324787616048
+    },
+    "primary_ownership_difference": {
+      "estimate": -0.942366769636494,
+      "se_hc3": 2.6407215698346542,
+      "ci95_low": -6.136045535494455,
+      "ci95_high": 4.251311996221467,
+      "p": 0.7214119875433538
+    },
+    "publication_audits_from_current_csvs": {
+      "Table 2": {
+        "matched": 82,
+        "checked": 88
+      },
+      "Table 3": {
+        "matched": 66,
+        "checked": 80
+      },
+      "Table 4": {
+        "matched": 16,
+        "checked": 18
+      }
+    },
+    "interpretation": "Insufficient evidence of ownership difference",
+    "limitations": [
+      "Only two states; HC3 does not handle arbitrary state-level dependence.",
+      "Publication discrepancies remain; exact original Figure 1 bars unverified.",
+      "Integrity checks do not establish causal assumptions."
+    ]
+  },
+  "csv_comparison_to_20261006_remote_clone": {
+    "count": 22,
+    "rtol": 1e-09,
+    "atol": 1e-10,
+    "passed": true
+  },
+  "processed_files": [
+    {
+      "filename": "course_analysis.csv",
+      "rows": 410,
+      "columns": 54,
+      "sha256": "69eeb676e4d65cc9172457f3d2d1b8f2ecb3598009163225743e22ff3f25335b"
+    },
+    {
+      "filename": "table3_analysis.csv",
+      "rows": 410,
+      "columns": 63,
+      "sha256": "dbc8c9f7fbaf26045d25b3896e8134c4b34aa14fb7639a31ad0af0e6bbf6697d"
+    },
+    {
+      "filename": "table4_analysis.csv",
+      "rows": 410,
+      "columns": 61,
+      "sha256": "8bb8037f6624e6a56a699db0d6f4192a83a6414ed7b2d1ced5579b0876856180"
+    },
+    {
+      "filename": "extension_ownership_analysis.csv",
+      "rows": 410,
+      "columns": 61,
+      "sha256": "c15248fb043f7b7c3b5ad3a87cf6d97b935682439691d7a057b772631b5195bc"
+    }
+  ],
+  "private_archive_prepared": true,
+  "private_archive_uploaded": false,
+  "student_final_review": "pending",
+  "formal_submission": "deferred at student request",
+  "git_history_limitation": "Git tracking began after implementation; no earlier history fabricated"
+}

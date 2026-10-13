@@ -115,3 +115,8 @@ The code archive passed extraction into a fresh directory with bundled results s
 ## Actual GitHub clone verification
 
 On 6 October 2026 the public repository was cloned with Git credentials and interactive prompts disabled. Using the already validated locked Python environment on the same Windows host, the downloaded code regenerated all 39 outputs; all 22 CSVs matched the reviewed results within rtol=1e-9 and atol=1e-10. Input, source and output integrity checks passed. This remote-clone check is separate from the earlier fresh-environment ZIP simulation. See [saved evidence](docs/github_delivery_validation.json).
+
+
+## Final content check — 13 October 2026
+
+All five stages were rerun and the full integrity helper passed after refreshing a validation file made stale by synchronization. All22 CSVs match the earlier remote-clone check within the documented tolerances. The four final processed datasets are prepared in a local private archive for authorized teaching-team delivery. See [final validation](docs/final_content_validation.json). Student review and formal submission remain pending. Historical author-data crosschecking is preserved in docs/author_data_crosscheck_historical.json; the current validation file records the current course-input run.

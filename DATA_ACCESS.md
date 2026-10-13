@@ -40,3 +40,8 @@ These files derive from restricted course inputs and are excluded from the publi
 The assignment requests the processed data used in the final analysis. Generation instructions document them but do not claim a separate transfer has already happened. Reviewers with authorized Package 01 access can reproduce all four files. If a separate processed-data submission is required, provide these four generated files directly through an authorized teaching-team channel; do not place them in a public GitHub repository. Confirm the team's input access and delivery arrangement before submission. No private transfer or access verification has yet been completed.
 
 The optional author-hosted archive was acquired independently for a source comparison. See `docs/data_provenance.json`. It is not a substitute for the documented course input and is not bundled in the public package.
+
+
+## Local processed-data package prepared
+
+On 13 October 2026 the four final processed datasets were packaged locally in ECO6067_Processed_Data_PRIVATE.zip with row counts and SHA-256 hashes. The archive is excluded from public distribution and has not been transferred to the teaching team. A full final rerun and integrity check passed; see docs/final_content_validation.json. The authorized private delivery channel remains to be confirmed.

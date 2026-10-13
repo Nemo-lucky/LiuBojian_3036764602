@@ -14,7 +14,7 @@ The student chose the minimum-wage topic, Python and the ownership extension; ra
 
 | Area | Check and evidence |
 |---|---|
-| Data and samples | Course CSV compared with parsed author data: all 410 × 46 numeric values and missing positions matched. Identifiers, closure codes and sample counts were checked. See `docs/course_data_validation.json` and `docs/data_provenance.json`. |
+| Data and samples | Course CSV compared with parsed author data: all 410 × 46 numeric values and missing positions matched. Identifiers, closure codes and sample counts were checked. See `docs/author_data_crosscheck_historical.json` and `docs/data_provenance.json`; the current course-input run has its own `docs/course_data_validation.json`. |
 | Core replication | Published means, SEs and other printed values were audited at their displayed precision. All remaining differences are preserved in `results/table2_audit_cells.csv`, `table3_audit_cells.csv` and `table4_audit_cells.csv`. |
 | Independent calculations | Table 3 checked against alternative OLS representations; Table 4 OLS and joint tests checked through QR and Wald calculations; extension HC3 covariance and contrasts checked independently. See stage validation JSON files in `results/`. |
 | Figures and writing | Generated figures and the prior Word rendering were visually inspected. The current Markdown report retains the reviewed scientific content; its image and internal file links are checked. |
