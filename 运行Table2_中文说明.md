@@ -7,19 +7,19 @@
 
 | 文件 | 作用 |
 |---|---|
-| `run_table2.py` | 一键运行入口 |
-| `src/course_data.py` | 读取原始 CSV、检查数据、构造 FTE 和餐价等变量 |
+| `code/run_table2.py` | 一键运行入口 |
+| `code/src/course_data.py` | 读取原始 CSV、检查数据、构造 FTE 和餐价等变量 |
 | `src/02_table2.py` | 分州计算均值、标准误、t 统计量，输出原文对照与分母检查 |
 | `src/audit_table2.py` | 逐项核对原文均值、标准误和 t，记录差异与口径诊断 |
 | `requirements.txt` | 需要安装的 Python 库 |
 
 ## 输入文件位置
 
-把原来的 `01_DID` 文件夹放在 `run_table2.py` 旁边，保留内部文件名和结构：
+把原来的 `01_DID` 文件夹放在 `code/run_table2.py` 旁边，保留内部文件名和结构：
 
 ```text
 项目文件夹/
-  run_table2.py
+  code/run_table2.py
   requirements.txt
   src/
     course_data.py
@@ -44,7 +44,7 @@ python -m pip install -r requirements.txt
 然后运行：
 
 ```powershell
-python run_table2.py
+python code/run_table2.py
 ```
 
 若 Windows 的 Python 命令名是 `py`，将上述两条命令开头的 `python` 换成 `py`。
@@ -52,12 +52,12 @@ python run_table2.py
 也可以直接读取桌面上的原始 CSV，无需复制：
 
 ```powershell
-python run_table2.py --data "C:\Users\ber寨\Desktop\01_DID\data\public.csv"
+python code/run_table2.py --data "C:\Users\ber寨\Desktop\01_DID\data\public.csv"
 ```
 
 `--data` 后填写 CSV 文件的完整路径，不是 `01_DID` 文件夹路径。程序只读取输入，结果仍生成在代码项目的 `results` 文件夹中。
 
-在 VS Code 中选择“文件 → 打开文件夹”，打开包含 `run_table2.py` 的项目文件夹，再选择“终端 → 新建终端”，执行上面的命令。不能只复制某一行循环，也不要把这些终端命令粘贴进 Python 的 `>>>` 提示符。
+在 VS Code 中选择“文件 → 打开文件夹”，打开包含 `code/run_table2.py` 的项目文件夹，再选择“终端 → 新建终端”，执行上面的命令。不能只复制某一行循环，也不要把这些终端命令粘贴进 Python 的 `>>>` 提示符。
 
 ## 计算过程
 
@@ -74,10 +74,10 @@ python run_table2.py --data "C:\Users\ber寨\Desktop\01_DID\data\public.csv"
 
 ## 生成的结果
 
-- `results/table2_replication.md`：可阅读的表格、原文对照、计算口径和差异记录。
-- `results/table2_numeric.csv`：完整精度的均值、标准误、t 与各项有效样本数。
-- `results/table2_wage_denominators.csv`：工资比例在不同分母下的对照。
+- `outputs/tables/table2_replication.md`：可阅读的表格、原文对照、计算口径和差异记录。
+- `outputs/tables/table2_numeric.csv`：完整精度的均值、标准误、t 与各项有效样本数。
+- `outputs/tables/table2_wage_denominators.csv`：工资比例在不同分母下的对照。
 - `docs/course_data_validation.json`：输入文件校验值、样本检查；若作者原始数据存在，额外比较两份数据。
 - `data/processed/course_analysis.csv`：带派生变量的分析数据，仅供本地使用，不放入公开 GitHub。
 
-完整核对覆盖原文的 88 个已发表数值，82 个在显示精度下一致。差异为 1 处均值、1 处标准误和 4 处 t，详见 `results/table2_audit_中文.md`。诊断发现一条装修店记录可以解释均值和标准误差异，但不能确认原文实际采用该处理，4 处 t 的差异也未完全解释。代码保留基准结果，不通过改动数据强行匹配原文。
+完整核对覆盖原文的 88 个已发表数值，82 个在显示精度下一致。差异为 1 处均值、1 处标准误和 4 处 t，详见 `outputs/tables/table2_audit_中文.md`。诊断发现一条装修店记录可以解释均值和标准误差异，但不能确认原文实际采用该处理，4 处 t 的差异也未完全解释。代码保留基准结果，不通过改动数据强行匹配原文。

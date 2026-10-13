@@ -3,14 +3,14 @@
 在桌面 `01_DID/Table2_Python` 项目终端运行：
 
 ```powershell
-python run_extension.py --data "..\data\public.csv"
+python code/run_extension.py --data "..\data\public.csv"
 ```
 
 使用现有requirements.txt里的pandas、numpy、scipy、matplotlib，不需要额外下载数据。
 主结果是 `NJ_brands_primary`：357家餐厅，直营店效果减加盟店效果约−0.942，HC3标准误约2.641，近似p值约0.721。
 这表示没有足够证据确认所有权分组的效果不同，不是证明差异为零。
 
-打开 `results/extension_ownership_report.md`，按Ctrl+Shift+V查看中文说明、分组表和两张图。
+打开 `outputs/tables/extension_ownership_report.md`，按Ctrl+Shift+V查看中文说明、分组表和两张图。
 主回归：就业变化 = 截距 + NJ + 直营店 + NJ×直营店 + 品牌控制。
 其中NJ×直营店的系数才是直接检验两类店差异的关键。
 

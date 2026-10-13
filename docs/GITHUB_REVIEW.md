@@ -9,10 +9,10 @@ Use the repository's **Code → Download ZIP** action and extract it, or clone t
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
-.\.venv\Scripts\python.exe run_all.py --data "01_DID\data\public.csv"
+.\.venv\Scripts\python.exe code/run_all.py --data "01_DID\data\public.csv"
 ```
 
-For the clickable interface, start `.\.venv\Scripts\python.exe local_app.py` and visit the local address printed in that terminal. The GitHub repository hosts files; it does not itself execute the Python analysis or host the local browser page.
+For the clickable interface, start `.\.venv\Scripts\python.exe code/local_app.py` and visit the local address printed in that terminal. The GitHub repository hosts files; it does not itself execute the Python analysis or host the local browser page.
 
 Run the workflow before checking its manifest in a new checkout. Four required processed datasets are intentionally excluded from public distribution and must be regenerated from authorized inputs. Bundled workflow records retain the paths and environment of their original run and are historical evidence, not a claim that the new checkout has already been run.
 

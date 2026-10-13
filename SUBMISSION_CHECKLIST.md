@@ -1,37 +1,24 @@
 # Submission checklist
 
-Student: **Liu Bojian — 3036764602**  
-Deadline: **18 October 2026, 23:59 Hong Kong time**
+Student and sole student author: **Liu Bojian — 3036764602**.
 
-## Prepared for review
+## This local revision
 
-- [x] English empirical report in [Markdown](report/ECO6067_Empirical_Report.md): research question, data and variables, design, Tables 2–4, Figure 1, ownership extension, differences, validation and limitations.
-- [x] Complete analytical code, dependency ranges and tested version lock.
-- [x] README with input layout and one-command execution; English local-page guide.
-- [x] Reusable AI skill and integrity helper; local browser interface.
-- [x] Aggregate tables, plots, audits and saved validation evidence.
-- [x] Separate [AI-use disclosure](AI_USE_DISCLOSURE.md), with uses, checks and rejected/corrected outputs.
-- [x] [Data-access instructions](DATA_ACCESS.md), final processed-data inventory and public-data exclusion checks.
+- [x] Teacher-example layout: code/, data/raw/, data/processed/, outputs/tables/, outputs/figures/, skills/SKILL.md.
+- [x] English report in root report.pdf, with editable Markdown source.
+- [x] AI_USE_DISCLOSURE.md and reusable skill included.
+- [x] code/run_all.py completes five stages, regenerates 39 outputs and preserves input data.
+- [x] New-layout numeric comparisons and integrity checks recorded in docs/layout_validation.json.
+- [x] Restricted raw and processed data excluded from the public delivery ZIP.
 
-## Still to complete
+## Remaining delivery tasks
 
-- [ ] Student reviews and understands the final report and disclosure.
-- [x] Actual Git commits established from the verified snapshot and subsequent real revisions. Git was not used throughout earlier implementation; no earlier history was fabricated.
-- [x] Public repository published; anonymous clone and reviewer access verified.
-- [x] Actual remote clone tested: five stages, 39 regenerated outputs, 22 CSV comparisons and integrity checks passed. Same host and previously validated locked environment.
-- [ ] Confirm authorized teaching-team input access and whether the four processed files need separate private delivery.
-- [ ] Submit the repository URL through the teaching team's designated channel.
+- [ ] Student final review of report and AI disclosure.
+- [x] Rename the repository to LiuBojian_3036764602 and update current links.
+- [ ] Publish this reorganized revision and PDF, then verify remote file access.
+- [ ] Confirm authorized teaching-team data access.
+- [ ] Email the final repository URL to both xiongyan2224@gmail.com and 7chenjeff7@gmail.com, as stated in the teacher's email.
 
-Markdown is the primary report format. Previous Word versions are local historical material and are excluded from the public delivery archive. A PDF can be generated from the approved Markdown later if requested. GitHub can render the Markdown report and its relative figure links directly.
+The teacher's email separately asks for xiongyan2224 and Jeff7c to be added as GitHub collaborators. No invitations were sent in this step; the user specified no other collaborators. GitHub access permissions are distinct from academic authorship. Resolve this delivery requirement before final submission without adding coauthors to the report.
 
-
-Repository URL: https://github.com/Nemo-lucky/eco6067-minimum-wage-replication
-
-
-## Final content closure — 13 October 2026
-
-- [x] Full workflow rerun, 39 output hashes and input/source checks passed.
-- [x] All22 CSVs match the previously reviewed remote-clone run within documented tolerances.
-- [x] Four final processed datasets packaged locally for private teaching-team delivery; not uploaded publicly.
-
-Content preparation is complete under the previously supplied assignment brief. Student final review and formal submission remain pending. The latest protected course page could not be read without course login.
+The PDF is the submission report; Markdown is its maintained source. Historical validation JSON files describe the layouts actually tested at those dates. The current layout has its own validation record.

@@ -2,7 +2,7 @@
 
 ## Purpose and scope
 
-Reconstruct Card and Krueger Tables 2–4 and Figure 1, then test restaurant ownership heterogeneity. `run_all.py` is a reusable command-line workflow, not an installed AI skill. It generates analytical results and stage reports; it does not regenerate or edit the narrative Word report.
+Reconstruct Card and Krueger Tables 2–4 and Figure 1, then test restaurant ownership heterogeneity. `code/run_all.py` is a reusable command-line workflow, not an installed AI skill. It generates analytical results and stage reports; it does not regenerate or edit the narrative report.
 
 ## Input contract
 
@@ -19,7 +19,7 @@ Windows PowerShell, from the project directory:
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
-.\.venv\Scripts\python.exe run_all.py --data "01_DID\data\public.csv"
+.\.venv\Scripts\python.exe code/run_all.py --data "01_DID\data\public.csv"
 ```
 
 `requirements.txt` provides compatible version ranges. `requirements-lock.txt` pins the versions installed in the successful clean validation, including transitive dependencies. Installing into a new virtual environment avoids relying on the student's existing packages. Activation is optional, and no change to PowerShell execution policy is required.
@@ -40,7 +40,7 @@ The input loader verifies dimensions, required variables, category codes, nonneg
 
 Before analysis, the workflow checks the interpreter, package versions, CSV validity and SHA-256 checksum. It runs each stage with the same interpreter and records its detailed output in local `logs/workflow.log`.
 
-A stage must exit successfully and regenerate every declared nonempty output. The first failure stops the workflow with a nonzero exit status. `results/workflow_run.json` and `workflow_summary.md` are marked failed so that an old success cannot be mistaken for the current attempt. Already completed output files may remain after a failure; they are not evidence of full completion.
+A stage must exit successfully and regenerate every declared nonempty output. The first failure stops the workflow with a nonzero exit status. `outputs/tables/workflow_run.json` and `workflow_summary.md` are marked failed so that an old success cannot be mistaken for the current attempt. Already completed output files may remain after a failure; they are not evidence of full completion.
 
 On success, all stage validations pass, all declared files are regenerated and the raw input checksum is unchanged. The run manifest records environment versions, source hashes and output hashes. Original-publication mismatches are still disclosed: Table 2 82/88, Table 3 66/80, Table 4 16/18; exact Figure 1 bars are unverified. This status does not certify causal identification.
 
@@ -56,8 +56,8 @@ Before submission, confirm the teaching team can access the required input and G
 
 ## Companion AI skill
 
-`skills/minimum-wage-replication/SKILL.md` adds natural-language task routing, input resolution, execution, integrity verification and interpretation around this runner. The root Chinese skill guide explains personal installation and usage. The runner remains the deterministic analytical engine.
+`skills/SKILL.md` adds natural-language task routing, input resolution, execution, integrity verification and interpretation around this runner. The root Chinese skill guide explains personal installation and usage. The runner remains the deterministic analytical engine.
 
 ## Local operation page
 
-Run `python local_app.py` or the Windows launcher to open the Chinese local interface. It reuses this analytical workflow and the packaged skill integrity helper. Choosing a CSV keeps a local copy under ignored logs/ui_inputs. The page exposes aggregate results only and requires no AI account. Failure and changed inputs do not display prior results as a newly verified success. See the root Chinese page guide and docs/local_page_validation.json.
+Run `python code/local_app.py` or the Windows launcher to open the Chinese local interface. It reuses this analytical workflow and the packaged skill integrity helper. Choosing a CSV keeps a local copy under ignored logs/ui_inputs. The page exposes aggregate results only and requires no AI account. Failure and changed inputs do not display prior results as a newly verified success. See the root Chinese page guide and docs/local_page_validation.json.

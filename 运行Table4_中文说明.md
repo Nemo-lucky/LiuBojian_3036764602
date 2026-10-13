@@ -4,7 +4,7 @@
 
 ```powershell
 python -m pip install -r requirements.txt
-python run_table4.py --data "..\data\public.csv"
+python code/run_table4.py --data "..\data\public.csv"
 ```
 
 这次新增 scipy 依赖，用于系数显著性和联合 F 检验。安装完成后再运行第二行。
@@ -12,12 +12,12 @@ python run_table4.py --data "..\data\public.csv"
 预期五组都使用357家餐厅，系数依次约为2.33、2.30、15.65、14.92、11.98。
 验证文件中的 published_matches 为16，published_numeric_cells为18。
 
-打开 `results/table4_replication.md`，按 Ctrl+Shift+V 查看表格及中文解释。
-`results/table4_numeric.csv` 保存未四舍五入的主要结果；
-`results/table4_all_coefficients.csv` 包含全部控制变量和截距系数；
-`results/table4_sample_flow.csv` 是样本筛选计数；
-`results/table4_audit_cells.csv` 逐格核对原文；
-`results/table4_author_sas_comparison.csv` 单独保存作者程序第五组未加入所有权的结果。
+打开 `outputs/tables/table4_replication.md`，按 Ctrl+Shift+V 查看表格及中文解释。
+`outputs/tables/table4_numeric.csv` 保存未四舍五入的主要结果；
+`outputs/tables/table4_all_coefficients.csv` 包含全部控制变量和截距系数；
+`outputs/tables/table4_sample_flow.csv` 是样本筛选计数；
+`outputs/tables/table4_audit_cells.csv` 逐格核对原文；
+`outputs/tables/table4_author_sas_comparison.csv` 单独保存作者程序第五组未加入所有权的结果。
 
 第五组主结果按论文表注含所有权，不能为匹配原文而隐瞒控制设定。
 作者程序对照能匹配11.91 (7.39)，但其残差标准差8.74仍与原表8.75不同。

@@ -8,7 +8,7 @@ Keep `01_DID`, `data` and `public.csv` unchanged. In the repository folder, use 
 
 ```text
 project/
-  run_all.py
+  code/run_all.py
   01_DID/
     data/
       public.csv
@@ -21,7 +21,7 @@ The checked input has 410 restaurants and 46 columns; its SHA-256 is `45e6f4ac49
 After installing the dependencies described in README, run:
 
 ```powershell
-.\.venv\Scripts\python.exe run_all.py --data "01_DID\data\public.csv"
+.\.venv\Scripts\python.exe code/run_all.py --data "01_DID\data\public.csv"
 ```
 
 The workflow regenerates these four **store-level** files under `data/processed/`:

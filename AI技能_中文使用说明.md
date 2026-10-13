@@ -34,7 +34,7 @@ skill不负责重新编写回归算法，也不会自动提交GitHub或改写Wor
 
 ## 文件在哪里
 
-项目内用于提交和分享的技能文件夹是 `skills/minimum-wage-replication/`：
+项目内用于提交和分享的技能文件夹是 `skills/`：
 
 ```text
 minimum-wage-replication/
@@ -46,14 +46,14 @@ minimum-wage-replication/
 
 SKILL.md是AI执行说明；agents/openai.yaml是显示名称和默认提示；interpretation.md是样本、差异与解释规则；summarize_run.py只读检查现有完整运行并提取数值。
 
-本机使用副本放在个人技能目录 `~/.agents/skills/minimum-wage-replication/`。
+本机使用副本放在个人技能目录 `~/.agents/skills/`。
 技能单独不包含整个分析项目。别人需要项目代码、获准使用的数据、Python依赖和支持技能的AI环境。
 
 ## 怎么验证
 
 显式调用后，观察AI是否读取该SKILL.md、执行正确操作并给出真实输出。一个只说“我会使用技能”的回复不构成运行验证。
 
-完整运行后，AI会读取results/workflow_run.json，并使用技能内的summarize_run.py。其成功输出包含：
+完整运行后，AI会读取outputs/tables/workflow_run.json，并使用技能内的summarize_run.py。其成功输出包含：
 
 - status为verified；
 - files_hash_checked为39；
@@ -70,7 +70,7 @@ SKILL.md是AI执行说明；agents/openai.yaml是显示名称和默认提示；i
 
 ## 其他人如何使用
 
-将项目中 `skills/minimum-wage-replication` 整个文件夹复制到自己的 `~/.agents/skills/`；或者在自己的Codex项目中放到 `.agents/skills/`，供项目内发现。两种方法选择一种，避免同名技能重复显示。确保AI有权限访问本地项目和输入。
+将项目中 `skills` 整个文件夹复制到自己的 `~/.agents/skills/`；或者在自己的Codex项目中放到 `.agents/skills/`，供项目内发现。两种方法选择一种，避免同名技能重复显示。确保AI有权限访问本地项目和输入。
 
 若不使用Codex，也可以在支持读取Agent Skills的工具中使用，或直接让可运行本地代码的AI阅读SKILL.md后遵循。普通网页聊天没有本地文件/终端权限时，不能自动执行你的电脑代码，仍可以走README中的Python命令入口。
 

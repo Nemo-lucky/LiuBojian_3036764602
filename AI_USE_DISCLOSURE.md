@@ -15,8 +15,8 @@ The student chose the minimum-wage topic, Python and the ownership extension; ra
 | Area | Check and evidence |
 |---|---|
 | Data and samples | Course CSV compared with parsed author data: all 410 × 46 numeric values and missing positions matched. Identifiers, closure codes and sample counts were checked. See `docs/author_data_crosscheck_historical.json` and `docs/data_provenance.json`; the current course-input run has its own `docs/course_data_validation.json`. |
-| Core replication | Published means, SEs and other printed values were audited at their displayed precision. All remaining differences are preserved in `results/table2_audit_cells.csv`, `table3_audit_cells.csv` and `table4_audit_cells.csv`. |
-| Independent calculations | Table 3 checked against alternative OLS representations; Table 4 OLS and joint tests checked through QR and Wald calculations; extension HC3 covariance and contrasts checked independently. See stage validation JSON files in `results/`. |
+| Core replication | Published means, SEs and other printed values were audited at their displayed precision. All remaining differences are preserved in `outputs/tables/table2_audit_cells.csv`, `table3_audit_cells.csv` and `table4_audit_cells.csv`. |
+| Independent calculations | Table 3 checked against alternative OLS representations; Table 4 OLS and joint tests checked through QR and Wald calculations; extension HC3 covariance and contrasts checked independently. See stage validation JSON files in `outputs/tables/`. |
 | Figures and writing | Generated figures and the prior Word rendering were visually inspected. The current Markdown report retains the reviewed scientific content; its image and internal file links are checked. |
 | Reproducibility | Five stages regenerated 39 outputs. Fresh-directory and fresh-environment runs compared 22 CSVs within documented tolerances. Input, code and output hashes were verified. See `docs/clean_reproduction_validation.json` and `docs/teacher_download_validation.json`. |
 | Skill and local page | Explicit skill invocation, result verification, browser execution and English result display were tested. Evidence is in the corresponding validation JSON files under `docs/`. |
@@ -35,4 +35,8 @@ The fresh-environment tests used the same Windows host, not a second computer or
 
 ## Current status and supporting records
 
-The narrative report is [Markdown](report/ECO6067_Empirical_Report.md). The detailed chronological record is [AI_USE_LOG.md](docs/AI_USE_LOG.md); earlier pending statements in that historical log refer to those stages, not current completion status. Review [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for current delivery tasks. GitHub publication and anonymous remote-clone reproduction have now been verified; see docs/github_delivery_validation.json. Git tracking began after implementation, without fabricated historical stages. Teaching-team restricted-data access and formal submission remain pending.
+The submission report is [PDF](report.pdf), maintained from [Markdown](report/ECO6067_Empirical_Report.md). Liu Bojian is the sole student author. The detailed chronological record is [AI_USE_LOG.md](docs/AI_USE_LOG.md); earlier pending statements in that historical log refer to those stages, not current completion status. Review [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for current delivery tasks. GitHub publication and anonymous remote-clone reproduction have now been verified; see docs/github_delivery_validation.json. Git tracking began after implementation, without fabricated historical stages. Teaching-team restricted-data access and formal submission remain pending.
+
+## Directory and PDF revision — 13 October 2026
+
+AI assisted with adapting paths to the teacher-example layout, regenerating the PDF and testing the relocated entry point. The statistical models and sample rules were preserved; numeric outputs were compared with the reviewed run. PDF pages were rendered and visually reviewed. No collaborator invitations or submission emails were sent in this step.

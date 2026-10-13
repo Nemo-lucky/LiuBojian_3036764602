@@ -2,7 +2,7 @@
 
 Replication of Card and Krueger 1994 and an exploratory ownership extension
 
-ECO6067 individual project | 5 October 2026
+ECO6067 individual project | Revised 13 October 2026
 
 Liu Bojian    Student ID 3036764602
 
@@ -106,7 +106,7 @@ One renovation record reports a $5.05 wage. A diagnostic exclusion from the indi
 
 The distribution plot shows the wage shift in New Jersey after the policy. It uses valid wages separately in each state and wave: NJ314 and PA76 before; NJ318 and PA71 after. Bars represent ten-cent intervals with inclusive lower boundaries and a final pooled tail at $5.50 or above. The two panels retain different vertical scales to show the concentration after the policy.
 
-![Figure 1. Reconstructed starting-wage distributions. Exact original bin endpoints and individual bar percentages are not verified.](../results/figure1.png)
+![Figure 1. Reconstructed starting-wage distributions. Exact original bin endpoints and individual bar percentages are not verified.](../outputs/figures/figure1.png)
 
 After the policy, 284 of 318 valid NJ wages lie in [5.00, 5.10), or 89.31%. This is different from Table 2’s 283/331 = 85.5% exactly at $5.05: both the interval definition and the denominator differ. Each distribution sums to 100%, and interval counts are checked independently. The figure’s qualitative wage shift is reproduced, while precise original bars remain unverified.
 
@@ -183,7 +183,7 @@ With brand controls, the ownership difference is −0.94 FTE (HC3 SE 2.64; appro
 
 ### Ownership results and sensitivity checks
 
-![Figure 2. Ownership-specific state contrasts and their difference with store-level HC3 approximate 95% intervals.](../results/extension_ownership_effects.png)
+![Figure 2. Ownership-specific state contrasts and their difference with store-level HC3 approximate 95% intervals.](../outputs/figures/extension_ownership_effects.png)
 
 | Interaction specification | N | Difference | HC3 SE | p |
 | --- | --- | --- | --- | --- |
@@ -222,13 +222,13 @@ The reconstructed paired-state DID and first four Table 4 models reproduce the m
 
 ## 10 Reproducibility and AI disclosure
 
-The unified entry point run_all.py generates Table 2, Figure 1, Table 3, Table 4 and the ownership extension from the unmodified course CSV. It validates the input, runs the five stages, confirms that all 39 declared outputs were regenerated and checks that the input checksum is unchanged. It stops at the first failure and records that failure instead of reusing a previous success. The dependencies are pandas, numpy, matplotlib and scipy; requirements-lock.txt records the versions used in the clean-environment validation.
+The unified entry point code/run_all.py generates Table 2, Figure 1, Table 3, Table 4 and the ownership extension from the unmodified course CSV. It validates the input, runs the five stages, confirms that all 39 declared outputs were regenerated and checks that the input checksum is unchanged. It stops at the first failure and records that failure instead of reusing a previous success. The dependencies are pandas, numpy, matplotlib and scipy; requirements-lock.txt records the versions used in the clean-environment validation.
 
-The minimum-wage-replication AI skill routes natural-language requests to the existing workflow or to read-only result verification, then explains generated estimates and publication differences. Its explicit invocation was tested. An English local browser page, started with local_app.py using the project virtual environment, provides input selection, execution progress, result tables, figures, downloads and verification. The page requires neither Codex nor an AI account. Both interfaces reuse the analytical code; they do not automatically revise this report or publish the repository.
+The minimum-wage-replication AI skill routes natural-language requests to the existing workflow or to read-only result verification, then explains generated estimates and publication differences. Its explicit invocation was tested. An English local browser page, started with code/local_app.py using the project virtual environment, provides input selection, execution progress, result tables, figures, downloads and verification. The page requires neither Codex nor an AI account. Both interfaces reuse the analytical code; they do not automatically revise this report or publish the repository.
 
 A download-package simulation extracted the code ZIP into a new directory, set bundled results aside and created a fresh virtual environment. After the authorized course CSV was placed in 01_DID/data/public.csv, the page detected it without code or data edits. Clicking Run all analyses regenerated all 39 outputs, and input, analytical-source and output hashes passed verification. All 22 generated CSVs matched the reviewed run at relative tolerance 1e-9 and absolute tolerance 1e-10; three figures were visually inspected. The new environment used Python 3.12.3, pandas 3.0.6, numpy 2.5.3, matplotlib 3.11.2 and scipy 1.18.1. This was a fresh directory and environment on the same Windows host, not another computer or an actual GitHub clone. Evidence is retained in docs/teacher_download_validation.json.
 
-The reproducibility package contains the code, dependency lists, README, LOCAL_PAGE.md, AI skill, report and aggregate outputs. Restricted course raw and store-level processed data are excluded from public distribution. Reviewers need authorized Package 01 access; the four processed CSVs are regenerated under data/processed, and any separate delivery must use an authorized teaching-team channel. The author archive is an independently acquired source check, not a replacement for the course input. The GitHub repository URL is the intended submission entry point, while the local page runs on the reviewer’s own computer. The repository is now public at https://github.com/Nemo-lucky/eco6067-minimum-wage-replication. Anonymous cloning and a full run of the downloaded code passed on 6 October 2026: all 39 outputs regenerated, integrity checks passed and all 22 CSVs matched the reviewed run within the same tolerances. This remote-clone check reused the previously validated locked environment on the same Windows host; it was not a second-machine test. Evidence is retained in docs/github_delivery_validation.json. Git tracking began after implementation, with an initial import and subsequent actual revisions; no retrospective commit history is claimed.
+The reproducibility package contains the code, dependency lists, README, LOCAL_PAGE.md, AI skill, report and aggregate outputs. Restricted course raw and store-level processed data are excluded from public distribution. Reviewers need authorized Package 01 access; the four processed CSVs are regenerated under data/processed, and any separate delivery must use an authorized teaching-team channel. The author archive is an independently acquired source check, not a replacement for the course input. The GitHub repository URL is the intended submission entry point, while the local page runs on the reviewer’s own computer. The repository is now public at https://github.com/Nemo-lucky/LiuBojian_3036764602. Anonymous cloning and a full run of the downloaded code passed on 6 October 2026: all 39 outputs regenerated, integrity checks passed and all 22 CSVs matched the reviewed run within the same tolerances. This remote-clone check reused the previously validated locked environment on the same Windows host; it was not a second-machine test. Evidence is retained in docs/github_delivery_validation.json. Git tracking began after implementation, with an initial import and subsequent actual revisions; no retrospective commit history is claimed.
 
 ### Where AI was used
 
@@ -238,7 +238,7 @@ AI assisted with explaining the paper, acquiring and parsing the author data, co
 
 AI-generated calculations were checked against the unmodified data, original tables, author program and alternative mathematical implementations described in Section 9. An earlier AI explanation incorrectly attributed Table 3’s printed 2.76 to full-precision rounding: the observed value is 2.753606 and rounds to 2.75. That explanation was rejected. An early Table 2 diagnostic suggested that recoding one renovation store might match all wage-indicator entries; checking showed it matches the mean and SE but not the t statistic, so it was not adopted as the baseline.
 
-The fifth Table 4 author-code specification is reported separately from the paper-note specification, rather than selectively mixing their results. An initial Table 2 comparison omitted standard-error discrepancies; the expanded audit records all six unmatched cells. The ownership extension was not changed to seek significance after obtaining an imprecise interaction. Detailed uses, checks and corrections are retained in docs/AI_USE_LOG.md and the result audits. Public repository access has been checked. Student review, the teaching team’s restricted-data access and formal URL submission remain to be completed.
+The fifth Table 4 author-code specification is reported separately from the paper-note specification, rather than selectively mixing their results. An initial Table 2 comparison omitted standard-error discrepancies; the expanded audit records all six unmatched cells. The ownership extension was not changed to seek significance after obtaining an imprecise interaction. Detailed uses, checks and corrections are retained in docs/AI_USE_LOG.md and the result audits. Public access to the earlier repository revision has been checked. The revised submission follows the teaching-team directory example: code/run_all.py is the entry point, tables and figures are under outputs/tables and outputs/figures, skills/SKILL.md is the reusable agent entry, and report.pdf is the final report with this Markdown file as its source. This layout revision was checked locally; the GitHub repository contains the submission files under the revised directory structure. Liu Bojian is the sole student author. Student review, the teaching team’s restricted-data access and formal URL submission remain to be completed.
 
 ### References
 

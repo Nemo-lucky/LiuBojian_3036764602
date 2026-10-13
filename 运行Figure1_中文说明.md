@@ -11,7 +11,7 @@ python -m pip install -r requirements.txt
 然后运行：
 
 ```powershell
-python run_figure1.py --data "..\data\public.csv"
+python code/run_figure1.py --data "..\data\public.csv"
 ```
 
 在 `results` 中打开 `figure1.png` 查看图片；`figure1_中文说明.md` 解释分组、分母、核验和局限。完整分析代码在 `src/03_figure1.py`。

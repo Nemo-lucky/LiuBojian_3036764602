@@ -17,3 +17,6 @@ venv/
 env/
 *.pyc
 *.pyo
+
+!data/raw/README.md
+!data/processed/README.md

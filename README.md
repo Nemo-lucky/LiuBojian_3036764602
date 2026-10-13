@@ -1,122 +1,107 @@
-# ECO6067 Minimum Wage Replication and Ownership Extension
+# Minimum-wage replication and ownership extension
 
-This project reconstructs Tables 2–4 and Figure 1 of Card and Krueger (1994), then tests whether company-owned and non-company-owned restaurants respond differently. All five stages have been computed, validated and run by the student. The unified workflow also passed a fresh-directory, fresh-virtual-environment validation. The English report has been updated with completed workflow, skill, local-page and download-simulation evidence, and the supplied student details. The public GitHub repository has been published and anonymously cloned; its full workflow passed a remote-clone reproduction check. Student review, authorized teaching-team data access and formal submission remain pending.
+**Liu Bojian | 3036764602 | ECO6067 individual project**
 
-Repository URL: [https://github.com/Nemo-lucky/eco6067-minimum-wage-replication](https://github.com/Nemo-lucky/eco6067-minimum-wage-replication)
+This project reproduces Tables 2–4 and Figure 1 of Card and Krueger (1994) and tests whether the employment response differs by restaurant ownership. Liu Bojian is the sole student author. AI assistance is documented separately.
 
-## Review the submission
-
-- [Empirical report (Markdown)](report/ECO6067_Empirical_Report.md)
+- [Final research report (PDF)](report.pdf)
+- [Editable report source (Markdown)](report/ECO6067_Empirical_Report.md)
 - [AI-use disclosure](AI_USE_DISCLOSURE.md)
-- [Data access and processed-data delivery](DATA_ACCESS.md)
+- [Data access](DATA_ACCESS.md)
 - [Submission checklist](SUBMISSION_CHECKLIST.md)
-- [English local-page guide](LOCAL_PAGE.md)
 
-The report is now maintained in Markdown. Historical Word drafts are excluded from the public package. GitHub displays the report, tables and linked figures without Word.
+## Repository structure
+
+```text
+README.md
+report.pdf
+AI_USE_DISCLOSURE.md
+requirements.txt
+requirements-lock.txt
+code/
+  run_all.py
+  run_table2.py, run_figure1.py, run_table3.py, run_table4.py, run_extension.py
+  local_app.py
+  src/                         analytical implementations
+data/
+  raw/README.md                authorized input placement instructions
+  processed/README.md          four CSVs regenerated locally
+outputs/
+  tables/                     tables, numeric audits and run records
+  figures/                    PNG and SVG figures
+skills/
+  SKILL.md
+  scripts/summarize_run.py
+  references/interpretation.md
+  agents/openai.yaml
+report/                       Markdown report and reading guide
+docs/                         provenance and validation evidence
+ui/                           English local-page assets
+```
+
+The layout follows the teaching team's example. Restricted raw and store-level processed data are not published. They are generated or supplied locally under the directories shown above.
 
 ## Reproduce all analytical results
 
-From the project directory, using Windows PowerShell:
+Open a terminal at the repository root. Install Python and obtain authorized course Package 01. Extract it under `data/raw/`, preserving `01_DID/data/public.csv`.
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
-.\.venv\Scripts\python.exe run_all.py --data "01_DID\data\public.csv"
+.\.venv\Scripts\python.exe code/run_all.py --data "data/raw/01_DID/data/public.csv"
 ```
 
-No activation or execution-policy change is required. `requirements-lock.txt` pins the exact versions tested in the clean validation. `requirements.txt` provides broader supported version ranges. Python 3.10 or later is required; the locked environment was tested on the specific Python and Windows versions in `docs/clean_reproduction_validation.json`, not on every platform.
-
-For the student's current desktop layout, from `01_DID/Table2_Python`:
+Alternatively, provide the existing course CSV location. In the student's desktop folder `01_DID/Table2_Python`:
 
 ```powershell
-python run_all.py --data "..\data\public.csv"
+python code/run_all.py --data "..\data\public.csv"
 ```
 
-If dependencies are unavailable, first run `python -m pip install -r requirements.txt` with the same interpreter. The workflow checks the CSV and dependencies, runs five stages, verifies all 39 declared analytical files were regenerated, and confirms that the raw CSV checksum is unchanged. It stops at the first failure and records a failed status rather than reusing a prior success.
+Use the same interpreter for installation and execution. `requirements.txt` supplies broader supported version ranges; `requirements-lock.txt` records the tested environment. Python 3.10+ is required; the locked Windows environment was tested on Python 3.12.3. No activation or execution-policy change is necessary. Relative `--data` paths resolve from the terminal directory, not the script directory.
 
-## Required input and access
+The single entry point validates 410 restaurants and 46 columns, executes five stages and confirms all 39 declared outputs are regenerated. It stops at the first failure and verifies that the original input hash remains unchanged. It does not require an AI account or network access after dependency installation. Without `--data`, it checks `data/raw/01_DID/data/public.csv`, `data/raw/public.csv`, the legacy `01_DID/data/public.csv`, then `../data/public.csv`.
 
-Obtain the course Package 01 through authorized ECO6067 access and preserve its numbered folder and CSV filename. Within a portable project, the input layout is:
+## Inspect and verify results
 
-```text
-project/
-  run_all.py
-  requirements.txt
-  requirements-lock.txt
-  src/
-  01_DID/
-    data/
-      public.csv
-```
+- [Table 2](outputs/tables/table2_replication.md)
+- [Figure 1](outputs/figures/figure1.png)
+- [Table 3](outputs/tables/table3_replication.md)
+- [Table 4](outputs/tables/table4_replication.md)
+- [Ownership extension](outputs/tables/extension_ownership_report.md)
+- [Current execution summary](outputs/tables/workflow_summary.md)
 
-The input is 410 restaurants with 46 columns. No edits to data or code are needed. An explicit `--data` path can point to the course CSV elsewhere; relative arguments are interpreted from the terminal's current folder. Without `--data`, the runner first looks for `01_DID/data/public.csv` inside the project, then for `../data/public.csv` in the existing desktop layout.
-
-The main workflow needs neither an author archive nor internet after package installation. The course CSV was independently compared with the author-hosted archive, and all numeric values and missing positions match. The optional author-source comparison runs if `data/raw/author/public.dat` and `codebook` are present; otherwise it is explicitly skipped.
-
-## Output locations
-
-- `results/`: Tables 2–4, Figure 1 PNG/SVG, ownership results and figures, complete numeric outputs, original-paper audits and validation files.
-- `results/workflow_run.json`: current run environment, input/source/output SHA-256 hashes and stage status.
-- `results/workflow_summary.md`: short current completion status.
-- `logs/workflow.log`: detailed local execution output, ignored by Git.
-- `data/processed/`: four generated store-level analysis CSVs, ignored by Git.
-- `docs/clean_reproduction_validation.json`: independent clean-run evidence and comparisons.
-- `docs/干净目录复现检查.md`: Chinese clean-validation explanation.
-- `docs/REUSABLE_WORKFLOW.md`: reusable workflow contract, stage sequence and interpretation rules.
-- `report/`: final English Markdown report and Chinese reading guide; prior Word files are local history.
-
-`results/clean_workflow_run.json` and `clean_workflow_summary.md` are retained evidence from the isolated clean project, not a checksum certificate for the current directory's outputs. Runtime JSON/log files may include local paths and timestamps. Graphic bytes can differ across library versions while underlying counts and estimates remain the same.
-
-## Validation results and limits
-
-The clean run used only copied code and the unmodified course CSV, with no previous outputs, processed data or author archive. All four analysis libraries loaded from its new .venv, and pip reported no dependency conflicts. It generated 39 analytical files plus two workflow-state files. All 22 CSVs matched the audited project with numeric tolerance rtol1e-9/atol1e-10; the three charts were visually reviewed. Missing input produced a nonzero exit and a failed manifest. Full tested versions and source hashes are recorded in the validation JSON.
-
-The original-paper cell audits remain Table 2 82/88, Table 3 66/80 and Table 4 16/18. Figure 1's exact original bar percentages are unverified. Table 3's unbalanced SE is a transparent reconstruction. Table 4's fifth paper-note model includes ownership, while the author SAS model omits it; both are reported separately. The ownership interaction is approximately −0.942 FTE (HC3 SE 2.641, approximate p=.721), providing insufficient evidence of different responses, not evidence of equality. Workflow success does not establish causal identification or perfect agreement with publication.
-
-## Individual stages
+`outputs/tables/workflow_run.json` records the current environment and input/source/output hashes. Four store-level CSVs are generated in `data/processed/`; local logs are in `logs/workflow.log`.
 
 ```powershell
-python run_table2.py --data "01_DID\data\public.csv"
-python run_figure1.py --data "01_DID\data\public.csv"
-python run_table3.py --data "01_DID\data\public.csv"
-python run_table4.py --data "01_DID\data\public.csv"
-python run_extension.py --data "01_DID\data\public.csv"
+python skills/scripts/summarize_run.py --project . --data "data/raw/01_DID/data/public.csv"
 ```
 
-In the desktop copy replace the data argument with `..\data\public.csv`. Separate Chinese guides remain available. These entry points and `run_all.py` use the same stage implementations.
+This read-only check must return `status: verified` and 39 checked outputs. It requires the locally regenerated processed files. Bundled aggregate outputs alone do not certify a new machine's execution. Single-stage runners in `code/` accept the same `--data` argument; rerunning one stage can make an earlier complete-run record stale.
 
-## Sources and data restrictions
+## Findings and remaining publication differences
 
-Card, D., and Krueger, A. B. (1994), American Economic Review 84(4),772–793. Paper: https://davidcard.berkeley.edu/papers/njmin-aer.pdf
+The paired-sample DID is 2.75 FTE. Table 4 uses 357 restaurants; its NJ estimates are 2.33 without controls and 2.30 with brand and ownership controls. The ownership interaction is about -0.94 FTE (HC3 SE 2.64; approximate 95% interval [-6.14, 4.25]; p=.721): insufficient evidence of different ownership responses, not proof of equal effects.
 
-Independent author-source check: https://davidcard.berkeley.edu/data_sets.html and https://davidcard.berkeley.edu/data_sets/njmin.zip. `docs/data_provenance.json` records acquisition details. The supplied course input remains the actual analytical source.
+Publication audits match 82/88 cells in Table 2, 66/80 in Table 3 and 16/18 in the Table 4 paper-note specification. Figure 1's exact original bars remain unverified. The Table 4 author-SAS fifth model is exported separately. Calculation checks do not establish causal identification; one pre-policy wave and only two states limit inference.
 
-Do not publish restricted course inputs, processed store-level data or course download links. Raw sources, `01_DID/`, processed files, virtual environments and local logs are excluded from Git. Processed datasets are generated automatically; arrange permitted teaching-team access or reproduction from their authorized course input. Aggregate tables, plots, audits, code and documentation are suitable repository contents.
+## Local browser page and reusable AI skill
 
-## Remaining delivery work
+```powershell
+.\.venv\Scripts\python.exe code/local_app.py
+```
 
-Review [the Markdown report](report/ECO6067_Empirical_Report.md) and [AI-use disclosure](AI_USE_DISCLOSURE.md), verify the teaching team's input access, and submit the repository URL through the designated channel. Git tracking began after implementation; the initial snapshot and actual subsequent revisions are documented honestly in docs/GITHUB_REVIEW.md. Do not fabricate earlier commit history. The unified runner generates analytical reports and figures; it does not automatically update the narrative report. The report now documents completed workflow checks; update it again only if methods or delivery status change.
+Or double-click `启动本地页面.bat`. The English page runs on the reviewer's own computer, accepts the course CSV, runs or verifies the same workflow, and displays aggregate outputs. See [LOCAL_PAGE.md](LOCAL_PAGE.md). Keep the server terminal open.
 
-Deadline:18 October 2026,23:59 Hong Kong time. Table 1 is not assigned.
+[skills/SKILL.md](skills/SKILL.md) gives reusable AI instructions for running, verifying and explaining this fixed project. To install it in a compatible agent, copy the contents of `skills/` into that agent's `minimum-wage-replication` skill folder. A reviewer can also ask an agent to read the repository's SKILL.md directly. The skill is optional for Python and browser execution.
 
-## AI skill
+## Validation history and current delivery status
 
-The reusable AI instructions are in `skills/minimum-wage-replication/SKILL.md`. See [Chinese installation and usage guide](AI技能_中文使用说明.md) for natural-language invocation in a local AI environment. This companion skill runs or explains the existing Python workflow and verifies source/output/input hashes; it does not rewrite the report or publish to GitHub.
+The earlier layout passed a fresh-directory, fresh-virtual-environment check and an anonymous GitHub-clone check on this Windows host. Historical JSON evidence retains its original paths and dates. The reorganized layout is tested separately; see [layout validation](docs/layout_validation.json). No second-computer validation is claimed. Git tracking began after implementation; no retrospective commit history is claimed.
 
-## Local browser interface
+Current remote: https://github.com/Nemo-lucky/LiuBojian_3036764602 . The repository uses the required Name_StudentID format. Formal submission is tracked in the checklist. No collaborators were added during this revision.
 
-After the virtual-environment setup above, run `.\.venv\Scripts\python.exe local_app.py` from the project directory, or double-click `启动本地页面.bat` on Windows (the launcher automatically prefers the project .venv). Use `python local_app.py` only when that interpreter already has the required analysis dependencies. The loopback-only page lets users choose the course CSV, run all five stages, verify existing results, preview tables/figures and download aggregate outputs. It uses only the Python standard library for the interface and the existing analysis dependencies; no AI account is required. See the [English page guide](LOCAL_PAGE.md) or [Chinese page guide](本地页面_中文使用说明.md). Keep the server terminal open.
+## Sources
 
-## Reviewer download simulation
+Card and Krueger (1994), American Economic Review 84(4), 772–793. [Published paper](https://davidcard.berkeley.edu/papers/njmin-aer.pdf), [author data page](https://davidcard.berkeley.edu/data_sets.html).
 
-The code archive passed extraction into a fresh directory with bundled results set aside, a new project virtual environment and only the authorized CSV in the documented location. The local browser regenerated all39 outputs; all22 CSVs matched the reviewed run within rtol1e-9/atol1e-10, and three figures were inspected. See docs/teacher_download_validation.json. This tested the same Windows host with a new directory/environment, not a second computer or an actual GitHub clone. Public repository access is now verified; teaching-team data access remains a final delivery check.
-
-
-## Actual GitHub clone verification
-
-On 6 October 2026 the public repository was cloned with Git credentials and interactive prompts disabled. Using the already validated locked Python environment on the same Windows host, the downloaded code regenerated all 39 outputs; all 22 CSVs matched the reviewed results within rtol=1e-9 and atol=1e-10. Input, source and output integrity checks passed. This remote-clone check is separate from the earlier fresh-environment ZIP simulation. See [saved evidence](docs/github_delivery_validation.json).
-
-
-## Final content check — 13 October 2026
-
-All five stages were rerun and the full integrity helper passed after refreshing a validation file made stale by synchronization. All22 CSVs match the earlier remote-clone check within the documented tolerances. The four final processed datasets are prepared in a local private archive for authorized teaching-team delivery. See [final validation](docs/final_content_validation.json). Student review and formal submission remain pending. Historical author-data crosschecking is preserved in docs/author_data_crosscheck_historical.json; the current validation file records the current course-input run.
+Course Package 01 is the analytical input. The optional author archive was independently compared with it; all numeric values and missing positions matched. See `docs/author_data_crosscheck_historical.json`. Reviewers need authorized course data access; see DATA_ACCESS.md. The narrative report is maintained separately from numerical output generation.

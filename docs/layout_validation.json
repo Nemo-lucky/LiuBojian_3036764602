@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-13",
+  "status": "passed",
+  "entry": "code/run_all.py",
+  "clean_run": "No pre-existing outputs or processed data; default data/raw/01_DID/data/public.csv discovery; reused previously validated locked environment on same Windows host.",
+  "checks": {
+    "main": {
+      "status": "verified",
+      "mode": "read_only_existing_full_run",
+      "files_hash_checked": 39,
+      "analytical_sources_hash_checked": true,
+      "recorded_input_unchanged": true,
+      "current_input_hash_checked": true,
+      "run_finished_utc": "2026-10-13T13:04:48.878703+00:00",
+      "environment": {
+        "python": "3.12.3",
+        "platform": "Windows-10-10.0.19045-SP0",
+        "packages": {
+          "pandas": "3.0.6",
+          "numpy": "2.5.3",
+          "matplotlib": "3.11.2",
+          "scipy": "1.18.1"
+        }
+      },
+      "paired_did": {
+        "estimate": 2.75,
+        "se": 1.342340976908276
+      },
+      "table4_n": 357,
+      "table4_nj_no_controls": {
+        "estimate": 2.325831188883181,
+        "se": 1.1915962776999331
+      },
+      "table4_nj_controls": {
+        "estimate": 2.3038595094333267,
+        "se": 1.1955324787616048
+      },
+      "primary_ownership_difference": {
+        "estimate": -0.942366769636494,
+        "se_hc3": 2.6407215698346542,
+        "ci95_low": -6.136045535494455,
+        "ci95_high": 4.251311996221467,
+        "p": 0.7214119875433538
+      },
+      "publication_audits_from_current_csvs": {
+        "Table 2": {
+          "matched": 82,
+          "checked": 88
+        },
+        "Table 3": {
+          "matched": 66,
+          "checked": 80
+        },
+        "Table 4": {
+          "matched": 16,
+          "checked": 18
+        }
+      },
+      "interpretation": "Insufficient evidence of ownership difference",
+      "limitations": [
+        "Only two states; HC3 does not handle arbitrary state-level dependence.",
+        "Publication discrepancies remain; exact original Figure 1 bars unverified.",
+        "Integrity checks do not establish causal assumptions."
+      ]
+    },
+    "clean": {
+      "status": "verified",
+      "mode": "read_only_existing_full_run",
+      "files_hash_checked": 39,
+      "analytical_sources_hash_checked": true,
+      "recorded_input_unchanged": true,
+      "current_input_hash_checked": true,
+      "run_finished_utc": "2026-10-13T13:03:39.929274+00:00",
+      "environment": {
+        "python": "3.12.3",
+        "platform": "Windows-10-10.0.19045-SP0",
+        "packages": {
+          "pandas": "3.0.6",
+          "numpy": "2.5.3",
+          "matplotlib": "3.11.2",
+          "scipy": "1.18.1"
+        }
+      },
+      "paired_did": {
+        "estimate": 2.75,
+        "se": 1.342340976908276
+      },
+      "table4_n": 357,
+      "table4_nj_no_controls": {
+        "estimate": 2.325831188883181,
+        "se": 1.1915962776999331
+      },
+      "table4_nj_controls": {
+        "estimate": 2.3038595094333267,
+        "se": 1.1955324787616048
+      },
+      "primary_ownership_difference": {
+        "estimate": -0.942366769636494,
+        "se_hc3": 2.6407215698346542,
+        "ci95_low": -6.136045535494455,
+        "ci95_high": 4.251311996221467,
+        "p": 0.7214119875433538
+      },
+      "publication_audits_from_current_csvs": {
+        "Table 2": {
+          "matched": 82,
+          "checked": 88
+        },
+        "Table 3": {
+          "matched": 66,
+          "checked": 80
+        },
+        "Table 4": {
+          "matched": 16,
+          "checked": 18
+        }
+      },
+      "interpretation": "Insufficient evidence of ownership difference",
+      "limitations": [
+        "Only two states; HC3 does not handle arbitrary state-level dependence.",
+        "Publication discrepancies remain; exact original Figure 1 bars unverified.",
+        "Integrity checks do not establish causal assumptions."
+      ]
+    }
+  },
+  "numeric_csv_count": 22,
+  "numeric_csvs": [
+    "outputs/tables/extension_ownership_brand_counts.csv",
+    "outputs/tables/extension_ownership_coefficients.csv",
+    "outputs/tables/extension_ownership_effects.csv",
+    "outputs/tables/extension_ownership_groups.csv",
+    "outputs/tables/figure1_bin_counts.csv",
+    "outputs/tables/figure1_sample_checks.csv",
+    "outputs/tables/table2_audit_cells.csv",
+    "outputs/tables/table2_numeric.csv",
+    "outputs/tables/table2_t_method_checks.csv",
+    "outputs/tables/table2_wage_denominators.csv",
+    "outputs/tables/table3_audit_cells.csv",
+    "outputs/tables/table3_numeric.csv",
+    "outputs/tables/table3_samples.csv",
+    "outputs/tables/table4_all_coefficients.csv",
+    "outputs/tables/table4_audit_cells.csv",
+    "outputs/tables/table4_author_sas_comparison.csv",
+    "outputs/tables/table4_numeric.csv",
+    "outputs/tables/table4_sample_flow.csv",
+    "data/processed/course_analysis.csv",
+    "data/processed/extension_ownership_analysis.csv",
+    "data/processed/table3_analysis.csv",
+    "data/processed/table4_analysis.csv"
+  ],
+  "comparison": "Prior reviewed layout vs new main and clean layouts; rtol=1e-9, atol=1e-10.",
+  "local_page_get_routes_checked": 20,
+  "local_page_read_only_verification": "verified",
+  "pdf": {
+    "path": "report.pdf",
+    "pages": 12,
+    "tables": 12,
+    "figures": 2,
+    "sha256": "54ad6c8fe63bfbca7182de99313e1e2770a699c103efcf443ec55d3daeade621",
+    "visual_review": "All 12 pages rendered and inspected; heading/table pagination corrected."
+  },
+  "collaborator_invitations_sent": false,
+  "remote_synchronized": false,
+  "skill_validation": "passed"
+}
