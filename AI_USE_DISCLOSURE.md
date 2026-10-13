@@ -17,7 +17,7 @@ The student chose the minimum-wage topic, Python and the ownership extension; ra
 | Data and samples | Course CSV compared with parsed author data: all 410 × 46 numeric values and missing positions matched. Identifiers, closure codes and sample counts were checked. See `docs/author_data_crosscheck_historical.json` and `docs/data_provenance.json`; the current course-input run has its own `docs/course_data_validation.json`. |
 | Core replication | Published means, SEs and other printed values were audited at their displayed precision. All remaining differences are preserved in `outputs/tables/table2_audit_cells.csv`, `table3_audit_cells.csv` and `table4_audit_cells.csv`. |
 | Independent calculations | Table 3 checked against alternative OLS representations; Table 4 OLS and joint tests checked through QR and Wald calculations; extension HC3 covariance and contrasts checked independently. See stage validation JSON files in `outputs/tables/`. |
-| Figures and writing | Generated figures and the prior Word rendering were visually inspected. The current Markdown report retains the reviewed scientific content; its image and internal file links are checked. |
+| Figures and writing | Generated figures and the final 12-page PDF were rendered and visually inspected. The Markdown source, numerical claims, student identity and disclosure were reviewed; see `docs/final_report_review.md`. |
 | Reproducibility | Five stages regenerated 39 outputs. Fresh-directory and fresh-environment runs compared 22 CSVs within documented tolerances. Input, code and output hashes were verified. See `docs/clean_reproduction_validation.json` and `docs/teacher_download_validation.json`. |
 | Skill and local page | Explicit skill invocation, result verification, browser execution and English result display were tested. Evidence is in the corresponding validation JSON files under `docs/`. |
 
@@ -40,3 +40,7 @@ The submission report is [PDF](report.pdf), maintained from [Markdown](report/EC
 ## Directory and PDF revision — 13 October 2026
 
 AI assisted with adapting paths to the teacher-example layout, regenerating the PDF and testing the relocated entry point. The statistical models and sample rules were preserved; numeric outputs were compared with the reviewed run. PDF pages were rendered and visually reviewed. No collaborator invitations or submission emails were sent in this step.
+
+## Final technical review and teacher access
+
+The assistant reviewed the final report and this disclosure at the student's request, confirming the student identity and agreement of the main claims with the current results. This does not certify the student's personal understanding. Teacher collaborator invitations to xiongyan2224 and Jeff7c were sent and were pending acceptance when checked. This updates the earlier revision-specific statement above. Formal submission email has not been sent.

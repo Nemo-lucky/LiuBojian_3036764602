@@ -98,7 +98,7 @@ Or double-click `启动本地页面.bat`. The English page runs on the reviewer'
 
 The earlier layout passed a fresh-directory, fresh-virtual-environment check and an anonymous GitHub-clone check on this Windows host. Historical JSON evidence retains its original paths and dates. The reorganized layout is tested separately; see [layout validation](docs/layout_validation.json). No second-computer validation is claimed. Git tracking began after implementation; no retrospective commit history is claimed.
 
-Current remote: https://github.com/Nemo-lucky/LiuBojian_3036764602 . The repository uses the required Name_StudentID format. Formal submission is tracked in the checklist. No collaborators were added during this revision.
+Current remote: https://github.com/Nemo-lucky/LiuBojian_3036764602 . The repository uses the required Name_StudentID format. Formal submission is tracked in the checklist. Teaching-team collaborator invitations were sent to xiongyan2224 and Jeff7c; both were pending acceptance at the latest check.
 
 ## Sources
 
@@ -108,4 +108,4 @@ Course Package 01 is the analytical input. The optional author archive was indep
 
 ## Published layout verification
 
-The renamed public repository and its reorganized submission were verified anonymously on 13 October 2026. Uploaded files matched local Git blob hashes, and direct PDF, README, runner and skill downloads matched their local files. See [delivery verification](docs/github_layout_delivery.json). No collaborator invitations or submission emails were sent.
+The renamed public repository and its reorganized submission were verified anonymously on 13 October 2026. Uploaded files matched local Git blob hashes, and direct PDF, README, runner and skill downloads matched their local files. See [delivery verification](docs/github_layout_delivery.json). Teacher collaborator invitations have subsequently been sent; formal submission email remains pending. See [final review](docs/final_report_review.md).

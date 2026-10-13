@@ -101,3 +101,7 @@ Relocated analytical entry points to code/, aggregate outputs to outputs/tables 
 ## 13 October 2026 — repository naming and upload
 
 At the student's explicit request, the repository was renamed to LiuBojian_3036764602. Current README and report links were updated before publishing the teacher-example directory layout and PDF. No collaborators were added and no submission email was sent.
+
+## Final technical review and teacher invitations
+
+At the student's explicit request, the assistant reviewed the PDF and AI disclosure against the existing verified results, confirmed Liu Bojian / 3036764602, and invited xiongyan2224 and Jeff7c as GitHub collaborators. Both invitations were confirmed pending acceptance. This supersedes prior no-invitation status notes. No submission email was sent and no student-understanding attestation was invented.

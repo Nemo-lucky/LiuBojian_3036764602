@@ -18,7 +18,7 @@
     },
     {
       "path": "AI_USE_DISCLOSURE.md",
-      "sha256": "dba31d6ea18432aad0ab4d66fe21290a3c350b384314927766badb3fca94b97b"
+      "sha256": "fe94a3629f9c238fafc33f95ca32c6fcbb7e569ddc589e579b0f91bd7f20aba0"
     },
     {
       "path": "AI技能_中文使用说明.md",
@@ -34,11 +34,11 @@
     },
     {
       "path": "README.md",
-      "sha256": "98b04a823ae092c96a5de2c53a9268c7d64e1e2a9531b1f31aa6313135e4911f"
+      "sha256": "a64ac3501c8bb3c065234a35e83c6a8e12181cbd6ed647a97067cf84b5d75b20"
     },
     {
       "path": "SUBMISSION_CHECKLIST.md",
-      "sha256": "f7a5a206e880cf119c7964e52a8f23d191539b8ae08b290b25a3b81e25038cb9"
+      "sha256": "7cb22295e326dd4040c19102ebefdbe63f5c51569937f822c1f6981696438f14"
     },
     {
       "path": "code/local_app.py",
@@ -114,7 +114,7 @@
     },
     {
       "path": "docs/AI_USE_LOG.md",
-      "sha256": "0fdc028e9e226a0332b2e7caf0a52278ff422e03495f231b031305276a9abc78"
+      "sha256": "62d95d20a5484287167338001353fbad86cd36ad2ec2f22fa1c8fdc4f99d94ae"
     },
     {
       "path": "docs/GITHUB_REVIEW.md",
@@ -151,6 +151,10 @@
     {
       "path": "docs/final_content_validation.json",
       "sha256": "962b56382aa30fb7fdd2c1cb749681da5af8682df7c16be39f5aba7aea0f9945"
+    },
+    {
+      "path": "docs/final_report_review.md",
+      "sha256": "36e3e30d0d4462587e4d0221ed99089d95ca3458b3d729512b7662cdf2cb6862"
     },
     {
       "path": "docs/github_delivery_validation.json",
