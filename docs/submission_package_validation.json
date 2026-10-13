@@ -5,12 +5,12 @@
   "source_report": "report/ECO6067_Empirical_Report.md",
   "layout_validation": "docs/layout_validation.json",
   "analyses_rerun": true,
-  "github_published_this_revision": false,
+  "github_published_this_revision": true,
   "restricted_data_detected": [],
   "files": [
     {
       "path": ".gitattributes",
-      "sha256": "8b1e4f0b6317e81f564634da9b7993e20e56d2202e23d69e960d4dbd14e163e0"
+      "sha256": "aec5fb26cbb117e8e48f5e92c91954e127589a6fbbc5716d4e7658e6fe625696"
     },
     {
       "path": ".gitignore",
@@ -23,6 +23,22 @@
     {
       "path": "AI技能_中文使用说明.md",
       "sha256": "118643241fe4239bc4545d0dc4bc98b379aa8c40452554847183ba7196046ab5"
+    },
+    {
+      "path": "DATA_ACCESS.md",
+      "sha256": "33551c28be721f3a31931d7bcb12890c2bfec2c73e3ec5bb179a868e62161fe9"
+    },
+    {
+      "path": "LOCAL_PAGE.md",
+      "sha256": "22ac3b52646051988795e3b3436403a47d3a120574b97dcf007fd7c023407423"
+    },
+    {
+      "path": "README.md",
+      "sha256": "98b04a823ae092c96a5de2c53a9268c7d64e1e2a9531b1f31aa6313135e4911f"
+    },
+    {
+      "path": "SUBMISSION_CHECKLIST.md",
+      "sha256": "f7a5a206e880cf119c7964e52a8f23d191539b8ae08b290b25a3b81e25038cb9"
     },
     {
       "path": "code/local_app.py",
@@ -97,8 +113,16 @@
       "sha256": "92b072a1ff8c9b4900ca1b8bb7ac4e7a362239a714b59e7d7f3398c7f52308fa"
     },
     {
-      "path": "DATA_ACCESS.md",
-      "sha256": "33551c28be721f3a31931d7bcb12890c2bfec2c73e3ec5bb179a868e62161fe9"
+      "path": "docs/AI_USE_LOG.md",
+      "sha256": "0fdc028e9e226a0332b2e7caf0a52278ff422e03495f231b031305276a9abc78"
+    },
+    {
+      "path": "docs/GITHUB_REVIEW.md",
+      "sha256": "ec6de1ce6fa260e1f06e665e676dd06c5ada4f657c372e7f42cc516fb007bb28"
+    },
+    {
+      "path": "docs/REUSABLE_WORKFLOW.md",
+      "sha256": "1190eeb2cadd4ccc1a9abb3df75e077439571e7cc7abd48da76cd55ca903c821"
     },
     {
       "path": "docs/ai_skill_invocation_validation.json",
@@ -107,10 +131,6 @@
     {
       "path": "docs/ai_skill_validation.json",
       "sha256": "fa1f65046ed00370a0cdeacaf6cbf9cca4a9f21d554a8d8898c40f76f0e16549"
-    },
-    {
-      "path": "docs/AI_USE_LOG.md",
-      "sha256": "0fdc028e9e226a0332b2e7caf0a52278ff422e03495f231b031305276a9abc78"
     },
     {
       "path": "docs/author_data_crosscheck_historical.json",
@@ -137,12 +157,12 @@
       "sha256": "3cdb7e2aa9f290893de0b0ac71ee667dede2094e130a90d8495d355073bfee04"
     },
     {
-      "path": "docs/GITHUB_REVIEW.md",
-      "sha256": "ec6de1ce6fa260e1f06e665e676dd06c5ada4f657c372e7f42cc516fb007bb28"
+      "path": "docs/github_layout_delivery.json",
+      "sha256": "5ec011a5c4f0206a677884928974968ede0a8369f81aa0e05f6b44bec5e624c9"
     },
     {
       "path": "docs/layout_validation.json",
-      "sha256": "28b84770bed190158cfec0fae92ed6b6361b2a0af784348e9e03fa233d3dda30"
+      "sha256": "c69a2781025a0af6a17b4fb931bda7ebc03e33e74e4fbe1337e19b9c04674067"
     },
     {
       "path": "docs/local_page_english_validation.json",
@@ -155,10 +175,6 @@
     {
       "path": "docs/report_content_validation.json",
       "sha256": "331bee9344d188319a9267c7d5a5c49157ad65f58e087453ff591f6b047e018a"
-    },
-    {
-      "path": "docs/REUSABLE_WORKFLOW.md",
-      "sha256": "1190eeb2cadd4ccc1a9abb3df75e077439571e7cc7abd48da76cd55ca903c821"
     },
     {
       "path": "docs/teacher_download_validation.json",
@@ -175,10 +191,6 @@
     {
       "path": "docs/第一步_理解研究设计.md",
       "sha256": "a54537ffac569b281d7e5a09655c91162811fae7a71a7870635f02e802685e08"
-    },
-    {
-      "path": "LOCAL_PAGE.md",
-      "sha256": "22ac3b52646051988795e3b3436403a47d3a120574b97dcf007fd7c023407423"
     },
     {
       "path": "outputs/figures/extension_ownership_changes.png",
@@ -349,8 +361,8 @@
       "sha256": "52b7b3ae082fc94b734e7131c1ee98784f770651c42ae1b4136292cd659c8920"
     },
     {
-      "path": "README.md",
-      "sha256": "00bfa0e0bd9a50f8811eebefc5d25a118c67625555e615dff4c3b7aa0f7cf92d"
+      "path": "report.pdf",
+      "sha256": "54ad6c8fe63bfbca7182de99313e1e2770a699c103efcf443ec55d3daeade621"
     },
     {
       "path": "report/ECO6067_Empirical_Report.md",
@@ -365,16 +377,16 @@
       "sha256": "650d2a8f8abd39174779d9532c5c8c61ef46fed5787aec59b2efc88438eb11ce"
     },
     {
-      "path": "report.pdf",
-      "sha256": "54ad6c8fe63bfbca7182de99313e1e2770a699c103efcf443ec55d3daeade621"
-    },
-    {
       "path": "requirements-lock.txt",
       "sha256": "776261b849a17e0f25ee91c78363fcfe3ad841cf9d226f0b2e484ecb49230ad5"
     },
     {
       "path": "requirements.txt",
       "sha256": "c2e920b62cc7540174a5b7a0c0b9d5c2addc15b01aca7a8487063463fd202cb0"
+    },
+    {
+      "path": "skills/SKILL.md",
+      "sha256": "cfec57088cacb8e896b0c9735961123bbb94eaf8ab27109ee33e08904dbe9589"
     },
     {
       "path": "skills/agents/openai.yaml",
@@ -387,14 +399,6 @@
     {
       "path": "skills/scripts/summarize_run.py",
       "sha256": "5aee5befebb7d507dcbaa38d4f4d6b0c422e7b710302c6658017a11767c5d62c"
-    },
-    {
-      "path": "skills/SKILL.md",
-      "sha256": "cfec57088cacb8e896b0c9735961123bbb94eaf8ab27109ee33e08904dbe9589"
-    },
-    {
-      "path": "SUBMISSION_CHECKLIST.md",
-      "sha256": "49aa588feb115a756be1cd395c9701b9c36879e6a147b24d7d89c6752725405f"
     },
     {
       "path": "ui/index.html",
@@ -452,5 +456,6 @@
       "path": "运行拓展A_中文说明.md",
       "sha256": "4940d8d207ad48ebc46f880896d6ba148fc4259f0387126fad66366f52a157c0"
     }
-  ]
+  ],
+  "repository_url": "https://github.com/Nemo-lucky/LiuBojian_3036764602"
 }

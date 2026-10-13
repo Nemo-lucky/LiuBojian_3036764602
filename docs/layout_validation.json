@@ -160,6 +160,7 @@
     "visual_review": "All 12 pages rendered and inspected; heading/table pagination corrected."
   },
   "collaborator_invitations_sent": false,
-  "remote_synchronized": false,
-  "skill_validation": "passed"
+  "remote_synchronized": true,
+  "skill_validation": "passed",
+  "remote_verification": "docs/github_layout_delivery.json"
 }

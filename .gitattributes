@@ -1,3 +1,5 @@
 # Preserve exact source/output bytes used by the integrity manifests.
 # Avoid automatic line-ending conversion when downloading or cloning on Windows.
 * -text
+
+*.pdf binary

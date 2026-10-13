@@ -105,3 +105,7 @@ Current remote: https://github.com/Nemo-lucky/LiuBojian_3036764602 . The reposit
 Card and Krueger (1994), American Economic Review 84(4), 772–793. [Published paper](https://davidcard.berkeley.edu/papers/njmin-aer.pdf), [author data page](https://davidcard.berkeley.edu/data_sets.html).
 
 Course Package 01 is the analytical input. The optional author archive was independently compared with it; all numeric values and missing positions matched. See `docs/author_data_crosscheck_historical.json`. Reviewers need authorized course data access; see DATA_ACCESS.md. The narrative report is maintained separately from numerical output generation.
+
+## Published layout verification
+
+The renamed public repository and its reorganized submission were verified anonymously on 13 October 2026. Uploaded files matched local Git blob hashes, and direct PDF, README, runner and skill downloads matched their local files. See [delivery verification](docs/github_layout_delivery.json). No collaborator invitations or submission emails were sent.

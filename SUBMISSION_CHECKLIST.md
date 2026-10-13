@@ -15,7 +15,7 @@ Student and sole student author: **Liu Bojian — 3036764602**.
 
 - [ ] Student final review of report and AI disclosure.
 - [x] Rename the repository to LiuBojian_3036764602 and update current links.
-- [ ] Publish this reorganized revision and PDF, then verify remote file access.
+- [x] Publish this reorganized revision and PDF, then verify remote file access. See docs/github_layout_delivery.json.
 - [ ] Confirm authorized teaching-team data access.
 - [ ] Email the final repository URL to both xiongyan2224@gmail.com and 7chenjeff7@gmail.com, as stated in the teacher's email.
 
