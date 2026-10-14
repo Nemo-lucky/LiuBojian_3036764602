@@ -1,5 +1,5 @@
 {
-  "input_csv": "C:\\Users\\ber寨\\Desktop\\01_DID\\data\\public.csv",
+  "input_csv": "public.csv",
   "input_sha256": "45e6f4ac4928f7c9fcc2585a45e0467ecaa039f0b241f4c5a26cd290fd8e772b",
   "sample_n": 357,
   "nj_n": 290,

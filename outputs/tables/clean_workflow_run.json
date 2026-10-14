@@ -33,7 +33,7 @@
           "bytes": 330
         },
         {
-          "path": "results/table2_audit_中文.md",
+          "path": "results/table2_audit_\u4e2d\u6587.md",
           "sha256": "2323835a35dd0cb112d90334a8815bd5a7751c12926362e3953c5e5c0bab85f0",
           "bytes": 2694
         },
@@ -80,7 +80,7 @@
           "bytes": 1357
         },
         {
-          "path": "results/figure1_中文说明.md",
+          "path": "results/figure1_\u4e2d\u6587\u8bf4\u660e.md",
           "sha256": "28b0acd7125dcd0a566e5f872b98ca4eff65a8eac893ca7d9af3a249702b8687",
           "bytes": 2581
         }

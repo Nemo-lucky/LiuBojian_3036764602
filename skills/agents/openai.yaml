@@ -1,4 +1,4 @@
 interface:
-  display_name: "最低工资论文复现与拓展"
-  short_description: "按顺序检查课程数据运行已验证的最低工资复现与拓展并解释差异和结果"
-  default_prompt: "请使用 $minimum-wage-replication 检查我提供的项目和数据，生成全部表图并解释验证结果。"
+  display_name: "Minimum-Wage Replication and Extension"
+  short_description: "Run, verify and explain the course minimum-wage analysis"
+  default_prompt: "Use $minimum-wage-replication with my project and course CSV to generate all tables and figures and explain the verification results."

@@ -3,7 +3,7 @@
   "test": "Fresh package extraction, independent virtual environment and local browser execution",
   "scope": "Same Windows computer, new directory and environment; not an actual GitHub clone or a second computer/operating system",
   "original_archive_sha256": "9918421a30a4fca46e8b199d52881a87e9eb30a1a5aa382e4060b9b4e3b55308",
-  "project": "C:\\Users\\ber寨\\Documents\\Codex\\2026-10-04\\z\\work\\teacher_download_20261005_204908\\Table2_Python",
+  "project": "C:\\Users\\ber\u5be8\\Documents\\Codex\\2026-10-04\\z\\work\\teacher_download_20261005_204908\\Table2_Python",
   "bundled_outputs_set_aside": [
     "results"
   ],

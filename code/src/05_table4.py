@@ -112,7 +112,7 @@ def main():
     contrast = sample.groupby('nj').change_fte.mean().diff().iloc[-1]
     if not np.isclose(contrast, results[0]['estimate'], atol=1e-10):
         raise AssertionError('NJ difference-of-means check failed')
-    checks = dict(input_csv=str(path), input_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+    checks = dict(input_csv=path.name, input_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                   sample_n=len(sample), nj_n=int(sample.nj.sum()), pa_n=int(sample.nj.eq(0).sum()),
                   paired_employment_n=int(employment.sum()),
                   excluded_wage_n=int((employment & ~selected).sum()),
@@ -134,36 +134,8 @@ def main():
     pd.DataFrame([alternative]).to_csv(output/'table4_author_sas_comparison.csv', index=False)
     data.groupby(['state', 'table4_exclusion']).size().rename('n').reset_index().to_csv(output/'table4_sample_flow.csv', index=False)
     (output/'table4_validation.json').write_text(json.dumps(checks, ensure_ascii=False, indent=2), encoding='utf-8')
-    lines = ['# Table 4：就业变化回归与原文比较', '',
-             '因变量：同店政策后 FTE 减政策前 FTE。所有模型含截距，使用同一357家样本。', '',
-             '| 模型 | 核心变量 | 系数（标准误） | 原文系数（标准误） | 回归标准误 | 控制变量联合检验 p |',
-             '|---|---|---|---|---|---|']
-    for i, row in enumerate(results):
-        p = '—' if not np.isfinite(row['controls_p']) else f"{row['controls_p']:.2f}"
-        lines.append(f"| {row['model']} | {row['variable'].upper()} | {row['estimate']:.2f} ({row['se']:.2f}) | {PAPER['estimate'][i]:.2f} ({PAPER['se'][i]:.2f}) | {row['regression_se']:.2f} | {p} |")
-    lines += ['', '## 样本和变量', '',
-              f"- 原始410家；就业变化有效{employment.sum()}家；再排除缺工资的{checks['excluded_wage_n']}家，保留357家（NJ290、PA67）。",
-              f"- 永久关闭的{checks['closed_retained_n']}家保留，后期就业为0；按作者程序允许缺后期工资。暂时关闭仍为缺失。",
-              '- 其他餐厅必须两轮就业和两轮起薪均有效。工资不是前两组回归的解释变量，但共同样本也应用这一筛选。',
-              '- GAP：PA为0；NJ为 max((5.05 − 政策前工资)/政策前工资, 0)。例如4.25美元对应0.188235，即18.82%，不是0.80美元。',
-              '- 模型(i)：NJ；(ii)：NJ加品牌和所有权；(iii)：GAP；(iv)：GAP加品牌和所有权；(v)：GAP再加地区。',
-              '- 品牌以Wendy\'s为基准，加入BK、KFC、Roy Rogers三个虚拟变量；所有权为co_owned。',
-              '- 地区以North NJ为基准，加入Central NJ、South NJ、PA1、PA2；第五组不另加NJ，否则与地区虚拟变量共线。',
-              '- 复现使用传统OLS标准误：残差平方和/(N−参数数)乘(X\'X)逆矩阵。不是州聚类或异方差稳健标准误。',
-              '- 回归标准误是残差标准差，不是核心系数的标准误。控制变量p值检验所有额外控制变量共同为0，不是政策系数p值。',
-              f"- 因变量均值{checks['outcome_mean']:.6f}、样本标准差{checks['outcome_sd']:.6f}；原文为−0.237和8.825，均值按通常三位四舍五入为−0.238，原文显示有末位差异。", '',
-              '## 核对和第五组差异', '',
-              f"原表18个回归数值中，{checks['published_matches']}个按两位小数匹配。样本数与因变量描述统计另列，不纳入这18格。",
-              '前四组所有已发表回归数值匹配。第五组按表注含所有权得到11.98 (7.42)，而原文11.91 (7.39)。',
-              f"作者check.sas的第五个就业设定没有co_owned，按该程序得到{alternative['estimate']:.2f} ({alternative['se']:.2f})，回归标准误{alternative['regression_se']:.2f}、联合控制p={alternative['controls_p']:.2f}。",
-              '该对照解释了核心系数与标准误差异，但未复现原文第五组回归标准误8.75，控制联合p值也为0.31而不是原文0.40。不能把两个设定的数值拼成一列，也不能确认原文全部差异的原因。',
-              '全部不一致格见table4_audit_cells.csv；完整控制系数见table4_all_coefficients.csv；逐店筛选标记保存在被Git忽略的data/processed/table4_analysis.csv。', '',
-              '## 结果怎么读', '',
-              '模型(i)的NJ系数约2.33：共同样本中新泽西的同店就业变化比宾州高约2.33个FTE。它与Table 3的2.75不同，主要因为样本收窄到357家。',
-              'GAP用比例而非百分点计量，模型(iii)中政策前工资4.25的NJ餐厅对应15.65×0.188235≈2.95个FTE的预测差异。',
-              '品牌和所有权控制对主要系数影响较小；加入地区后GAP系数降低且标准误增大，第五组在通常5%水平下不显著。正的点估计不等于所有模型都证明就业增加。',
-              '数值交叉检查通过不证明因果假设成立。单一政策前观测无法直接检验平行趋势，且这里只有两个州。']
-    (output/'table4_replication.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
+    from english_reports import write_report
+    write_report('table4_replication.md', 'table4_notes.md', [('Regression results', result_frame), ('Published-cell audit', audit_frame), ('Author-SAS fifth model', pd.DataFrame([alternative]))])
     print(result_frame[['model', 'variable', 'n', 'estimate', 'se', 'regression_se', 'controls_p']].to_string(index=False))
     print(json.dumps(checks, ensure_ascii=False, indent=2))
     print('Table 4 saved in outputs/tables/ and outputs/figures/. Author-SAS fifth model exported separately.')

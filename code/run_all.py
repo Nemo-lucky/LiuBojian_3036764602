@@ -20,12 +20,12 @@ STAGES = [
     ('Table 2', '02_table2.py', [
         'outputs/tables/table2_numeric.csv', 'outputs/tables/table2_replication.md',
         'outputs/tables/table2_wage_denominators.csv', 'outputs/tables/table2_audit_cells.csv',
-        'outputs/tables/table2_t_method_checks.csv', 'outputs/tables/table2_audit_中文.md',
+        'outputs/tables/table2_t_method_checks.csv', 'outputs/tables/table2_audit.md',
         'data/processed/course_analysis.csv', 'docs/course_data_validation.json']),
     ('Figure 1', '03_figure1.py', [
         'outputs/figures/figure1.png', 'outputs/figures/figure1.svg', 'outputs/tables/figure1_bin_counts.csv',
         'outputs/tables/figure1_sample_checks.csv', 'outputs/tables/figure1_validation.json',
-        'outputs/tables/figure1_中文说明.md']),
+        'outputs/tables/figure1_notes.md']),
     ('Table 3', '04_table3.py', [
         'outputs/tables/table3_numeric.csv', 'outputs/tables/table3_audit_cells.csv',
         'outputs/tables/table3_samples.csv', 'outputs/tables/table3_replication.md',
@@ -106,6 +106,8 @@ def main():
         manifest['source_sha256']['code/src/course_data.py'] = sha256(ROOT/'code'/'src'/'course_data.py')
         manifest['source_sha256']['code/src/audit_table2.py'] = sha256(ROOT/'code'/'src'/'audit_table2.py')
         manifest['source_sha256']['code/run_all.py'] = sha256(Path(__file__))
+        for relative in ['code/src/english_reports.py', *[f'ui/reports/{name}_notes.md' for name in ['table2', 'figure1', 'table3', 'table4', 'ownership']]]:
+            manifest['source_sha256'][relative] = sha256(ROOT/relative)
         logs = ROOT/'logs'
         logs.mkdir(exist_ok=True)
         log_path = logs/'workflow.log'

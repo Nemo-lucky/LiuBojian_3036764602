@@ -1,64 +1,50 @@
-# 独立拓展：直营店与非直营店的就业反应
+# Ownership extension: company-owned versus franchise / non-company stores
 
-研究问题：最低工资提高后的就业变化，在公司直营店和非直营店（本文简称加盟店）之间是否不同？
-数据严格定义是CO_OWNED=1与0；它没有进一步区分加盟合同形式，也没有两期所有权变化记录。
+Research question: did employment respond differently to the minimum-wage increase by restaurant ownership? The primary model regresses employment change on NJ, company ownership, NJ x ownership and three brand indicators, using the common Table 4 sample. The interaction directly estimates the company-owned effect minus the franchise / non-company effect. Company-owned effects add the NJ and interaction coefficients; their SE includes the covariance.
 
-## 经济动机与事先设定
+Read the current interaction estimate, HC3 SE, 95% interval and approximate p value in the result cards and numeric CSV. The ownership main effect measures the difference in employment changes within PA; it is not the difference in policy effects. The co_owned indicator does not measure franchise contract details.
 
-两类餐厅可能在资金条件、决策权限和成本承担方式上不同，因此就业调整可能不同。这些是待讨论的可能机制，当前数据不能直接验证。
-原论文在就业回归中控制所有权；本拓展直接检验政策暴露与所有权的交互项。没有把原文控制变量系数当作异质性检验。
-主分析固定为357家共同样本、NJ交互模型、品牌控制。GAP、地区控制和384家样本均为补充，所有设定完整报告，不按显著性挑选。
+The unadjusted model, GAP with brands, GAP with brands and regions, and the employment-only 384-store sample are supplementary checks. All specifications are retained rather than selected for significance. GAP interactions have a different scale from binary NJ interactions.
 
-## 样本和描述统计
+Failure to reject a zero interaction means insufficient evidence of different responses, not proof of equal effects. Comparing one group's significance with another group's significance is not a valid test of their difference.
 
-| 州 | 所有权 | N | 政策前FTE | 政策后FTE | 同店平均变化 |
-|---|---|---:|---:|---:|---:|
-| PA | 非直营/加盟店 | 43 | 26.41 | 24.17 | -2.24 |
-| PA | 直营店 | 24 | 18.64 | 16.72 | -1.92 |
-| NJ | 非直营/加盟店 | 187 | 20.97 | 21.37 | 0.40 |
-| NJ | 直营店 | 103 | 19.68 | 19.52 | -0.16 |
+Inference uses store-level HC3 with approximate t(N-k) intervals. With only two states, HC3 cannot account for arbitrary common state shocks. Ownership is not randomized, brand controls cannot remove all business differences, and a single pre-policy wave cannot establish parallel pre-trends. Interpretation is exploratory and conditional on these limitations.
 
-![分组变化](../figures/extension_ownership_changes.png)
+Checks compare QR estimates and HC3 covariance, unadjusted group DIDs, and the equivalent balanced long-panel triple interaction. These checks validate computations, not causal assumptions. Raw and store-level processed data remain local and excluded from public GitHub distribution.
 
-## 回归设定
+## Current generated results
 
-ΔFTE = α + β NJ + γ OWN + δ(NJ×OWN) + 品牌控制 + ε。
-OWN=1表示直营店。加盟店政策对照系数是β，直营店是β+δ，两类店差异是δ。γ是PA中两类店就业变化的差异，不是最低工资差异效应。
-GAP补充模型把NJ替换成GAP；两类店差异的单位是每一单位GAP，不能直接与NJ系数比较。对起薪4.25的NJ店，乘0.188235才能得到相应FTE差异。
-品牌控制以Wendy's为基准。GAP地区模型以North NJ为基准。NJ模型不同时加入全部地区虚拟变量，以免共线。
+The tables below are generated from this run. Interpretation notes describe the assigned course dataset; consult the numeric files for full precision.
 
-## 主结果：品牌控制NJ模型
+### State and ownership groups
 
-| 比较 | 系数 | HC3标准误 | 95%区间 | p值 |
-|---|---:|---:|---|---:|
-| 加盟店：NJ−PA | 2.641 | 2.118 | [-1.525, 6.807] | 0.213 |
-| 直营店：NJ−PA | 1.699 | 1.596 | [-1.441, 4.838] | 0.288 |
-| 直营店效果−加盟店效果 | -0.942 | 2.641 | [-6.136, 4.251] | 0.721 |
+| state | co_owned | ownership | n | before_fte | after_fte | mean_change | change_se |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| PA | 0 | Franchise/non-company | 43 | 26.4128 | 24.1686 | -2.24419 | 2.00281 |
+| PA | 1 | Company-owned | 24 | 18.6354 | 16.7188 | -1.91667 | 1.44515 |
+| NJ | 0 | Franchise/non-company | 187 | 20.9722 | 21.3703 | 0.398128 | 0.621928 |
+| NJ | 1 | Company-owned | 103 | 19.682 | 19.5194 | -0.162621 | 0.727539 |
 
-差异在本模型的5%近似检验下不显著。当前样本没有提供足够证据确认两类店反应不同；这不等于证明两类店效果相同。
+### All effects and interactions
 
-![效果及区间](../figures/extension_ownership_effects.png)
+| contrast | n | estimate | se_hc3 | ci95_low | ci95_high | p | exposure | max_leverage | model |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| franchise_effect | 357 | 2.64231 | 2.12029 | -1.52767 | 6.8123 | 0.213516 | nj | 0.0416667 | NJ_unadjusted |
+| company_effect | 357 | 1.75405 | 1.64735 | -1.48582 | 4.99391 | 0.28771 | nj | 0.0416667 | NJ_unadjusted |
+| company_minus_franchise | 357 | -0.888269 | 2.68503 | -6.16894 | 4.3924 | 0.740975 | nj | 0.0416667 | NJ_unadjusted |
+| franchise_effect | 357 | 2.64114 | 2.11831 | -1.52508 | 6.80735 | 0.2133 | nj | 0.0590919 | NJ_brands_primary |
+| company_effect | 357 | 1.69877 | 1.59626 | -1.44069 | 4.83823 | 0.287962 | nj | 0.0590919 | NJ_brands_primary |
+| company_minus_franchise | 357 | -0.942367 | 2.64072 | -6.13605 | 4.25131 | 0.721412 | nj | 0.0590919 | NJ_brands_primary |
+| franchise_effect | 357 | 20.817 | 8.79797 | 3.51351 | 38.1206 | 0.0185198 | gap | 0.0376834 | GAP_brands_support |
+| company_effect | 357 | 3.80059 | 8.45546 | -12.8293 | 20.4305 | 0.653361 | gap | 0.0376834 | GAP_brands_support |
+| company_minus_franchise | 357 | -17.0165 | 11.9453 | -40.5101 | 6.47723 | 0.155185 | gap | 0.0376834 | GAP_brands_support |
+| franchise_effect | 357 | 17.0757 | 9.04966 | -0.723567 | 34.875 | 0.0600123 | gap | 0.0672653 | GAP_brands_regions |
+| company_effect | 357 | 2.61353 | 10.0353 | -17.1244 | 22.3515 | 0.794685 | gap | 0.0672653 | GAP_brands_regions |
+| company_minus_franchise | 357 | -14.4622 | 12.9048 | -39.844 | 10.9196 | 0.263201 | gap | 0.0672653 | GAP_brands_regions |
+| franchise_effect | 384 | 3.18119 | 1.90783 | -0.570126 | 6.93251 | 0.0962571 | nj | 0.054839 | NJ_brands_384_sensitivity |
+| company_effect | 384 | 2.03952 | 1.5324 | -0.973605 | 5.05264 | 0.184016 | nj | 0.054839 | NJ_brands_384_sensitivity |
+| company_minus_franchise | 384 | -1.14167 | 2.41979 | -5.89965 | 3.6163 | 0.637337 | nj | 0.054839 | NJ_brands_384_sensitivity |
 
-## 所有设定的交互项
+![extension ownership changes.png](../figures/extension_ownership_changes.png)
 
-| 设定 | N | 差异系数 | HC3标准误 | p值 |
-|---|---:|---:|---:|---:|
-| NJ_unadjusted | 357 | -0.888 | 2.685 | 0.741 |
-| NJ_brands_primary | 357 | -0.942 | 2.641 | 0.721 |
-| GAP_brands_support | 357 | -17.016 | 11.945 | 0.155 |
-| GAP_brands_regions | 357 | -14.462 | 12.905 | 0.263 |
-| NJ_brands_384_sensitivity | 384 | -1.142 | 2.420 | 0.637 |
-
-## 推断与局限
-
-- 拓展使用店级HC3异方差稳健标准误，区间和p值使用t(N−k)近似。Table 4复现仍使用传统OLS标准误，两者目的和口径分别标明。
-- 只有两个州，店级HC3不能处理任意的州内共同冲击；这些p值和区间是条件性的探索结果，不是稳健的州级政策显著性证明。
-- 交互项直接检验差异，不能用“一组显著、另一组不显著”替代它。
-- 所有权不是随机分配，品牌控制也不能排除全部经营条件差异。只有一期政策前数据，不能直接检验所有权分组的平行趋势。
-- 不检验政策后变量作为控制，不按结果删极端值，不做以显著性为目标的模型筛选。
-- 保留六家永久关店、后期FTE为0；暂时关店在基准中为缺失。357家样本要求两轮工资有效（永久关店例外）；384家补充只要求就业变化有效。
-- 公开输出含分组汇总和回归结果；逐店分析文件被Git忽略，不能公开课程数据。
-
-## 验证
-
-QR分解核对系数和HC3协方差；无控制的回归与分组DID一致；两期堆叠模型三重交互系数与所有权DID之差一致。计算验证不证明因果假设成立。
+![extension ownership effects.png](../figures/extension_ownership_effects.png)

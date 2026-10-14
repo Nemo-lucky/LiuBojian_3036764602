@@ -1,39 +1,56 @@
-# Table 4：就业变化回归与原文比较
+# Table 4: employment-change regressions
 
-因变量：同店政策后 FTE 减政策前 FTE。所有模型含截距，使用同一357家样本。
+The common sample uses valid employment changes and two valid wages, with the author's permanent-closure exception. The course data retain 357 stores (NJ 290; PA 67), including six permanent closures with follow-up FTE set to zero. Of the 384 paired employment stores, 27 are excluded by wage requirements. Temporary closures remain missing.
 
-| 模型 | 核心变量 | 系数（标准误） | 原文系数（标准误） | 回归标准误 | 控制变量联合检验 p |
-|---|---|---|---|---|---|
-| i | NJ | 2.33 (1.19) | 2.33 (1.19) | 8.79 | — |
-| ii | NJ | 2.30 (1.20) | 2.30 (1.20) | 8.78 | 0.34 |
-| iii | GAP | 15.65 (6.08) | 15.65 (6.08) | 8.76 | — |
-| iv | GAP | 14.92 (6.21) | 14.92 (6.21) | 8.76 | 0.44 |
-| v | GAP | 11.98 (7.42) | 11.91 (7.39) | 8.75 | 0.40 |
+GAP = 0 in PA and max((5.05 - initial wage) / initial wage, 0) in NJ. An initial wage of 4.25 implies GAP = 0.188235. GAP coefficients are per unit proportional gap, not per dollar or per percentage point.
 
-## 样本和变量
+Models: (i) NJ; (ii) NJ with brand and ownership controls; (iii) GAP; (iv) GAP with brand and ownership controls; (v) GAP with brand, ownership and region controls, following the paper note. Wendy's and North NJ are reference categories. A full region set cannot be combined with NJ because of collinearity.
 
-- 原始410家；就业变化有效384家；再排除缺工资的27家，保留357家（NJ290、PA67）。
-- 永久关闭的6家保留，后期就业为0；按作者程序允许缺后期工资。暂时关闭仍为缺失。
-- 其他餐厅必须两轮就业和两轮起薪均有效。工资不是前两组回归的解释变量，但共同样本也应用这一筛选。
-- GAP：PA为0；NJ为 max((5.05 − 政策前工资)/政策前工资, 0)。例如4.25美元对应0.188235，即18.82%，不是0.80美元。
-- 模型(i)：NJ；(ii)：NJ加品牌和所有权；(iii)：GAP；(iv)：GAP加品牌和所有权；(v)：GAP再加地区。
-- 品牌以Wendy's为基准，加入BK、KFC、Roy Rogers三个虚拟变量；所有权为co_owned。
-- 地区以North NJ为基准，加入Central NJ、South NJ、PA1、PA2；第五组不另加NJ，否则与地区虚拟变量共线。
-- 复现使用传统OLS标准误：残差平方和/(N−参数数)乘(X'X)逆矩阵。不是州聚类或异方差稳健标准误。
-- 回归标准误是残差标准差，不是核心系数的标准误。控制变量p值检验所有额外控制变量共同为0，不是政策系数p值。
-- 因变量均值-0.237535、样本标准差8.825485；原文为−0.237和8.825，均值按通常三位四舍五入为−0.238，原文显示有末位差异。
+The replication uses conventional OLS coefficient SEs. The regression SE is residual SD, not the policy coefficient's SE. The controls p value is a joint test of the additional controls, not a policy p value. The displayed results come from the current numeric CSV.
 
-## 核对和第五组差异
+The first four models match the published regression cells; 16/18 regression cells match overall. The paper-note fifth specification gives GAP 11.98 (7.42), while the paper prints 11.91 (7.39). Author check.sas omits ownership from that specification and gives 11.91 (7.39), residual SE 8.74 and controls p about 0.31, compared with the printed 8.75 and 0.40. Separate author-SAS outputs preserve this difference; values from the two models must not be spliced into one column.
 
-原表18个回归数值中，16个按两位小数匹配。样本数与因变量描述统计另列，不纳入这18格。
-前四组所有已发表回归数值匹配。第五组按表注含所有权得到11.98 (7.42)，而原文11.91 (7.39)。
-作者check.sas的第五个就业设定没有co_owned，按该程序得到11.91 (7.39)，回归标准误8.74、联合控制p=0.31。
-该对照解释了核心系数与标准误差异，但未复现原文第五组回归标准误8.75，控制联合p值也为0.31而不是原文0.40。不能把两个设定的数值拼成一列，也不能确认原文全部差异的原因。
-全部不一致格见table4_audit_cells.csv；完整控制系数见table4_all_coefficients.csv；逐店筛选标记保存在被Git忽略的data/processed/table4_analysis.csv。
+The course sample's outcome mean -0.237535 rounds to -0.238 rather than the published -0.237. This descriptive difference is outside the 18-cell regression audit. Model (v) is not significant at the usual 5% level. Computational agreement does not validate parallel trends or overcome the two-state inference limitation.
 
-## 结果怎么读
+## Current generated results
 
-模型(i)的NJ系数约2.33：共同样本中新泽西的同店就业变化比宾州高约2.33个FTE。它与Table 3的2.75不同，主要因为样本收窄到357家。
-GAP用比例而非百分点计量，模型(iii)中政策前工资4.25的NJ餐厅对应15.65×0.188235≈2.95个FTE的预测差异。
-品牌和所有权控制对主要系数影响较小；加入地区后GAP系数降低且标准误增大，第五组在通常5%水平下不显著。正的点估计不等于所有模型都证明就业增加。
-数值交叉检查通过不证明因果假设成立。单一政策前观测无法直接检验平行趋势，且这里只有两个州。
+The tables below are generated from this run. Interpretation notes describe the assigned course dataset; consult the numeric files for full precision.
+
+### Regression results
+
+| estimate | se | regression_se | controls_p | n | residual_df | t | coefficient_p | ci95_low | ci95_high | model | variable |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2.32583 | 1.1916 | 8.79086 | - | 357 | 355 | 1.95186 | 0.0517406 | -0.0176441 | 4.66931 | i | nj |
+| 2.30386 | 1.19553 | 8.78466 | 0.344251 | 357 | 351 | 1.92706 | 0.0547794 | -0.0474487 | 4.65517 | ii | nj |
+| 15.6529 | 6.08024 | 8.75655 | - | 357 | 355 | 2.57439 | 0.0104464 | 3.69508 | 27.6107 | iii | gap |
+| 14.9157 | 6.20533 | 8.75921 | 0.43736 | 357 | 351 | 2.40369 | 0.0167487 | 2.71136 | 27.12 | iv | gap |
+| 11.9792 | 7.41912 | 8.75249 | 0.40457 | 357 | 347 | 1.61464 | 0.107297 | -2.61287 | 26.5713 | v | gap |
+
+### Published-cell audit
+
+| model | metric | replicated | published | match_at_precision |
+| --- | --- | --- | --- | --- |
+| i | estimate | 2.32583 | 2.33 | True |
+| i | se | 1.1916 | 1.19 | True |
+| i | regression_se | 8.79086 | 8.79 | True |
+| ii | estimate | 2.30386 | 2.3 | True |
+| ii | se | 1.19553 | 1.2 | True |
+| ii | regression_se | 8.78466 | 8.78 | True |
+| ii | controls_p | 0.344251 | 0.34 | True |
+| iii | estimate | 15.6529 | 15.65 | True |
+| iii | se | 6.08024 | 6.08 | True |
+| iii | regression_se | 8.75655 | 8.76 | True |
+| iv | estimate | 14.9157 | 14.92 | True |
+| iv | se | 6.20533 | 6.21 | True |
+| iv | regression_se | 8.75921 | 8.76 | True |
+| iv | controls_p | 0.43736 | 0.44 | True |
+| v | estimate | 11.9792 | 11.91 | False |
+| v | se | 7.41912 | 7.39 | False |
+| v | regression_se | 8.75249 | 8.75 | True |
+| v | controls_p | 0.40457 | 0.4 | True |
+
+### Author-SAS fifth model
+
+| estimate | se | regression_se | controls_p | n | residual_df | t | coefficient_p | ci95_low | ci95_high | model |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 11.9131 | 7.39441 | 8.74016 | 0.307491 | 357 | 348 | 1.61109 | 0.108067 | -2.63029 | 26.4564 | v_author_sas_without_ownership |

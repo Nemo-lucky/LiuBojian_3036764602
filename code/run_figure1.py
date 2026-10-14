@@ -1,4 +1,4 @@
-"""运行 Figure 1：python run_figure1.py --data 路径/public.csv。"""
+"""Run this analysis stage with the current Python interpreter."""
 from pathlib import Path
 import subprocess
 import sys

@@ -34,7 +34,7 @@ skills/
   scripts/summarize_run.py
   references/interpretation.md
   agents/openai.yaml
-report/                       Markdown report and reading guide
+report/                       Editable Markdown report source
 docs/                         provenance and validation evidence
 ui/                           English local-page assets
 ```
@@ -51,7 +51,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe code/run_all.py --data "data/raw/01_DID/data/public.csv"
 ```
 
-Alternatively, provide the existing course CSV location. In the student's desktop folder `01_DID/Table2_Python`:
+Alternatively, provide the existing course CSV location. In the student's desktop folder `01_DID/LiuBojian_3036764602`:
 
 ```powershell
 python code/run_all.py --data "..\data\public.csv"
@@ -90,7 +90,7 @@ Publication audits match 82/88 cells in Table 2, 66/80 in Table 3 and 16/18 in t
 .\.venv\Scripts\python.exe code/local_app.py
 ```
 
-Or double-click `启动本地页面.bat`. The English page runs on the reviewer's own computer, accepts the course CSV, runs or verifies the same workflow, and displays aggregate outputs. See [LOCAL_PAGE.md](LOCAL_PAGE.md). Keep the server terminal open.
+Or double-click `start_local_page.bat`. The English page runs on the reviewer's own computer, accepts the course CSV, runs or verifies the same workflow, and displays aggregate outputs. See [LOCAL_PAGE.md](LOCAL_PAGE.md). Keep the server terminal open.
 
 [skills/SKILL.md](skills/SKILL.md) gives reusable AI instructions for running, verifying and explaining this fixed project. To install it in a compatible agent, copy the contents of `skills/` into that agent's `minimum-wage-replication` skill folder. A reviewer can also ask an agent to read the repository's SKILL.md directly. The skill is optional for Python and browser execution.
 

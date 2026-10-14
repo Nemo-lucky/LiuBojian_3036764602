@@ -1,4 +1,4 @@
-"""Table 3 入口：python run_table3.py --data 路径/public.csv。"""
+"""Run this analysis stage with the current Python interpreter."""
 from pathlib import Path
 import subprocess
 import sys

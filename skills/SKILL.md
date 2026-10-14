@@ -1,6 +1,6 @@
 ---
 name: minimum-wage-replication
-description: "Run or explain the ECO6067 Card and Krueger minimum wage replication and ownership extension using an existing Python project and course public.csv. Use for 最低工资论文复现、所有权拓展、检查表图 or interpreting this project results; not for arbitrary papers or new causal designs."
+description: "Run or explain the ECO6067 Card and Krueger minimum wage replication and ownership extension using an existing Python project and course public.csv. Use for minimum-wage replication, ownership extensions, table and figure verification or interpreting this project results; not for arbitrary papers or new causal designs."
 ---
 
 # Minimum wage replication and ownership extension
@@ -9,8 +9,8 @@ Turn a natural-language request into a checked run of the existing analysis, or 
 
 ## Resolve the requested task and inputs
 
-- For “复现全部结果”, “生成表图” or an explicit rerun, execute the full workflow below.
-- For “解释结果”, “检查工作流是否成功” or a named existing table, inspect and explain existing outputs first. Do not rerun merely to answer a question. A requested single stage can use its existing code/run_table2.py, code/run_figure1.py, code/run_table3.py, code/run_table4.py or code/run_extension.py entry point.
+- For “reproduce all results”, “generate tables and figures” or an explicit rerun, execute the full workflow below.
+- For “explain results”, “verify the workflow” or a named existing table, inspect and explain existing outputs first. Do not rerun merely to answer a question. A requested single stage can use its existing code/run_table2.py, code/run_figure1.py, code/run_table3.py, code/run_table4.py or code/run_extension.py entry point.
 - Use the user's supplied project path, then the active project directory if it contains code/run_all.py and code/src/course_data.py. A portable copy of this skill at project/skills can also identify its enclosing project. An installed skill must not assume the creator's Desktop path. If no project is established, ask for the project folder; the skill alone is not the analysis package.
 - Use an explicit data path when supplied. Otherwise inspect project/data/raw/01_DID/data/public.csv, project/data/raw/public.csv, project/01_DID/data/public.csv, then project.parent/data/public.csv. If multiple existing candidates differ, ask which input to use. If neither exists, request its location; do not invent data or silently substitute another archive.
 

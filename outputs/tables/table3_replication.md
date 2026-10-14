@@ -1,78 +1,89 @@
-# Table 3：就业变化与双重差分
+# Table 3: employment changes and difference-in-differences
 
-单位：每家餐厅的全职等价就业人数（FTE）；括号为标准误。基准数据为未经修改的课程 public.csv。
+DID = (NJ after - NJ before) - (PA after - PA before). NJ stores are also compared by initial starting wage: low, middle and high wage groups. Row 1 compares pre-policy levels, row 2 post-policy levels, row 3 changes using all available observations in each wave, row 4 paired-store changes, and row 5 paired changes with temporary closures assigned zero follow-up employment as a separate sensitivity check.
 
-| 行与样本口径 | PA | NJ | NJ−PA | NJ低工资 | NJ中工资 | NJ高工资 | 低−高 | 中−高 |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1. 政策前 FTE：全部有效记录 | 23.33 (1.35) | 20.44 (0.51) | -2.89 (1.44) | 19.56 (0.77) | 20.08 (0.84) | 22.25 (1.14) | -2.69 (1.37) | -2.17 (1.41) |
-| 2. 政策后 FTE：全部有效记录 | 21.17 (0.94) | 21.03 (0.52) | -0.14 (1.08) | 20.88 (1.01) | 20.96 (0.76) | 20.21 (1.03) | 0.66 (1.44) | 0.74 (1.27) |
-| 3. 两轮可用均值之差（非平衡样本） | -2.17 (1.22) | 0.59 (0.47) | 2.75 (1.31) | 1.32 (0.81) | 0.87 (0.67) | -2.04 (0.98) | 3.36 (1.27) | 2.91 (1.19) |
-| 4. 同店就业变化（平衡样本） | -2.28 (1.25) | 0.47 (0.48) | 2.75 (1.34) | 1.20 (0.82) | 0.71 (0.69) | -2.16 (1.01) | 3.36 (1.30) | 2.87 (1.22) |
-| 5. 同店就业变化（暂时关店按零处理） | -2.28 (1.25) | 0.23 (0.49) | 2.51 (1.35) | 0.90 (0.87) | 0.49 (0.69) | -2.39 (1.02) | 3.29 (1.34) | 2.88 (1.23) |
+For the course data, the paired sample contains 384 stores: NJ 309 and PA 75. The temporary-zero sample contains 388 stores. The paired state DID is 2.75 FTE, SE 1.34, matching the paper at displayed precision. The temporary-zero DID is 2.51, SE 1.35.
 
-## 三个核心双重差分
+The unbalanced-wave observations overlap. Row 3 uses overlap-aware store influence scores with G/(G-1) correction, independently checked using stacked OLS. Missing employment is not filled with zero. The original row 3 SE algorithm is unconfirmed, so this is a transparent reconstruction rather than a claim to reproduce the author's exact method.
 
-| 口径 | 本次计算 | 原文 |
-|---|---:|---:|
-| 两轮可用均值之差（非平衡样本） | 2.753606 | 2.76 |
-| 同店就业变化（平衡样本） | 2.750000 | 2.75 |
-| 同店就业变化（暂时关店按零处理） | 2.509212 | 2.51 |
+The audit checks 80 published estimates and SEs; 66 match and 14 differ. Several differences are row 3 SEs. The current unbalanced DID is 2.753605783, which rounds to 2.75 rather than the published 2.76. The difference cannot simply be attributed to rounding; its original cause remains unverified. No baseline data are altered to force agreement.
 
-## 样本数
+Positive relative employment changes depend on comparison-group and trend assumptions. There is only one pre-policy wave and two states, limiting causal and policy-level inference.
 
-| 组别 | 全部 | 政策前有效 | 政策后有效 | 两轮均有效 | 暂时关店按零后两轮有效 |
-|---|---:|---:|---:|---:|---:|
+## Current generated results
+
+The tables below are generated from this run. Interpretation notes describe the assigned course dataset; consult the numeric files for full precision.
+
+### Employment estimates and SEs
+
+| row | column | estimate | se | published_estimate | published_se |
+| --- | --- | --- | --- | --- | --- |
+| 1 | PA | 23.3312 | 1.35115 | 23.33 | 1.35 |
+| 1 | NJ | 20.4394 | 0.508261 | 20.44 | 0.51 |
+| 1 | NJ-PA | -2.89176 | 1.44358 | -2.89 | 1.44 |
+| 1 | NJ_low | 19.5567 | 0.774856 | 19.56 | 0.77 |
+| 1 | NJ_mid | 20.0807 | 0.841274 | 20.08 | 0.84 |
+| 1 | NJ_high | 22.25 | 1.1358 | 22.25 | 1.14 |
+| 1 | Low-High | -2.6933 | 1.37493 | -2.69 | 1.37 |
+| 1 | Mid-High | -2.16934 | 1.41343 | -2.17 | 1.41 |
+| 2 | PA | 21.1656 | 0.943221 | 21.17 | 0.94 |
+| 2 | NJ | 21.0274 | 0.520309 | 21.03 | 0.52 |
+| 2 | NJ-PA | -0.138155 | 1.07721 | -0.14 | 1.07 |
+| 2 | NJ_low | 20.8776 | 1.0059 | 20.88 | 1.01 |
+| 2 | NJ_mid | 20.9556 | 0.755608 | 20.96 | 0.76 |
+| 2 | NJ_high | 20.2138 | 1.0251 | 20.21 | 1.03 |
+| 2 | Low-High | 0.663783 | 1.4362 | 0.67 | 1.44 |
+| 2 | Mid-High | 0.741787 | 1.27349 | 0.75 | 1.27 |
+| 3 | PA | -2.16558 | 1.22199 | -2.16 | 1.25 |
+| 3 | NJ | 0.588021 | 0.472146 | 0.59 | 0.54 |
+| 3 | NJ-PA | 2.75361 | 1.31003 | 2.76 | 1.36 |
+| 3 | NJ_low | 1.32085 | 0.811592 | 1.32 | 0.95 |
+| 3 | NJ_mid | 0.874899 | 0.672801 | 0.87 | 0.84 |
+| 3 | NJ_high | -2.03623 | 0.981906 | -2.04 | 1.14 |
+| 3 | Low-High | 3.35708 | 1.2739 | 3.36 | 1.48 |
+| 3 | Mid-High | 2.91113 | 1.19029 | 2.91 | 1.41 |
+| 4 | PA | -2.28333 | 1.25327 | -2.28 | 1.25 |
+| 4 | NJ | 0.466667 | 0.480829 | 0.47 | 0.48 |
+| 4 | NJ-PA | 2.75 | 1.34234 | 2.75 | 1.34 |
+| 4 | NJ_low | 1.20479 | 0.82249 | 1.21 | 0.82 |
+| 4 | NJ_mid | 0.709848 | 0.686227 | 0.71 | 0.69 |
+| 4 | NJ_high | -2.15672 | 1.00732 | -2.16 | 1.01 |
+| 4 | Low-High | 3.3615 | 1.30046 | 3.36 | 1.3 |
+| 4 | Mid-High | 2.86656 | 1.21885 | 2.87 | 1.22 |
+| 5 | PA | -2.28333 | 1.25327 | -2.28 | 1.25 |
+| 5 | NJ | 0.225879 | 0.490979 | 0.23 | 0.49 |
+| 5 | NJ-PA | 2.50921 | 1.34601 | 2.51 | 1.35 |
+| 5 | NJ_low | 0.897368 | 0.869916 | 0.9 | 0.87 |
+| 5 | NJ_mid | 0.49403 | 0.692838 | 0.49 | 0.69 |
+| 5 | NJ_high | -2.38971 | 1.01938 | -2.39 | 1.02 |
+| 5 | Low-High | 3.28707 | 1.34011 | 3.29 | 1.34 |
+| 5 | Mid-High | 2.88374 | 1.23254 | 2.88 | 1.23 |
+
+### Sample counts
+
+| group | all_stores | before_n | after_n | paired_n | temp_zero_paired_n |
+| --- | --- | --- | --- | --- | --- |
 | PA | 79 | 77 | 77 | 75 | 75 |
 | NJ | 331 | 321 | 319 | 309 | 313 |
 | NJ_low | 101 | 97 | 98 | 94 | 95 |
 | NJ_mid | 140 | 137 | 135 | 132 | 134 |
 | NJ_high | 73 | 71 | 69 | 67 | 68 |
 
-## 变量与样本规则
+### Unmatched published cells
 
-- FTE = EMPFT + NMGRS + 0.5 × EMPPT；不把缺失人数当零。
-- 6家永久关闭餐厅的政策后FTE为0。第1–4行暂时关闭/装修的政策后FTE保持缺失。仅第5行把4家暂时关闭/装修店的政策后FTE改为0，重新确定平衡样本。
-- NJ工资组按政策前起薪确定：低=4.25，中为4.25以上且5.00以下，高≥5.00。初始工资缺失的17家NJ店保留在州比较中，但不进入工资组比较。
-- 第3行：政策后可用样本均值减政策前可用样本均值。第4行：先对同一家店计算就业变化，再对两轮都有就业数据的店求平均。
-
-## 标准误：第3行须特别说明
-
-第1、2、4、5行的组内标准误为样本标准差/sqrt(n)。州或工资组之间互不重叠，其差异标准误为sqrt(SE₁²+SE₀²)。
-
-第3行的两轮样本有重叠，不能简单当作相互独立。当前使用餐厅层面的影响函数方差，并乘G/(G−1)小样本校正：
-
-`u_i = I_after × (FTE_after − mean_after)/n_after − I_before × (FTE_before − mean_before)/n_before`
-`SE = sqrt[G/(G−1) × sum(u_i²)]`
-
-G为至少一轮就业有效的餐厅数。缺失项对该得分贡献为0，并不是把缺失就业填成0。此方法已用两轮堆叠OLS及按餐厅汇总的协方差独立验证；第4、5行的州差异也用OLS和HC2标准误独立验证。
-
-原文未明确提供第3行非平衡样本标准误的计算细节，作者附带SAS只提供部分Table 3统计。因此该标准误是透明重建方法，不能声称是作者原算法，差异不应隐藏。
-
-## 与原文逐项核对
-
-共核对80个已发表数值（40个估计值和40个标准误），66个在两位小数下一致，14个不同。
-
-| 行 | 列 | 指标 | 本次 | 原文 |
-|---|---|---|---:|---:|
-| 2 | NJ-PA | se | 1.08 | 1.07 |
-| 2 | Low-High | estimate | 0.66 | 0.67 |
-| 2 | Mid-High | estimate | 0.74 | 0.75 |
-| 3 | PA | estimate | -2.17 | -2.16 |
-| 3 | PA | se | 1.22 | 1.25 |
-| 3 | NJ | se | 0.47 | 0.54 |
-| 3 | NJ-PA | estimate | 2.75 | 2.76 |
-| 3 | NJ-PA | se | 1.31 | 1.36 |
-| 3 | NJ_low | se | 0.81 | 0.95 |
-| 3 | NJ_mid | se | 0.67 | 0.84 |
-| 3 | NJ_high | se | 0.98 | 1.14 |
-| 3 | Low-High | se | 1.27 | 1.48 |
-| 3 | Mid-High | se | 1.19 | 1.41 |
-| 4 | NJ_low | estimate | 1.20 | 1.21 |
-
-## 差异解释与局限
-
-第3行州差异从当前数据算得 2.753605783，四舍五入为2.75，原文为2.76。此前讲解称2.76来自未四舍五入数值，这个说法没有证据支持，现予以纠正。原文与当前公开数据可能存在版本、样本或计算细节差异，但目前未确认原因。
-
-第3行的标准误差异与未确定的原文算法有关；其余行也保留所有小差异，不为凑原文数值调整数据或计算过程。
-
-这些正向差分依赖比较组、趋势等识别假设；历史表格的餐厅层面标准误不消除只有两个政策地区的推断局限。此处先复现并说明方法，不把正估计直接当作普遍政策结论。
+| row | column | metric | value | display | published | matches |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2 | NJ-PA | se | 1.07721 | 1.08 | 1.07 | False |
+| 2 | Low-High | estimate | 0.663783 | 0.66 | 0.67 | False |
+| 2 | Mid-High | estimate | 0.741787 | 0.74 | 0.75 | False |
+| 3 | PA | estimate | -2.16558 | -2.17 | -2.16 | False |
+| 3 | PA | se | 1.22199 | 1.22 | 1.25 | False |
+| 3 | NJ | se | 0.472146 | 0.47 | 0.54 | False |
+| 3 | NJ-PA | estimate | 2.75361 | 2.75 | 2.76 | False |
+| 3 | NJ-PA | se | 1.31003 | 1.31 | 1.36 | False |
+| 3 | NJ_low | se | 0.811592 | 0.81 | 0.95 | False |
+| 3 | NJ_mid | se | 0.672801 | 0.67 | 0.84 | False |
+| 3 | NJ_high | se | 0.981906 | 0.98 | 1.14 | False |
+| 3 | Low-High | se | 1.2739 | 1.27 | 1.48 | False |
+| 3 | Mid-High | se | 1.19029 | 1.19 | 1.41 | False |
+| 4 | NJ_low | estimate | 1.20479 | 1.2 | 1.21 | False |

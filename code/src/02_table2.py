@@ -123,7 +123,7 @@ def main():
     lines += differences or ["All displayed means and t statistics match."]
     lines += ["", "The 3e NJ difference corresponds to 283/331 stores in the data (85.5%), versus approximately 282/331 in the paper (85.2%). Renovation store SHEET 65 reports WAGE_ST2 = 5.05; classifying its wage indicator as unavailable/false would remove one count. This is a possible explanation, not a verified original-paper coding rule; baseline values are preserved.",
               "", "These descriptive results alone do not establish a causal policy effect. Employment effects and the ownership extension are examined in the separate stage outputs."]
-    lines += ["", "The comparison above covers means and t statistics. The complete audit including published standard errors is in table2_audit_中文.md (82 of 88 published values match at displayed precision)."]
+    lines += ["", "The comparison above covers means and t statistics. The complete audit including published standard errors is in table2_audit.md (82 of 88 published values match at displayed precision)."]
     (results / "table2_replication.md").write_text("\n".join(lines)+"\n", encoding="utf-8")
     sensitivity = []
     for variable, target in [("wage_st",4.25),("wage_st2",4.25),("wage_st2",5.05)]:

@@ -12,7 +12,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe code/local_app.py
 ```
 
-The browser opens automatically. Keep the terminal open. Alternatively, after setup, double-click 启动本地页面.bat; it selects the project virtual environment automatically. Do not switch to a different system Python after installing dependencies into .venv.
+The browser opens automatically. Keep the terminal open. Alternatively, after setup, double-click start_local_page.bat; it selects the project virtual environment automatically. Do not switch to a different system Python after installing dependencies into .venv.
 
 ## Choose the input and run
 

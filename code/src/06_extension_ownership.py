@@ -161,7 +161,7 @@ def main():
     ax.spines[['top','right']].set_visible(False); fig.tight_layout()
     fig.savefig(ROOT / 'outputs' / 'figures' / 'extension_ownership_effects.png',dpi=180)
     fig.savefig(ROOT / 'outputs' / 'figures' / 'extension_ownership_effects.svg'); plt.close(fig)
-    checks=dict(input_csv=str(path),input_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+    checks=dict(input_csv=path.name,input_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                 primary_n=357,sensitivity_n=384,models=[m[0] for m in specs],
                 inference='Store-level HC3 with t(N-k) approximate intervals; not state-cluster inference.',
                 checks_passed=['common_samples','QR_coefficients_HC3','OLS_orthogonality',
@@ -170,50 +170,8 @@ def main():
                 hypothesis='NJ x company ownership interaction = 0; two-sided test.',
                 originality_scope='Ownership interaction extension of this paper; no claim of novelty in all literature.')
     (out/'extension_ownership_validation.json').write_text(json.dumps(checks,ensure_ascii=False,indent=2),encoding='utf-8')
-    lines=['# 独立拓展：直营店与非直营店的就业反应', '',
-           '研究问题：最低工资提高后的就业变化，在公司直营店和非直营店（本文简称加盟店）之间是否不同？',
-           '数据严格定义是CO_OWNED=1与0；它没有进一步区分加盟合同形式，也没有两期所有权变化记录。', '',
-           '## 经济动机与事先设定', '',
-           '两类餐厅可能在资金条件、决策权限和成本承担方式上不同，因此就业调整可能不同。这些是待讨论的可能机制，当前数据不能直接验证。',
-           '原论文在就业回归中控制所有权；本拓展直接检验政策暴露与所有权的交互项。没有把原文控制变量系数当作异质性检验。',
-           '主分析固定为357家共同样本、NJ交互模型、品牌控制。GAP、地区控制和384家样本均为补充，所有设定完整报告，不按显著性挑选。', '',
-           '## 样本和描述统计', '',
-           '| 州 | 所有权 | N | 政策前FTE | 政策后FTE | 同店平均变化 |',
-           '|---|---|---:|---:|---:|---:|']
-    for row in group_rows:
-        owner='直营店' if row['co_owned'] else '非直营/加盟店'
-        lines.append(f"| {row['state']} | {owner} | {row['n']} | {row['before_fte']:.2f} | {row['after_fte']:.2f} | {row['mean_change']:.2f} |")
-    lines += ['', '![分组变化](../figures/extension_ownership_changes.png)', '', '## 回归设定', '',
-              'ΔFTE = α + β NJ + γ OWN + δ(NJ×OWN) + 品牌控制 + ε。',
-              'OWN=1表示直营店。加盟店政策对照系数是β，直营店是β+δ，两类店差异是δ。γ是PA中两类店就业变化的差异，不是最低工资差异效应。',
-              'GAP补充模型把NJ替换成GAP；两类店差异的单位是每一单位GAP，不能直接与NJ系数比较。对起薪4.25的NJ店，乘0.188235才能得到相应FTE差异。',
-              '品牌控制以Wendy\'s为基准。GAP地区模型以North NJ为基准。NJ模型不同时加入全部地区虚拟变量，以免共线。', '',
-              '## 主结果：品牌控制NJ模型', '',
-              '| 比较 | 系数 | HC3标准误 | 95%区间 | p值 |',
-              '|---|---:|---:|---|---:|']
-    for label,chinese in [('franchise_effect','加盟店：NJ−PA'),('company_effect','直营店：NJ−PA'),('company_minus_franchise','直营店效果−加盟店效果')]:
-        row=primary_results.loc[label]
-        lines.append(f"| {chinese} | {row.estimate:.3f} | {row.se_hc3:.3f} | [{row.ci95_low:.3f}, {row.ci95_high:.3f}] | {row.p:.3f} |")
-    diff=primary_results.loc['company_minus_franchise']
-    conclusion=('差异在本模型的5%近似检验下显著，但不能据此证明所有权本身造成差异。' if diff.p<.05
-                else '差异在本模型的5%近似检验下不显著。当前样本没有提供足够证据确认两类店反应不同；这不等于证明两类店效果相同。')
-    lines += ['',conclusion,'', '![效果及区间](../figures/extension_ownership_effects.png)', '',
-              '## 所有设定的交互项', '',
-              '| 设定 | N | 差异系数 | HC3标准误 | p值 |',
-              '|---|---:|---:|---:|---:|']
-    for row in estimates.loc[estimates.contrast.eq('company_minus_franchise')].itertuples():
-        lines.append(f'| {row.model} | {row.n} | {row.estimate:.3f} | {row.se_hc3:.3f} | {row.p:.3f} |')
-    lines += ['', '## 推断与局限', '',
-              '- 拓展使用店级HC3异方差稳健标准误，区间和p值使用t(N−k)近似。Table 4复现仍使用传统OLS标准误，两者目的和口径分别标明。',
-              '- 只有两个州，店级HC3不能处理任意的州内共同冲击；这些p值和区间是条件性的探索结果，不是稳健的州级政策显著性证明。',
-              '- 交互项直接检验差异，不能用“一组显著、另一组不显著”替代它。',
-              '- 所有权不是随机分配，品牌控制也不能排除全部经营条件差异。只有一期政策前数据，不能直接检验所有权分组的平行趋势。',
-              '- 不检验政策后变量作为控制，不按结果删极端值，不做以显著性为目标的模型筛选。',
-              '- 保留六家永久关店、后期FTE为0；暂时关店在基准中为缺失。357家样本要求两轮工资有效（永久关店例外）；384家补充只要求就业变化有效。',
-              '- 公开输出含分组汇总和回归结果；逐店分析文件被Git忽略，不能公开课程数据。', '',
-              '## 验证', '',
-              'QR分解核对系数和HC3协方差；无控制的回归与分组DID一致；两期堆叠模型三重交互系数与所有权DID之差一致。计算验证不证明因果假设成立。']
-    (out/'extension_ownership_report.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    from english_reports import write_report
+    write_report('extension_ownership_report.md', 'ownership_notes.md', [('State and ownership groups', pd.DataFrame(group_rows)), ('All effects and interactions', estimates)], ['extension_ownership_changes.png', 'extension_ownership_effects.png'])
     print(estimates.loc[estimates.contrast.eq('company_minus_franchise'),['model','n','estimate','se_hc3','ci95_low','ci95_high','p']].to_string(index=False))
     print('Primary contrast: company-owned effect minus franchise effect.')
     print('All computation checks passed. Outputs saved in outputs/tables/ and outputs/figures/.')

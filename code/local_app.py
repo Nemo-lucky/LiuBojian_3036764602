@@ -23,7 +23,7 @@ STATE = {'status': 'idle', 'lines': [], 'verification': None, 'error': None}
 FILES = {
     'figure1.png', 'figure1.svg', 'extension_ownership_changes.png',
     'extension_ownership_effects.png', 'extension_ownership_effects.svg',
-    'table2_replication.md', 'table2_audit_中文.md', 'figure1_中文说明.md',
+    'table2_replication.md', 'table2_audit.md', 'figure1_notes.md',
     'table3_replication.md', 'table4_replication.md', 'extension_ownership_report.md',
     'table2_numeric.csv', 'table3_numeric.csv', 'table4_numeric.csv',
     'extension_ownership_effects.csv', 'figure1_bin_counts.csv',

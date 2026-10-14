@@ -15,9 +15,9 @@ from course_data import ROOT, INPUT, load_course
 
 COLS = ['PA', 'NJ', 'NJ-PA', 'NJ_low', 'NJ_mid', 'NJ_high', 'Low-High', 'Mid-High']
 ROW_LABELS = {
-    1:'政策前 FTE：全部有效记录', 2:'政策后 FTE：全部有效记录',
-    3:'两轮可用均值之差（非平衡样本）', 4:'同店就业变化（平衡样本）',
-    5:'同店就业变化（暂时关店按零处理）',
+    1:'Before FTE: all valid observations', 2:'After FTE: all valid observations',
+    3:'Difference of available means (unbalanced sample)', 4:'Paired-store employment changes',
+    5:'Paired changes with temporary closures set to zero',
 }
 # Visually transcribed from printed page 780, Table 3. Never used as estimates.
 PAPER_MEAN = [
@@ -158,42 +158,8 @@ def main():
     audited.to_csv(results/'table3_audit_cells.csv',index=False)
     pd.DataFrame(samples).to_csv(results/'table3_samples.csv',index=False)
     mismatch=audited.loc[~audited.matches]
-    lines=['# Table 3：就业变化与双重差分','',
-           '单位：每家餐厅的全职等价就业人数（FTE）；括号为标准误。基准数据为未经修改的课程 public.csv。','',
-           '| 行与样本口径 | PA | NJ | NJ−PA | NJ低工资 | NJ中工资 | NJ高工资 | 低−高 | 中−高 |',
-           '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
-    for row in range(1,6):
-        formatted=[f'{cells[(row,c)][0]:.2f} ({cells[(row,c)][1]:.2f})' for c in COLS]
-        lines.append('| '+f'{row}. {ROW_LABELS[row]}'+' | '+' | '.join(formatted)+' |')
-    lines += ['', '## 三个核心双重差分', '', '| 口径 | 本次计算 | 原文 |', '|---|---:|---:|']
-    for row in [3,4,5]:
-        lines.append(f'| {ROW_LABELS[row]} | {cells[(row,"NJ-PA")][0]:.6f} | {PAPER_MEAN[row-1][2]:.2f} |')
-    lines += ['', '## 样本数', '', '| 组别 | 全部 | 政策前有效 | 政策后有效 | 两轮均有效 | 暂时关店按零后两轮有效 |',
-              '|---|---:|---:|---:|---:|---:|']
-    for r in samples:
-        lines.append(f"| {r['group']} | {r['all_stores']} | {r['before_n']} | {r['after_n']} | {r['paired_n']} | {r['temp_zero_paired_n']} |")
-    lines += ['', '## 变量与样本规则', '',
-              '- FTE = EMPFT + NMGRS + 0.5 × EMPPT；不把缺失人数当零。',
-              '- 6家永久关闭餐厅的政策后FTE为0。第1–4行暂时关闭/装修的政策后FTE保持缺失。仅第5行把4家暂时关闭/装修店的政策后FTE改为0，重新确定平衡样本。',
-              '- NJ工资组按政策前起薪确定：低=4.25，中为4.25以上且5.00以下，高≥5.00。初始工资缺失的17家NJ店保留在州比较中，但不进入工资组比较。',
-              '- 第3行：政策后可用样本均值减政策前可用样本均值。第4行：先对同一家店计算就业变化，再对两轮都有就业数据的店求平均。', '',
-              '## 标准误：第3行须特别说明', '',
-              '第1、2、4、5行的组内标准误为样本标准差/sqrt(n)。州或工资组之间互不重叠，其差异标准误为sqrt(SE₁²+SE₀²)。', '',
-              '第3行的两轮样本有重叠，不能简单当作相互独立。当前使用餐厅层面的影响函数方差，并乘G/(G−1)小样本校正：', '',
-              '`u_i = I_after × (FTE_after − mean_after)/n_after − I_before × (FTE_before − mean_before)/n_before`',
-              '`SE = sqrt[G/(G−1) × sum(u_i²)]`', '',
-              'G为至少一轮就业有效的餐厅数。缺失项对该得分贡献为0，并不是把缺失就业填成0。此方法已用两轮堆叠OLS及按餐厅汇总的协方差独立验证；第4、5行的州差异也用OLS和HC2标准误独立验证。', '',
-              '原文未明确提供第3行非平衡样本标准误的计算细节，作者附带SAS只提供部分Table 3统计。因此该标准误是透明重建方法，不能声称是作者原算法，差异不应隐藏。', '',
-              '## 与原文逐项核对', '',
-              f'共核对80个已发表数值（40个估计值和40个标准误），{int(audited.matches.sum())}个在两位小数下一致，{len(mismatch)}个不同。', '',
-              '| 行 | 列 | 指标 | 本次 | 原文 |','|---|---|---|---:|---:|']
-    for r in mismatch.to_dict('records'):
-        lines.append(f"| {r['row']} | {r['column']} | {r['metric']} | {r['display']:.2f} | {r['published']:.2f} |")
-    lines += ['', '## 差异解释与局限', '',
-              f'第3行州差异从当前数据算得 {cells[(3,"NJ-PA")][0]:.9f}，四舍五入为2.75，原文为2.76。此前讲解称2.76来自未四舍五入数值，这个说法没有证据支持，现予以纠正。原文与当前公开数据可能存在版本、样本或计算细节差异，但目前未确认原因。', '',
-              '第3行的标准误差异与未确定的原文算法有关；其余行也保留所有小差异，不为凑原文数值调整数据或计算过程。', '',
-              '这些正向差分依赖比较组、趋势等识别假设；历史表格的餐厅层面标准误不消除只有两个政策地区的推断局限。此处先复现并说明方法，不把正估计直接当作普遍政策结论。']
-    (results/'table3_replication.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    from english_reports import write_report
+    write_report('table3_replication.md', 'table3_notes.md', [('Employment estimates and SEs', numeric), ('Sample counts', pd.DataFrame(samples)), ('Unmatched published cells', mismatch)])
     validation={'input_filename':path.name,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
                 'group_counts_match_paper':True,'row3_stacked_ols_validation':True,
                 'rows4_5_ols_hc2_validation':True,'original_row3_se_method_confirmed':False,

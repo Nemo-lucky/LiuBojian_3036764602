@@ -94,30 +94,8 @@ def main():
     plt.close(fig)
 
     key=distribution.loc[distribution.wave.eq(2)&distribution.state.eq('NJ')&distribution.bin_index.eq(8)].iloc[0]
-    summary_rows=['| 调查 | 州 | 全部餐厅 | 有效工资 | 缺失工资 | 工资至少5.50的餐厅 |',
-                  '|---|---|---:|---:|---:|---:|']
-    for r in summaries:
-        summary_rows.append(f"| {r['wave']} | {r['state']} | {r['surveyed']} | {r['valid_wages']} | {r['missing_wages']} | {r['high_tail_n']} |")
-    note=['# Figure 1 复现说明','',
-          '已生成政策前后两州起薪分布图，并检查每个州、每一轮的分组计数与比例。此图是公开数据下的透明重建，尚不能声称逐根柱子精确匹配原图。','',
-          '## 数据与分母','',*summary_rows,'',
-          '只剔除所画工资变量的缺失值，不要求该店就业或其他变量完整，也不要求两轮工资都完整。各州各轮分别归一化到 100%。不因第二轮装修状态而删除已报告的工资。','',
-          '## 工资分组','',
-          '按照原图横轴的 0.10 美元间隔重建分组：4.20≤工资<4.30、4.30≤工资<4.40，以此类推。最后一组为工资≥5.50，包含超过5.60的记录，避免悄悄丢弃尾部。原图最后一项标为5.55，本图明确标成5.50+。','',
-          '区间端点和上尾合并是当前重建选择，原文图注没有完整说明，作者所附 check.sas 也未提供 Figure 1 的绘图程序。因此不能仅凭视觉接近认定完全复现。','',
-          '用整数“分”分组，防止浮点误差把4.30等端点分错；另用逐区间计数独立校验所有分组。','',
-          '## 如何理解与 Table 2 的区别','',
-          f"政策后 NJ 在 [5.00,5.10) 区间有 {int(key['count'])} 家，有效工资记录为 {int(key['valid_wage_n'])} 家，因此柱高为 {key['percent']:.2f}%。",'',
-          'Table 2 的目标工资指标是恰好等于5.05的283家，按照作者 SAS 指示变量口径除以全部331家，得到85.5%。Figure 1 则对工资区间计数并以有效工资为分母，两者不应强行相等。','',
-          '## 原图比较与限制','',
-          '原图与本次重建均呈现：政策前两州分布较分散，政策后 NJ 高度集中在新最低工资附近，PA 仍较分散。两张子图纵轴上限分别为35%和90%，沿用原图的不同刻度。','',
-          '原图没有提供每根柱子的精确数值表，目前未完成逐柱数值验证。区间端点、尾部处理、有效样本口径或历史数据版本都可能造成高度差异；不以改变数据来追求视觉一致。图的边际分布不能证明同一餐厅的工资迁移，也不单独识别就业因果效果。','',
-          '## 文件','',
-          '- figure1.png：可预览的图片。','- figure1.svg：可缩放的矢量图片。',
-          '- figure1_bin_counts.csv：所有柱子的区间、计数、分母与比例。',
-          '- figure1_sample_checks.csv：样本、缺失、范围和比例合计。',
-          '- figure1_validation.json：输入校验值和计算检查。']
-    (results/'figure1_中文说明.md').write_text('\n'.join(note)+'\n',encoding='utf-8')
+    from english_reports import write_report
+    write_report('figure1_notes.md', 'figure1_notes.md', [('Sample and denominator checks', summary), ('Bin counts and percentages', distribution)], ['figure1.png'])
     validation={'input_filename':path.name,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
                 'binning':'10 cents, left-inclusive, from 4.20; final tail >=5.50',
                 'denominator':'nonmissing wage, within state and wave',

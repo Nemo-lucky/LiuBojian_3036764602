@@ -105,3 +105,7 @@ At the student's explicit request, the repository was renamed to LiuBojian_30367
 ## Final technical review and teacher invitations
 
 At the student's explicit request, the assistant reviewed the PDF and AI disclosure against the existing verified results, confirmed Liu Bojian / 3036764602, and invited xiongyan2224 and Jeff7c as GitHub collaborators. Both invitations were confirmed pending acceptance. This supersedes prior no-invitation status notes. No submission email was sent and no student-understanding attestation was invented.
+
+## 14 October 2026 — English-only submission
+
+At the student's request, duplicate translated reading guides and stage-by-stage setup notes were removed from the submission. The README and LOCAL_PAGE.md retain the required setup instructions. Generated stage reports now use shared English interpretation notes and current result tables. Numerical calculations and sample rules were preserved. Historical JSON provenance retains its original values, with non-ASCII paths encoded as JSON Unicode escapes.

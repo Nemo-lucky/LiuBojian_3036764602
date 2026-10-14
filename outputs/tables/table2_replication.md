@@ -49,4 +49,4 @@ The 3e NJ difference corresponds to 283/331 stores in the data (85.5%), versus a
 
 These descriptive results alone do not establish a causal policy effect. Employment effects and the ownership extension are examined in the separate stage outputs.
 
-The comparison above covers means and t statistics. The complete audit including published standard errors is in table2_audit_中文.md (82 of 88 published values match at displayed precision).
+The comparison above covers means and t statistics. The complete audit including published standard errors is in table2_audit.md (82 of 88 published values match at displayed precision).
